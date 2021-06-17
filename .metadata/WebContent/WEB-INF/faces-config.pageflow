@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16234593569280" configfile="/eduklita/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="72" y="192" id="pf162346474428721" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf162346474428722 pf162346474428724 pf16235564030752 pf16238912324130 pf16238912324131" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="introduccion.xhtml" x="552" y="120" id="pf162346474428726" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf162346474428724" path="/introduccion.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="nosotros.xhtml" x="348" y="396" id="pf162346474428728" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf162346474428722" path="/nosotros.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="misionvision.xhtml" x="480" y="257" id="pf16235564030753" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf16235564030752" path="/misionvision.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="270" id="pf16238912324132" inlinks="pf16238912324130" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register.xhtml" x="264" y="96" id="pf16238912324133" inlinks="pf16238912324131" path="/register.xhtml"/>
+  <links id="pf162346474428722" target="pf162346474428728" source="pf162346474428721" outcome="nosotros"/>
+  <links id="pf162346474428724" target="pf162346474428726" source="pf162346474428721" outcome="introduccion"/>
+  <links id="pf16235564030752" target="pf16235564030753" source="pf162346474428721" outcome="misionvision"/>
+  <links id="pf16238912324130" target="pf16238912324132" source="pf162346474428721" outcome="login"/>
+  <links id="pf16238912324131" target="pf16238912324133" source="pf162346474428721" outcome="register"/>
+</pageflow:Pageflow>

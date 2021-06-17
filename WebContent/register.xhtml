@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<style>
+#Fondo {
+	background: url(images/satelite2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style>
+	<h:outputStylesheet library="css" name="estiloslogin.css" />
+	<title>INDEX</title>
+</h:head>
+<h:body id="Fondo">
+
+	 
+	 
+	 
+	  
+	  <h:form>
+<p:panel id="panel" header="Registro Persona">
+<p:messages id="msgs"/>
+<h:panelGrid columns="2" cellpadding="5">
+<p:outputLabel for="firstname" value="Nombre:" />
+<p:inputText id="firstname" value="#{userView.firstname}" required="true" label="Firstname">
+<f:validateLength minimum="2" />
+</p:inputText>
+
+<p:outputLabel for="Apellidos" value="Apellidos" />
+<p:inputText id="Apellidos" value="#{userView.firstname}" required="true" label="Apellidos">
+<f:validateLength minimum="2" />
+</p:inputText>
+ 
+ 
+ 
+ <p:outputLabel for="Correo" value="Correo" />
+<p:inputText id="Correo" value="#{userView.Correo}" required="true" label="Correo">
+<f:validateLength minimum="2" />
+</p:inputText>
+
+
+
+<p:outputLabel for="Cedula" value="Cedula" />
+<p:inputText id="Cedula" value="#{userView.Cedula}" required="true" label="Cedula">
+<f:validateLength minimum="2" />
+</p:inputText>
+
+
+<p:outputLabel for="Usuario" value="Usuario" />
+<p:inputText id="Usuario" value="#{userView.Usuario}" required="true" label="Usuario">
+<f:validateLength minimum="2" />
+</p:inputText>
+
+ 
+
+
+<p:outputLabel for="lastname" value="Contraseña:" />
+<p:inputText id="lastname" value="#{userView.lastname}" label="Lastname" required="true">
+<f:validateLength minimum="2" />
+<p:ajax update="msgLastname" event="keyup" />
+</p:inputText>
+<p:message for="lastname" id="msgLastname" display="icon" />
+
+ 
+		
+		
+		
+<div class="login-container">
+	<h:form action="" class="form-login">
+		<ul class="login-nav">
+			<li class="login-nav__item active">
+				<a href="#">Sign In</a>
+			</li>
+			<li class="login-nav__item">
+				<a href="#">Sign Up</a>
+			</li>
+		</ul>
+		
+		<p:outputLabel for="" class="login__label">
+			Username
+		</p:outputLabel>
+		<p:inputText id="login-input-user" class="login__input" type="text" />
+		<p:outputLabel for="" class="login__label">
+			Password
+		</p:outputLabel>
+		<p:inputText id="login-input-password" class="login__input" type="password" />
+		 
+		<button class="login__submit" >INGRESAR</button>
+	</h:form>
+	<a href="#" class="login__forgot">¿Has olvidado tu contraseña?</a>
+</div>		
+			
+
+
+
+</h:panelGrid>
+<p:commandButton value="Save" update="panel" action="#{userView.save}" icon="pi pi-check" />
+
+
+
+
+
+
+
+</p:panel>
+
+
+
+
+ </h:form>
+	  
+	 
+	 
+	
+	
+	 
+
+	 
+</h:body>
+</html>

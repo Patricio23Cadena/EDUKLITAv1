@@ -1,0 +1,558 @@
+
+
+@charset "ISO-8859-1";
+
+ 
+ 
+#bodyTi{
+   background: #030321;;
+ 
+}
+
+ 
+#Content{
+	height: 100px;
+	width:100%;
+	font-size: 13px;
+	color: White;
+	text-align: center;
+	 background-color:Black;
+}
+
+
+b{
+    text-align: center;
+     font-size: 2.5em;
+}
+
+
+.menubar{  
+     background: rgba(0,0,0,0.5);
+     border-style: none;
+     font-size: 1.5em;
+     
+    
+    
+} 
+
+.ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link .ui-menuitem-text {
+    float: none;
+    vertical-align: middle; 
+    font-weight: bolder;
+    font-style:Italic;
+}
+
+
+.affaires .ui-menu-child{background: rgba(0,0,0,0.5);}
+
+.menucolor{
+	
+	 color:White; 
+	
+}
+ 
+ 
+ 
+ 
+ 
+ .ui-menu, .ui-menu .ui-menu-child {
+    background: #c4c4c4 url(/eduklita/javax.faces.resource/images/ui-bg_highlight-hard_80_c4c4c4_1x100.png.xhtml?ln=primefaces-aristo) top repeat-x;
+    background: #c4c4c4 linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    background: rgba(0,0,0,0.5) -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5)));
+    background: #c4c4c4 -moz-linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    border-style: none;
+}
+ 
+ 
+.ui-menuitem .ui-widget .ui-corner-all .ui-menuitem-active{
+	
+	background:Black;
+	 
+} 
+ 
+.ui-menuitem-link .ui-corner-all .ui-state-hover{
+	
+	background:Black;
+} 
+submenu{
+	
+	 background: rgba(0,0,0,0.5);
+	border-style: none;
+} 
+
+
+.ui-widget-content a {
+    color: White;
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700');
+
+body {
+  /*min-height: 100%;*/
+  /*height:-webkit-fill-available;*/
+  margin: 0;
+  height:200%;
+  font-family: Lato, sans-serif;
+  /*background-color: #E1E2E1; */
+  /*overflow-y:scroll;*/
+}
+
+header{
+    background:#35429f;        
+}
+h2{
+   font-size: 72px;
+  background: -webkit-linear-gradient(#ff0000, #7686fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+animation-duration: 12s !important; /*tiempo que dura la animación*/ 
+animation-delay: 5s; /*tiempo de espera hasta que se produce la animación*/
+/*  animation-iteration-count: infinite;*/
+}
+
+ .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover {
+        background: #858ae3; }
+
+ h4{
+ 
+   font-size: 60px;
+   font-family: Broadway;
+ color: #FFFFFF;
+text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0, 0 0 20px #2cd0f0, 0 0 20px #2cd0f0, 0 0 1px #2cd0f0, 0 0 12px #2cd0f0;
+ }
+ 
+ 
+
+#footer{
+	/*margin-top:0.8%;*/
+	height: 30%;
+	width:100%;
+	font-size: 0.5em;
+	color: White;
+	background-color: rgba(0,0,0,0.5);
+	/*display: inline-flex;*/
+    /*flex-wrap: wrap;*/
+    	/*align-content: flex-start;*/
+    display: flex;
+    justify-content: start;}
+
+
+.footerToDIvC{
+	height: 96%;
+	width:27%;
+	display: flex;
+  flex-direction: column;
+  padding-left:25%;
+ 
+}
+
+.footerDiv{
+	padding-top:2%;
+	font-size: 0.6em;
+	color: White;
+	height: 100%;
+	width:33%;
+
+	 display: flex;
+    justify-content: center;
+	 /*display: flex;
+	flex-wrap: wrap;
+	align-content: flex-around;
+	flex-direction: column;
+	height: 100%;*/
+}
+
+.imagenCentroFo{
+	
+	height: 80%;
+	width:40%;
+
+	
+}
+.imagenCentroFo1{
+    height: 80%;
+	width:40%;
+	
+	
+  
+}
+
+
+
+.footerImg{
+	height: 96%;
+	width:12%;
+}
+
+.gifTierra {
+	height: 100%;
+	width:100%;	
+	
+}
+
+.imgFoter{
+	
+	height: 15%;
+	width:15%;	
+}
+
+.foh1{
+	padding-top:28%;
+	padding-left:5%;
+	font-size:3.5em;
+}
+
+.foh2{
+	
+	font-size:1.2em;
+}
+
+
+ ui-dock-container-top ui-widget-header{
+ 
+ left: 311.5px; 
+   height:300px; 
+    width: 120px;
+ 
+ }
+ 
+ 
+
+ 
+ 
+ 
+ 
+ /*Letra del titulo de eduklita*/
+ .detallePro{
+	margin-top:35%;
+	
+	padding-top:1%;
+	text-align:center;
+	height: 30%;
+	width: 100%;
+	font-size:0.7em;
+	color:white;
+	font-family: "Consolas", monospace;;
+}
+ 
+ .divcontenedorTi{
+  width: 54%;  
+  height: 54%;
+ }
+ 
+ @import url(https://fonts.googleapis.com/css?family=Erica+One);
+/* BODY */
+.divtitulo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 54%;  
+  height: 54%;
+ /* background-color: rgba(0,0,0,0.5);*/
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  overflow: hidden;
+  margin-top: 4.2%;
+}
+::selection {
+  background: transparent;
+}
+
+.letraTitulo {
+  cursor: default;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  margin: auto;
+  display: block;
+  
+  -webkit-animation: bounce .3s ease infinite alternate;
+  
+  font-family: 'Erica One', cursive;
+  font-size: 8em;
+  color: #00a8e8;
+  text-align: center;
+  line-height: 100px;
+  text-shadow: 0 1px 0 #CCC,
+               0 2px 0 #CCC,
+               0 3px 0 #CCC,
+               0 4px 0 #CCC,
+               0 5px 0 #CCC,
+               0 6px 0 transparent,
+               0 7px 0 transparent,
+               0 8px 0 transparent,
+               0 9px 0 transparent,
+               0 10px 10px rgba(0, 0, 0, .6);
+}
+/* ANIMATION */
+@-webkit-keyframes bounce {
+  100% {
+    top: -220px;
+    
+    text-shadow: 0 1px 0 #CCC,
+                 0 2px 0 #CCC,
+                 0 3px 0 #CCC,
+                 0 4px 0 #CCC,
+                 0 5px 0 #CCC,
+                 0 6px 0 #CCC,
+                 0 7px 0 #CCC,
+                 0 8px 0 #CCC,
+                 0 9px 0 #CCC,
+                 0 30px 30px rgba(0, 0, 0, .3);
+  }
+}
+
+/*Aqui termina la letra del titulo Eduklita*/
+  .divBotonesRegistro{
+ 	display: inline-flex;
+  /*flex-direction: ;*/
+  flex-direction:row;
+	height: 100%;
+	width:85%;
+	padding-left:15%;
+ }
+ 
+ 
+ 
+ /*Botones*/
+ .wrapper {
+    height: 15%;
+	width:7%;
+	padding-left:3%;
+ /* max-width: 65rem;
+  width: 100%;*/
+  /*margin: 2rem auto;*/
+  /*padding: 5rem;*/
+  /*text-align: center;
+*/
+}
+hr {
+  border: 0;
+  border-bottom: 0.0625rem solid #bbb;
+  margin: 3rem 0;
+}
+button {
+  font-size: 1.0em;
+  background: #0077b6;
+  color: #fff;
+  border: 0.25rem solid #0077b6;
+  padding: 0.85em 0.75em;
+  margin: 2.1rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+button:hover {
+  color: black;
+}
+button::after {
+  content: "";
+  background: #ecf0f1;
+  position: absolute;
+  z-index: -1;
+  padding: 0.85em 0.75em;
+  display: block;
+}
+button[class^="slide"]::after {
+  transition: all 0.35s;
+}
+button[class^="slide"]:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all 0.35s;
+}
+button.slide_from_left::after {
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+}
+button.slide_from_right::after {
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: -100%;
+}
+button.slide_from_top::after {
+  left: 0;
+  right: 0;
+  top: -100%;
+  bottom: 100%;
+}
+button.slide_from_bottom::after {
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: -100%;
+}
+button[class^="grow"]::after {
+  transition: all 0.3s ease;
+}
+button[class^="grow"]:hover::after {
+  transition: all 0.3s ease-out;
+}
+button.grow_box::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+}
+button.grow_box:hover::after {
+  transform: scale(1, 1);
+}
+button.grow_ellipse::after {
+  border-radius: 50%;
+  left: -50%;
+  right: -50%;
+  top: -150%;
+  bottom: -150%;
+  line-height: 8.34em;
+  transform: scale(0, 0);
+}
+button.grow_ellipse:hover::after {
+  transform: scale(1, 1);
+}
+button.grow_skew_forward::after {
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+}
+button.grow_skew_forward:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+}
+button.grow_skew_backward::after {
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(45deg) scale(0, 1);
+}
+button.grow_skew_backward:hover::after {
+  transform: skewX(45deg) scale(1, 1);
+}
+button.grow_spin::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0) rotate(-180deg);
+}
+button.grow_spin:hover::after {
+  transform: scale(1, 1) rotate(0deg);
+}
+
+ 
+ 
+ 
+ /*Aqui comienza el ccs del multiple selection */
+ 
+
+.ui-accordion .ui-accordion-header {
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    min-height: 0;
+    padding: .5em .5em .5em 2.2em;
+}
+
+/* para cambiar el background del header*/
+.ui-accordion .ui-accordion-header {
+    margin: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: #003566;
+}
+
+.ui-helper-reset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    line-height: 1.3;
+    text-decoration: none;
+    font-size: 100%;
+    list-style: none;
+    font-family: cursive;
+    background: rgba(0,0,0,0.5);
+}
+
+.ui-corner-top {
+    -moz-border-radius-topleft: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+
+.ui-state-active {
+    -moz-box-shadow: inset 0 -1px 0 #fff;
+    -webkit-box-shadow: inset 0 1px 0 #fff;
+    box-shadow: inset 0 1px 0 #fff;
+}
+
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: 1px solid #7096ab;
+    background: #85b2cb url(/eduklita/javax.faces.resource/images/ui-bg_inset-hard_65_85b2cb_1x100.png.jsf?ln=primefaces-aristo) 50% 50% repeat-x;
+    background: #85b2cb linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,0.4));
+    background: #85b2cb -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0)),to(rgba(255,255,255,0.4)));
+    background: #85b2cb -moz-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,0.4));
+    font-weight: bold;
+    color: #f7f7f7;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 70%);
+}
+
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #a8a8a8;
+    background: #c4c4c4 url(/eduklita/javax.faces.resource/images/ui-bg_highlight-hard_80_c4c4c4_1x100.png.jsf?ln=primefaces-aristo) 50% 50% repeat-x;
+    background: #c4c4c4 linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    background: #c4c4c4 -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.8)),to(rgba(255,255,255,0)));
+    background: #c4c4c4 -moz-linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    font-weight: bold;
+    color: #f3ecec;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 70%);
+}
+.ui-accordion .ui-accordion-content {
+    color: lightcyan;
+    padding: 1em 2.2em;
+    border-top: 0;
+    margin-top: -2px;
+    position: relative;
+    top: 1px;
+    margin-bottom: 2px;
+    overflow: auto;
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    text-align: justify;
+}
+
+
+.divepanel{
+	
+	width: 100%;
+}

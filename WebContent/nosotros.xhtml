@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<style>
+#Fondo {
+	background: url(images/satelite2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style>
+	<h:outputStylesheet library="css" name="estilos.css" />
+	<h:outputStylesheet library="css" name="estilosQuienes.css" />
+	<title>NOSOTROS</title>
+</h:head>
+<h:body id="Fondo">
+
+	<p:menubar styleClass="menubar">
+		<p:submenu label="Inicio" icon="pi pi-pencil">
+			<p:menuitem style="color:White" value="Inicio" url="index.jsf"
+				icon="pi pi-angle-double-left" />
+			<p:menuitem style="color:White" value="GitHub"
+				url="https://github.com/Patricio23Cadena/eduklita"
+				icon="pi pi-angle-double-right" target="_blank" />
+			<p:menuitem style="color:White" value="Wiki"
+				url="https://patricio23cadena.github.io/eduklita/"
+				icon="pi pi-angle-double-right" target="_blank" />
+			<p:menuitem style="color:White" value="Readme"
+				url="https://github.com/Patricio23Cadena/eduklita/blob/main/README.md"
+				icon="pi pi-angle-double-right" target="_blank" />
+		</p:submenu>
+		<p:menuitem value="Introducción" style="color:White"
+			outcome="introduccion" icon="pi pi-times" />
+		<p:menuitem value="¿Quiénes somos?" style="color:White"
+			outcome="nosotros" icon="pi pi-times" />
+			<p:menuitem value="Misión/Visión" style="color:White" outcome="misionvision"
+			icon="pi pi-times" />
+		<p:menuitem value="Gráficos" style="color:White" outcome="misionvision"
+			icon="pi pi-times" />
+	</p:menubar>
+
+	<div class="">
+		 
+		 
+		 
+	<p:carousel  pageLinks="5" autoPlayInterval="5000" headerText="DESARROLLADORES" numVisible="1" effect="easeInStrong" circular="true" style=" text-align: center; border-style: none;"   >
+        
+        <p:tab title="SASKIA GUERRERO">
+            <h:panelGrid columns="" cellpadding="" >
+            	<a href="https://www.facebook.com/rbka.guerrero.16/" target="_blank"><img class="circular-imagen"  alt="SASKIA GUERRERO" title="SASKIA GUERRERO" src="images/saskia.jpeg"  width="30%" height="300px"></img></a>            
+                        <div> 
+                             <span ><h1 id="nombres"><u>SASKIA REBECA GUERRERO GARRIDO</u></h1><br />                            
+                          <h3 id="informacion">EDUCACIÓN PRIMARIA:</h3><br />
+                            <h3 id="info">Centro Educativo Giovanni Pascoli</h3><br />
+                           <h3 id="informacion">EDUCACIÓN SECUNDARIA:</h3><br />
+                           <h3 id="info">Colegio Nacional Simón Bolívar</h3><br />
+                           <h3 id="informacion">EDUCACIÓN SUPERIOR:</h3><br /> 
+                             <h3 id="info">  Universidad Politécnica Salesiana</h3><br />
+                            <h3 id="informacion">CURSOS:</h3><br />
+        <h3 id="info">Introduction to Packet Tracer</h3><br />
+        <h3 id="info">Introducción a IoT</h3><br />
+        <h3 id="info"> Python</h3><br />
+       <h3 id="info"></h3><br />
+       <h3 id="info"></h3><br />  	
+                              <h3 id="informacion">CORREO ELECTRÓNICO:</h3><br />  
+                              <h3 id="info"> saskia.rebeca@hotmail.com</h3><br /> 
+                              <h3 id="informacion">TELÉFONO:</h3><br />
+                              <h3 id="info"> (+593)992682005</h3>
+                              </span> 
+                        </div>
+            
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="PATRICIO CADENA">
+            <h:panelGrid columns="1" cellpadding="5">
+            	<a href="https://www.facebook.com/kevin.cadena.1612" target="_blank"><img class="circular-imagen" alt="PATRICIO CADENA" title="PATRICIO CADENA" src="images/patricio.jpeg"  width="30%" height="300px"></img></a>            
+            <div> 
+                            <span ><h1 id="nombres"><u>KEVIN PATRICIO CADENA PEÑA</u></h1><br />                            
+                          <h3 id="informacion">EDUCACIÓN PRIMARIA:</h3><br />
+                            <h3 id="info">Unidad Educativa Rincón del Saber</h3><br />
+                           <h3 id="informacion">EDUCACIÓN SECUNDARIA:</h3><br />
+                           <h3 id="info">Instituto Tecnológico Benito Juárez</h3><br />
+                           <h3 id="informacion">EDUCACIÓN SUPERIOR:</h3><br /> 
+                             <h3 id="info">  Universidad Politécnica Salesiana</h3><br />
+                            <h3 id="informacion">CURSOS:</h3><br />
+        <h3 id="info"> Python</h3><br />
+        <h3 id="info"> Introduction to Packet Tracer</h3><br />
+       <h3 id="info"> HTML5 and CSS Fundamentals - EDX</h3><br />
+       <h3 id="info">Introducción a IoT</h3><br />   		
+                              <h3 id="informacion">CORREO ELECTRÓNICO:</h3><br />  
+                             <h3 id="info">  kevin23cadena@hotmail.com</h3><br /> 
+                              <h3 id="informacion">TELÉFONO:</h3><br />
+                              <h3 id="info"> (+539)993563182 </h3>
+                              </span>                  
+                        </div>
+            </h:panelGrid>
+        </p:tab>
+        <p:tab title="DIEGO BEDOYA">
+            <h:panelGrid columns="1" cellpadding="5">
+            	<a href="https://www.facebook.com/diego.bedoya.507/" target="_blank"><img class="circular-imagen" alt="DIEGO BEDOYA" title="DIEGO BEDOYA" src="images/diego.jpeg"  width="30%" height="300px"></img></a>            
+                        <div> 
+                          <span ><h1 id="nombres"><u>DIEGO EDUARDO BEDOYA VACA</u></h1><br />                            
+                          <h3 id="informacion">EDUCACIÓN PRIMARIA:</h3><br />
+                            <h3 id="info">Pensionado Panamericano</h3><br />
+                           <h3 id="informacion">EDUCACIÓN SECUNDARIA:</h3><br />
+                           <h3 id="info">Instituto Tecnológico Benito Juárez</h3><br />
+                           <h3 id="informacion">EDUCACIÓN SUPERIOR:</h3><br /> 
+                             <h3 id="info">  Universidad Politécnica Salesiana</h3><br />
+                            <h3 id="informacion">CURSOS:</h3><br />
+        <h3 id="info">Cisco Networking Academy introduction to Packet Tracer</h3><br />
+        <h3 id="info"></h3><br />
+       <h3 id="info"> HTML5 and CSS Fundamentals - EDX</h3><br />
+       <h3 id="info"></h3><br />   		
+                              <h3 id="informacion">CORREO ELECTRÓNICO:</h3><br />  
+                              <h3 id="info">diegobedoyav1@hotmail.com</h3> <br /> 
+                               <h3 id="informacion">TELÉFONO:</h3><br />
+                              <h3 id="info">(+593)993745798</h3>
+                              </span>
+                              
+                               
+                        </div>
+            </h:panelGrid>
+        </p:tab>
+          <p:tab title="FREDDY CAMACHO">
+            <h:panelGrid columns="1" cellpadding="5">
+            	<a href="https://www.facebook.com/freddy.sarango.37/" target="_blank"><img class="circular-imagen" alt="FREDDY CAMACHO" title="FREDDY CAMACHO" src="images/freddy.jpeg"  width="30%" height="300px"></img></a>            
+                 <div> 
+                            <span ><h1 id="nombres"><u>FREDDY FABRICIO CAMACHO SARANGO</u></h1><br />                            
+                          <h3 id="informacion">EDUCACIÓN PRIMARIA:</h3><br />
+                            <h3 id="info"> C.E.I.P. Sacratif </h3><br />
+                           <h3 id="informacion">EDUCACIÓN SECUNDARIA:</h3><br />
+                           <h3 id="info">Unidad Educativa Dr. Miguel Ángel Zambrano</h3><br />
+                           <h3 id="informacion">EDUCACIÓN SUPERIOR:</h3><br /> 
+                             <h3 id="info">  Universidad Politécnica Salesiana</h3><br />
+                            <h3 id="informacion">CURSOS:</h3><br />
+        <h3 id="info"> MATLAB and Octave for Beginners - Edx</h3><br />
+        <h3 id="info"> Programación para todos (empezando con Python) - Edx</h3><br />
+       <h3 id="info"> HTML5 and CSS Fundamentals - EDX</h3><br />
+       <h3 id="info">  Introduction to Packet Tracer English 1020 - Cisco Networking Academy </h3><br />   		
+                              <h3 id="informacion">CORREO ELECTRÓNICO:</h3><br />  
+                            <h3 id="info">fc.freddy00@gmail.com</h3><br />  
+                              <h3 id="informacion">TELÉFONO:</h3><br />
+		                     <h3 id="info">(+593)961587556</h3>
+                              </span>
+                        </div>
+            
+            
+            </h:panelGrid>
+        </p:tab> 
+        </p:carousel>  
+	
+	
+		 
+		 
+		 
+	</div>
+	 
+	<div id="footer">	<div class="footerImg">
+		
+		<img class="gifTierra" src="images/giphy.gif"/>
+		</div>
+		<div class="footerToDIvC">
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/telefono.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">0984571751</h1>
+		</div>
+		</div>
+		
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/mail.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">guerrero01.@gmail.com</h1>
+		</div>
+		</div>
+		<div >
+		<b  class="foh2">Copyright© 2021. EDUKLITA. Todos los derechos reservados. </b>
+		</div>
+		</div>
+	
+	</div>
+	
+	
+	<style type="text/css">
+.ui-stack {
+	z-index: 1000;
+	
+}
+</style>
+
+	<h:form >
+		<p:stack   icon="images/herramienta.png" expanded="false">
+			<p:menuitem value="Wiki" 
+			url="https://patricio23cadena.github.io/eduklita/"
+			target="_blank"
+			icon="images/wiki.png" />
+			<p:menuitem value="Readme" 
+			url="https://github.com/Patricio23Cadena/eduklita/blob/main/README.md"
+				target="_blank"
+			icon="images/readme.png" />
+			<p:menuitem value="Facebook"
+				url="https://www.facebook.com/profile.php?id=100068991534701"
+				target="_blank"
+				icon="images/facebook.png" />
+			<p:menuitem value="Youtube"
+			    url="https://www.youtube.com/channel/UCIPQtaDrSSkHVb3wE-pApzQ"
+				target="_blank"
+				icon="images/youtube.png" />
+			<p:menuitem  value="GitHub"
+				url="https://github.com/Patricio23Cadena/eduklita"
+				target="_blank"
+				icon="/images/github.png" />
+		</p:stack>
+	</h:form>
+
+</h:body>
+</html>

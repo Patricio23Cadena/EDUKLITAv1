@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<style>
+#Fondo {
+	background: url(images/satelite2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style>
+	<h:outputStylesheet library="css" name="introduccion.css" />
+	<title>INDEX</title>
+</h:head>
+<h:body id="Fondo">
+
+	<p:menubar styleClass="menubar">
+		<p:submenu label="Inicio" icon="pi pi-pencil">
+			<p:menuitem style="color:White" value="Inicio" url="index.jsf"
+				icon="pi pi-angle-double-left" />
+			<p:menuitem style="color:White" value="GitHub"
+				url="https://github.com/Patricio23Cadena/eduklita"
+				icon="pi pi-angle-double-right" target="_blank" />
+			<p:menuitem style="color:White" value="Wiki"
+				url="https://patricio23cadena.github.io/eduklita/"
+				icon="pi pi-angle-double-right" target="_blank" />
+			<p:menuitem style="color:White" value="Readme"
+				url="https://github.com/Patricio23Cadena/eduklita/blob/main/README.md"
+				icon="pi pi-angle-double-right" target="_blank" />
+		</p:submenu>
+		<p:menuitem value="Introducción" style="color:White"
+			outcome="introduccion" icon="pi pi-times" />
+		<p:menuitem value="¿Quiénes somos?" style="color:White"
+			outcome="nosotros" icon="pi pi-times" />
+			<p:menuitem value="Misión/Visión" style="color:White" outcome="misionvision"
+			icon="pi pi-times" />
+		<p:menuitem value="Gráficos" style="color:White" outcome="misionvision"
+			icon="pi pi-times" />
+	</p:menubar>
+
+	<div class="divcontenedorTi">
+		<div class="divtitulo">
+			<h1 class="letraTitulo">EDUKLITA</h1>
+		</div>
+			<div class="detallePro">
+		
+		
+		</div>
+	</div>
+	 <div class="divepanel">
+	 <h:form id="form">
+    <p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true"/>
+    <div class="card">
+        <p:accordionPanel multiple="true" widgetVar="multiple">
+            <p:tab title="INTRODUCCIÓN">
+                <p class="p-m-0">
+                    Este proyecto está orientado a estudiantes de quinto nivel de la carrera de Ingeniería en Ciencias de la Computación, en el cuál nuestro sistema
+                    puede encontrar las siguientes funcionalidades. El proyecto cuenta con tres módulos, donde cada usuario va a tener una distinta forma de
+                    interactuar con el sistema, el usuario invitado podrá ver información básica que contiene el sistema, dando un resumen de los indicadores y
+                    gráficas básicas. Este usuario a su vez podrá registrarse, o ingresar con su cuenta que se haya registrado. El usuario asignado al módulo
+                    reportes podrá crear y publicar los reportes avanzados, mediante la base de datos. El siguiente módulo de seguridad tendrá la potestad de
+                    administrar cada uno de los usuarios registrados, además tendrá un apartado de auditoría donde podrá guardar el registro de actividades.
+                </p>
+            </p:tab>
+            <p:tab title="DETALLE DEL PROYECTO">
+                <p class="p-m-0">
+                    Este proyecto está orientado ha proporcionar información detallada de la economía que dispone el sector educativo, dando a conocer los
+                    resultados estadísticos que nos brinda el INEC. La licencia que tiene el programa es: GNU General Public License v3.0. Tiene como propósito
+                    que el usuario pueda modificar, visualizar y descargar el código fuente, cada una de estas modificaciones no pueden ser privativas hacia los
+                    otros usuarios, ya que así lo especifíca la licencia respectivamente utilizada. El programa está conformado por tres módulos:
+                    <ol>
+                    <p>
+                    <li>
+                    El primer módulo está orientado a la creación y publicación de reportes avanzados, estos reportes serán presentados en una aplicación
+                      web, en el cuál el usuario ingresará o seleccionará los criterios de búsqueda para generar el reporte.
+                      </li>
+                      </p>
+                      
+                      <p>
+                      <li>
+                    El segundo módulo se refiere a acceder sin necesidad de autentificación, indicando información básica de la aplicación para visitantes. 
+                      Incluye un resumen de los indicadores que maneja el sistema y gráficas básicas, en este módulo los visitantes no pueden crear un reporte.
+                      </li>
+                      </p>
+                      
+                      <p>
+                      <li>
+                    El tercer módulo es el de seguridad, en el cual permite la administración de usuarios (creación de usuarios, cambio de clave, bloqueo de 
+                      usuarios y consulta de usuarios), guardando el registro de cada actividad realizada en la base de datos.
+                      </li>
+                      </p>
+                      </ol>
+                </p>
+            </p:tab>
+            <p:tab title="PRE-RREQUISITOS">
+                <p class="p-m-0">
+                   Tener instalado las siguientes herramientas:
+                   <ol>
+                   <li>
+                        Integrated Development Environment (IDE), el que se utlizó es Eclipse (versión 2021-03).
+                   </li>
+                   <li>
+                        PostgreSQL (versión 12).
+                   </li>
+                <li>
+                        PgAdmin (versión 4).
+                  </li>
+                  <li>
+                        Pentaho (versión 8.1.0.0-365). 
+                  </li>
+                 <li>
+                        Wildfly (versión 17).
+                        </li>
+                   </ol>
+                   <p>
+                   Instalar las siguientes librerías en el IDE:
+                   </p>
+                   
+                   <ol>
+                   
+                   <p>
+                   <li>
+                   JBOSS
+                   </li>
+                   </p>
+                   <li>
+                   PRIMEFACES
+                   </li>
+                   </ol>
+                </p>
+            </p:tab>
+
+            <p:tab title="LICENCIA">
+                <p class="p-m-0">
+                  Licencia BSD 2.0", "Licencia BSD revisada", "Licencia BSD nueva" o "Licencia BSD modificada
+                </p>
+            </p:tab>
+            
+            <p:tab title="AGRADECIMIENTO">
+                <p class="p-m-0">
+                  A mis ingenieros Patsy Prieto, Gustavo Návas y Ricardo Albarracín; sus conocimientos fueron precisos y sabios en solventar cada una de las
+                  dudas generadas a lo largo del desarrollo del proyecto integrador. Gracias por compartir sus conocimientos de manera profesional, pero
+                  sobretodo gracias por su paciencia, tolerancia y perseverancia inigualable. Por dedicar tiempo en aclarar las dudas que se generan en el
+                  proyecto y poder avanzar para dar un buen trabajo. Agradecemos a la Universidad Politécnica Salesiana, por indicarnos a ser honrados
+                  ciudadanos y buenos cristianos, por priorizar los valores de solidaridad, familiaridad y honestidad.
+                </p>
+            </p:tab>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </p:accordionPanel>
+    </div>
+    
+    </h:form>
+    </div>
+	 
+	 
+	 
+	<div id="footer">	<div class="footerImg">
+		
+		<img class="gifTierra" src="images/giphy.gif"/>
+		</div>
+		<div class="footerToDIvC">
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/telefono.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">0984571751</h1>
+		</div>
+		</div>
+		
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/mail.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">guerrero01.@gmail.com</h1>
+		</div>
+		</div>
+		<div >
+		<b  class="foh2">Copyright© 2021. EDUKLITA. Todos los derechos reservados. </b>
+		</div>
+		</div>
+	
+	</div>
+	
+	
+	<style type="text/css">
+.ui-stack {
+	z-index: 1000;
+	
+}
+</style>
+
+	<h:form >
+		<p:stack   icon="images/herramienta.png" expanded="false">
+			<p:menuitem value="Wiki" 
+			url="https://patricio23cadena.github.io/eduklita/"
+			target="_blank"
+			icon="images/wiki.png" />
+			<p:menuitem value="Readme" 
+			url="https://github.com/Patricio23Cadena/eduklita/blob/main/README.md"
+				target="_blank"
+			icon="images/readme.png" />
+			<p:menuitem value="Facebook"
+				url="https://www.facebook.com/profile.php?id=100068991534701"
+				target="_blank"
+				icon="images/facebook.png" />
+			<p:menuitem value="Youtube"
+			    url="https://www.youtube.com/channel/UCIPQtaDrSSkHVb3wE-pApzQ"
+				target="_blank"
+				icon="images/youtube.png" />
+			<p:menuitem  value="GitHub"
+				url="https://github.com/Patricio23Cadena/eduklita"
+				target="_blank"
+				icon="/images/github.png" />
+		</p:stack>
+	</h:form>
+
+</h:body>
+</html>

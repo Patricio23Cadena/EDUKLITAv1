@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<style>
+#Fondo {
+	background: red;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.ui-widget-content { 
+      background: url(images/satelite2.jpg); 
+          color: White;
+}
+
+
+</style> 
+	<h:outputStylesheet library="css" name="estiloslogin.css" /> 
+	<title>LOGIN</title>
+</h:head>
+<h:body id="Fondo">
+ 
+	 
+            
+  <div class="login-container">
+	<h:form action="" class="form-login">
+	<p:messages id="msgs"/>
+		<ul class="login-nav">
+			<li class="login-nav__item active">
+				<a href="#">Sign In</a>
+			</li>
+			<li class="login-nav__item">
+				<a href="#">Sign Up</a>
+			</li>
+		</ul>
+		
+		<p:outputLabel for="" value="Username" class="login__label">
+			
+		</p:outputLabel>
+		<p:inputText id="login-input-user" required="true" class="login__input" type="text" />
+		<p:outputLabel for="" class="login__label" value="Password">
+			 
+		</p:outputLabel>
+		<p:inputText id="login-input-password" class="login__input" type="password" required="true">
+		 <f:validateLength minimum="2"/>
+		 <p:ajax event="keyup"/>
+            </p:inputText>
+		 <p:message for="lastname" id="msgLastname" display="icon"/>
+		 
+		<button class="login__submit" >INGRESAR</button>
+	</h:form>
+	<a href="#" class="login__forgot">¿Has olvidado tu contraseña?</a>
+</div>
+ 
+    
+	 
+	 
+	
+	
+	 
+
+</h:body>
+</html>
