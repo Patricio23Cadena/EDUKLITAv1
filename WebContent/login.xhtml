@@ -47,11 +47,9 @@
 		<p:outputLabel for="" class="login__label" value="Password">
 			 
 		</p:outputLabel>
-		<p:inputText id="login-input-password" class="login__input" type="password" required="true">
-		 <f:validateLength minimum="2"/>
-		 <p:ajax event="keyup"/>
-            </p:inputText>
-		 <p:message for="lastname" id="msgLastname" display="icon"/>
+		<p:password id="toggle" value="#{passwordView.password6}" toggleMask="true" class="login__input" required="true" redisplay="true">
+		 <f:validateLength minimum="2"/> 
+            </p:password> 
 		 
 		<button class="login__submit" >INGRESAR</button>
 	</h:form>
