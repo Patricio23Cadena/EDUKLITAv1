@@ -55,7 +55,7 @@ modelamiento de las tablas fueron generadas en Sql Power Architect y el desarrol
 
                                       ---------------WIKI---------------
 
-https://patricio23cadena.github.io/eduklita/
+https://patricio23cadena.github.io/EDUKLITAv1/
 
 
                                      ---------------VERSIÓN---------------
