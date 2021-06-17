@@ -1,0 +1,947 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.divTabla{
+	  margin-left:37%;
+}
+html { font-size: 100%; overflow-y: scroll;}
+.alinear{
+  margin-top:1%;
+  display: flex;
+  justify-content: center;
+}
+
+.contenedor:hover{transform: scale(1.5);}
+.contenedor {
+	
+	 transition: transform .2s; 
+}
+
+
+.PnAuth{
+ text-align:center;
+}
+.PnDetalle{
+ text-align:justify;
+  margin-left: 2em;
+  margin-right: 2em;
+   height:90vh;
+}
+.auth{
+ color:white; 
+	font-family: 'Baloo Tamma', cursive;
+  //text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  color: $clr-white;
+  font-size: 30px;
+  letter-spacing: 5px;
+  //top: 50%;
+  //position: absolute;
+  //margin-top: -40px;
+  
+  text-shadow: -1px -1px 0px $clr-blue,
+    3px 3px 0px $clr-blue,
+    6px 6px 0px $clr-blue-900;
+}
+
+
+.titulo{
+	align:center;
+	margin-top: -6%;
+}
+
+body{
+  height: 100%;
+  font-weight: 800;
+	  font-family: Arial;
+	  margin:0;
+  display: flex;
+	flex-direction: column;
+background: url("IMG/satelite2.jpg");
+background-size:cover;
+background-repeat: no-repeat;
+	
+	/*font-size: 13px; 
+	line-height: 1.231;*/
+}
+
+.bodyTi{
+  display: inline-block;
+  /*background: #030321;;*/
+  width: 100%;
+
+}
+
+.bodyFi{
+  display: inline-block;
+  /*background: #030321;;*/
+  width: 100%;
+  min-height: 32%;
+}
+
+
+.bodyConte{
+	display: inline-block;
+  /*background-image: linear-gradient(to right top, #780000 0%, #fdf0d5 100%);*/
+  width: 100%;
+ 
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #4D163D;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #840037;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #BD0034;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #FDB731;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
+
+
+h1 { 
+    font-weight:bold;
+    text-decoration: underline;
+	text-align:center;
+}
+
+
+@font-face {
+  font-family: 'Monoton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Monoton'), local('Monoton-Regular'), url(http://themes.googleusercontent.com/static/fonts/monoton/v4/AKI-lyzyNHXByGHeOcds_w.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Iceland';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Iceland'), local('Iceland-Regular'), url(http://themes.googleusercontent.com/static/fonts/iceland/v3/F6LYTZLHrG9BNYXRjU7RSw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/static/fonts/pacifico/v5/yunJt0R8tCvMyj_V4xSjafesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'PressStart';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Press Start 2P'), local('PressStart2P-Regular'), url(http://themes.googleusercontent.com/static/fonts/pressstart2p/v2/8Lg6LX8-ntOHUQnvQ0E7o3dD2UuwsmbX3BOp4SL_VwM.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Audiowide'), local('Audiowide-Regular'), url(http://themes.googleusercontent.com/static/fonts/audiowide/v2/8XtYtNKEyyZh481XVWfVOj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Vampiro One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Vampiro One'), local('VampiroOne-Regular'), url(http://themes.googleusercontent.com/static/fonts/vampiroone/v3/Ho2Xld8UbQyBA8XLxF1_NYbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
+#container{
+  width:100%;
+  margin:auto;
+}
+
+
+/*neeeeoooon*/
+p{
+  text-align:center;
+	font-size:2.5em;
+  margin:20px 0 20px 0; 
+}
+
+a{
+  text-decoration:none; 
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+p:nth-child(1) a{
+  color:#FF1177;
+  font-family:Monoton;
+}
+p:nth-child(1) a:hover{
+  -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+  animation: neon1 1.5s ease-in-out infinite alternate; 
+}
+
+p:nth-child(2) a{
+  font-size:1.5em;
+  color:#228DFF;
+  font-family:Iceland;
+}
+p:nth-child(2) a:hover{
+  -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+p:nth-child(3) a{
+  color:#FFDD1B;
+  font-family:Pacifico;
+}
+p:nth-child(3) a:hover{ 
+  -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+  animation: neon3 1.5s ease-in-out infinite alternate; 
+}
+
+p:nth-child(4) a{
+  color:#B6FF00;
+  font-family:PressStart;
+  font-size:0.8em;
+}
+p:nth-child(4) a:hover{
+  -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+  animation: neon4 1.5s ease-in-out infinite alternate;
+}
+
+p:nth-child(5) a{
+  color:#FF9900;
+  font-family:Audiowide;
+}
+p:nth-child(5) a:hover{
+  -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon5 1.5s ease-in-out infinite alternate;
+  animation: neon5 1.5s ease-in-out infinite alternate; 
+}
+
+p:nth-child(6) a{
+  color:#BA01FF;
+  font-family:Vampiro One;
+}
+p:nth-child(6) a:hover{
+  -webkit-animation: neon6 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon6 1.5s ease-in-out infinite alternate;
+  animation: neon6 1.5s ease-in-out infinite alternate;
+}
+
+p a:hover{
+color:#ffffff;  
+}
+
+
+
+/*glow for webkit*/
+@-webkit-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF1177,
+               0 0 70px  #FF1177,
+               0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}
+
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #228DFF,
+               0 0 70px  #228DFF,
+               0 0 80px  #228DFF,
+               0 0 100px #228DFF,
+               0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #228DFF,
+               0 0 35px #228DFF,
+               0 0 40px #228DFF,
+               0 0 50px #228DFF,
+               0 0 75px #228DFF;
+  }
+}
+
+@-webkit-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FFDD1B,
+               0 0 70px  #FFDD1B,
+               0 0 80px  #FFDD1B,
+               0 0 100px #FFDD1B,
+               0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FFDD1B,
+               0 0 35px #FFDD1B,
+               0 0 40px #FFDD1B,
+               0 0 50px #FFDD1B,
+               0 0 75px #FFDD1B;
+  }
+}
+
+@-webkit-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #B6FF00,
+               0 0 70px  #B6FF00,
+               0 0 80px  #B6FF00,
+               0 0 100px #B6FF00,
+               0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #B6FF00,
+               0 0 35px #B6FF00,
+               0 0 40px #B6FF00,
+               0 0 50px #B6FF00,
+               0 0 75px #B6FF00;
+  }
+}
+
+@-webkit-keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF9900,
+               0 0 70px  #FF9900,
+               0 0 80px  #FF9900,
+               0 0 100px #FF9900,
+               0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF9900,
+               0 0 35px #FF9900,
+               0 0 40px #FF9900,
+               0 0 50px #FF9900,
+               0 0 75px #FF9900;
+  }
+}
+
+@-webkit-keyframes neon6 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px #ff00de,
+               0 0 70px #ff00de,
+               0 0 80px #ff00de,
+               0 0 100px #ff00de,
+               0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #ff00de,
+               0 0 35px #ff00de,
+               0 0 40px #ff00de,
+               0 0 50px #ff00de,
+               0 0 75px #ff00de;
+  }
+}
+
+/*glow for mozilla*/
+@-moz-keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF1177,
+               0 0 70px  #FF1177,
+               0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}
+
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #228DFF,
+               0 0 70px  #228DFF,
+               0 0 80px  #228DFF,
+               0 0 100px #228DFF,
+               0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #228DFF,
+               0 0 35px #228DFF,
+               0 0 40px #228DFF,
+               0 0 50px #228DFF,
+               0 0 75px #228DFF;
+  }
+}
+
+@-moz-keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FFDD1B,
+               0 0 70px  #FFDD1B,
+               0 0 80px  #FFDD1B,
+               0 0 100px #FFDD1B,
+               0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FFDD1B,
+               0 0 35px #FFDD1B,
+               0 0 40px #FFDD1B,
+               0 0 50px #FFDD1B,
+               0 0 75px #FFDD1B;
+  }
+}
+
+@-moz-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #B6FF00,
+               0 0 70px  #B6FF00,
+               0 0 80px  #B6FF00,
+               0 0 100px #B6FF00,
+               0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #B6FF00,
+               0 0 35px #B6FF00,
+               0 0 40px #B6FF00,
+               0 0 50px #B6FF00,
+               0 0 75px #B6FF00;
+  }
+}
+
+@-moz-keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF9900,
+               0 0 70px  #FF9900,
+               0 0 80px  #FF9900,
+               0 0 100px #FF9900,
+               0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF9900,
+               0 0 35px #FF9900,
+               0 0 40px #FF9900,
+               0 0 50px #FF9900,
+               0 0 75px #FF9900;
+  }
+}
+
+@-moz-keyframes neon6 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px #ff00de,
+               0 0 70px #ff00de,
+               0 0 80px #ff00de,
+               0 0 100px #ff00de,
+               0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #ff00de,
+               0 0 35px #ff00de,
+               0 0 40px #ff00de,
+               0 0 50px #ff00de,
+               0 0 75px #ff00de;
+  }
+}
+
+/*glow*/
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF1177,
+               0 0 70px  #FF1177,
+               0 0 80px  #FF1177,
+               0 0 100px #FF1177,
+               0 0 150px #FF1177;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF1177,
+               0 0 35px #FF1177,
+               0 0 40px #FF1177,
+               0 0 50px #FF1177,
+               0 0 75px #FF1177;
+  }
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #228DFF,
+               0 0 70px  #228DFF,
+               0 0 80px  #228DFF,
+               0 0 100px #228DFF,
+               0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #228DFF,
+               0 0 35px #228DFF,
+               0 0 40px #228DFF,
+               0 0 50px #228DFF,
+               0 0 75px #228DFF;
+  }
+}
+
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FFDD1B,
+               0 0 70px  #FFDD1B,
+               0 0 80px  #FFDD1B,
+               0 0 100px #FFDD1B,
+               0 0 150px #FFDD1B;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FFDD1B,
+               0 0 35px #FFDD1B,
+               0 0 40px #FFDD1B,
+               0 0 50px #FFDD1B,
+               0 0 75px #FFDD1B;
+  }
+}
+
+@keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #B6FF00,
+               0 0 70px  #B6FF00,
+               0 0 80px  #B6FF00,
+               0 0 100px #B6FF00,
+               0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #B6FF00,
+               0 0 35px #B6FF00,
+               0 0 40px #B6FF00,
+               0 0 50px #B6FF00,
+               0 0 75px #B6FF00;
+  }
+}
+
+@keyframes neon5 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px  #fff,
+               0 0 30px  #fff,
+               0 0 40px  #FF9900,
+               0 0 70px  #FF9900,
+               0 0 80px  #FF9900,
+               0 0 100px #FF9900,
+               0 0 150px #FF9900;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #FF9900,
+               0 0 35px #FF9900,
+               0 0 40px #FF9900,
+               0 0 50px #FF9900,
+               0 0 75px #FF9900;
+  }
+}
+
+@keyframes neon6 {
+  from {
+    text-shadow: 0 0 10px #fff,
+               0 0 20px #fff,
+               0 0 30px #fff,
+               0 0 40px #ff00de,
+               0 0 70px #ff00de,
+               0 0 80px #ff00de,
+               0 0 100px #ff00de,
+               0 0 150px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff,
+               0 0 10px #fff,
+               0 0 15px #fff,
+               0 0 20px #ff00de,
+               0 0 35px #ff00de,
+               0 0 40px #ff00de,
+               0 0 50px #ff00de,
+               0 0 75px #ff00de;
+  }
+}
+
+
+/*REEEEEEEEEEESPONSIVE*/
+@media (max-width: 650px) {
+  
+  #container{
+    width: 100%;
+  }
+  
+  p{
+    font-size:1.5em;
+  }
+
+}
+
+//----------
+
+
+table {
+  
+ 
+  //width: 50%;
+  //margin: 0 auto;
+  //margin-top: 2%;
+  //border-collapse: collapse;
+  border: black 5px solid;
+  text-align: center;
+  
+}
+
+th {
+  //background-color: rgba(5, 5, 100, 95);
+  //height: 35px;
+  //border-bottom: 1px solid rgb(210, 220, 250);
+   color: white;
+   
+}
+
+
+
+td {
+  color: white;
+  //height: 30px;
+  //border: 0.5px solid rgba(240, 240, 240, 10);
+  
+}
+
+
+/*Pseudo-clases*/
+th:hover {
+  background-color: #9e3219;
+	 border-collapse: collapse;
+}
+
+tr:hover {
+  background-color: #9e3219;
+	 border-collapse: collapse;
+}
+
+/*Acordeon*/
+
+/* caja acordeon */
+.acordeon { width:830px; overflow:hidden; margin:10px auto; color:#474747; background:rgba(0,0,0,0.5); padding:10px; 
+font-size: 0.4em;
+height:100%;
+}
+
+/********
+Generales
+*********/
+
+/* ABIERTO */
+.acordeon section:target { background:rgba(0,0,0,0.5); padding:10px;}
+.acordeon section:target:hover { background:rgba(0,0,0,0.5); }
+.acordeon section:target h2 {width:100%;}
+.acordeon section:target h2 a{ color:#FFF; padding:0;}
+.acordeon section:target p {display:block;}
+.acordeon section:target:before {display:none;}
+.acordeon section h2 a{padding:34% 10px;display:block; font-size:3em; font-weight:normal;color:#eee; text-decoration:none; }
+
+/* CERRADO */
+.acordeon section{ float:left;	overflow:hidden; color:#FFF; cursor:pointer; background: rgb(24 24 82); margin:3px; }
+.acordeon section:hover {background:rgba(0,0,0,0.5);}
+.acordeon section p { display:none; }
+.acordeon section:before{position:relative;font-size:24px;color:#fff;font-weight:bold;}
+.acordeon section:nth-child(1):before{content:'1';}
+.acordeon section:nth-child(2):before{content:'2';}
+.acordeon section:nth-child(3):before{content:'3';}
+.acordeon section:nth-child(4):before{content:'4';}
+.acordeon section:nth-child(5):before{content:'5';}
+
+
+/*********************************************************************/
+
+/** HORIZONTAL **/
+
+.horizontal section{ width:5%; height:100%; 
+	-moz-transition:width 0.2s ease-out; 
+	-webkit-transition:width 0.2s ease-out;
+  	-o-transition:width 0.2s ease-out;
+	-ms-transition:width 0.2s ease-out;
+  	transition:width 0.9s ease-out;
+}
+
+/*Posiciona el numero de la viñeta*/
+.horizontal section:before{top:3px;left:15px;}
+
+/*h2 girado*/
+.horizontal section h2 { 
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	width:240px; position:relative; left:-100px; top:10%;
+} 
+
+/*  */
+
+/*abrir al hacer hover*/
+.horizontal :target{ width:73%;height:94%; }
+.horizontal :target h2{ top:0px;left:0;
+	-webkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+	-o-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg); 
+}
+
+
+
+/*Acordian Autores*/
+ul.acordeon * {
+  transition: all .6s ease-in-out;
+  margin: 0;
+  padding: 0;
+}
+/* Contenedor general */
+ul.acordeon {
+  width: 100%; /* Personalizar ancho total */
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+  font-size: 0;
+}
+/* Cada elemento */
+ul.acordeon li {
+  position: relative;
+  display: inline-block;
+  *display: inline; zoom: 1; /* IE7 */
+  width: 10%; 
+  background: rgba(0,0,0,0.5);;
+  height:0;
+  padding-bottom: 24%; /* Ratio aspecto imagen = (height*X)/width */
+  text-align: center;
+  border:1px solid black;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/* Títulos pestañas */
+/* Contenido inicialmente oculto */
+ul.acordeon li a, ul.acordeon li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  *display: inline; zoom: 1; /* IE7 */
+  height: 100%;
+  padding:0;
+  /*background: #333;*/
+  object-fit: cover;
+}
+/* Hover: Desplegamos elemento aumentando su ancho */
+ul.acordeon:hover li {
+  width: 5%;
+}
+ul.acordeon li:hover {
+  width: 24.5%; /* 100 - 10*(nºelem-1) // X=60 para ratio imagen */ 
+  /*background: #333;*/
+}
+/* Hover: Hacemos que el título recupere la horizontal y le ponemos un fondo */
+/* Hover: Expandimos el contenido */
+ul.acordeon li:hover a{
+  width: 100%; 
+}
+/* Ajustes para resoluciones pequeñas */
+@media(max-width:600px) {
+  ul.acordeon li h4 {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+
+/*PANEL AUTORES*/
+
+
+.galeria {
+position: relative;
+width: 80%; /* Ancho a ocupar por la galería sobre el total disponible */
+overflow: hidden;
+margin: 20px auto;
+background-color: #000;
+box-shadow: 1px 1px 6px #000;
+}
+.galeria:before {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background-image: url("IMG/logoups.png"); /* Fondo por defecto */
+-moz-background-size: cover;-webkit-background-size: cover;background-size: cover;
+opacity: .1;
+}
+.imagen {
+position: relative;
+width: 15%; /* Ancho de la miniatura sobre el ancho total de la galería */
+padding-bottom: 15%; /* Idéntico al anterior para miniaturas cuadradas */
+background-position: 50% 50%;
+-moz-background-size: cover;-webkit-background-size: cover;background-size: cover;
+cursor: pointer;
+}
+.imagen:nth-of-type(1) {
+background-image: url("IMG/guerrero.png");
+}
+.imagen:nth-of-type(2) {
+background-image: url("IMG/camacho.png");
+}
+.imagen:nth-of-type(3) {
+background-image: url("IMG/cadena.png");
+}
+.imagen:nth-of-type(4) {
+background-image: url("IMG/bedoya.png");
+}
+.imagen:before {
+content: "";
+position: absolute;
+top: -700%; /* ((Nºimágenes*2)-1)*100*/
+left: 100%;
+width: 566%; /* (10000/ancho_imagen)-100 */
+height: 400%; /* Nºimagenes*100 */
+background-image: inherit;
+-moz-background-size: cover;-webkit-background-size: cover;background-size: cover;
+-moz-transition: all .8s ;-webkit-transition: all .8s ;transition: all .8s ;
+}
+.imagen:hover:nth-of-type(1):before {
+top: 0%; /* (Nº.nth-1)*(-100) */
+}
+.imagen:hover:nth-of-type(2):before {
+top: -100%; /* (Nº.nth-1)*(-100) */
+}
+.imagen:hover:nth-of-type(3):before {
+top: -200%; /* (Nº.nth-1)*(-100) */
+}
+.imagen:hover:nth-of-type(4):before {
+top: -300%; /* (Nº.nth-1)*(-100) */
+}
