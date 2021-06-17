@@ -72,7 +72,11 @@ v1.0
 
                                      ---------------LICENCIA---------------
 
-BSD-3-Clause License
+Copyright (c) ,  Todos los derechos reservados. 
+Se permite la redistribución y el uso en formato fuente y binario, con o sin modificaciones, siempre que se cumplan las siguientes condiciones: 
+* Las redistribuciones del código fuente deben conservar el aviso de derechos de autor anterior , esta lista de condiciones y el siguiente descargo de responsabilidad.
+* Las redistribuciones en formato binario deben reproducir el aviso de derechos de autor anterior, esta lista de condiciones y el siguiente descargo de responsabilidad en la documentación y / u otros materiales proporcionados con la distribución. 
+* Ni el nombre de < organización> ni los nombres de sus colaboradores pueden usarse para respaldar o promover productos derivados de este software sin un permiso previo específico por escrito. ESTE SOFTWARE ES PROPORCIONADO POR LOS TITULARES DE LOS DERECHOS DE AUTOR Y COLABORADORES "TAL CUAL" Y CUALQUIER GARANTÍA EXPRESA O IMPLÍCITA, INCLUYENDO, PERO SIN LIMITARSE A, LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD Y APTITUD PARA UN PROPÓSITO EN PARTICULAR ESTÁN RENUNCIADAS. EN NINGÚN CASO EL  SERÁ RESPONSABLE DE CUALQUIER DAÑO DIRECTO, INDIRECTO, INCIDENTAL, ESPECIAL, EJEMPLAR O CONSECUENTE (INCLUYENDO, PERO NO LIMITADO A, LA ADQUISICIÓN DE BIENES O SERVICIOS SUSTITUTOS; PÉRDIDA DE USO, DATOS O BENEFICIOS; INTERRUPCIÓN COMERCIAL) SIN EMBARGO Y EN CUALQUIER TEORÍA DE RESPONSABILIDAD, YA SEA POR CONTRATO, RESPONSABILIDAD ESTRICTA O AGRAVIO (INCLUYENDO NEGLIGENCIA O DE OTRA MANERA) QUE SURJA DE CUALQUIER MANERA DEL USO DE ESTE SOFTWARE, AUNQUE SE INDIQUE LA POSIBILIDAD DE DICHO DAÑO.
 
 
 
