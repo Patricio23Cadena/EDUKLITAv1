@@ -26,42 +26,34 @@
 </h:head>
 <h:body id="Fondo">
  
-	 
-            
-  <div class="login-container">
-	<h:form action="" class="form-login">
-	<p:messages id="msgs"/>
-		<ul class="login-nav">
-			<li class="login-nav__item active">
-				<a href="#">Sign In</a>
-			</li>
-			<li class="login-nav__item">
-				<a href="#">Sign Up</a>
-			</li>
-		</ul>
-		
-		<p:outputLabel for="" value="Username" class="login__label">
-			
-		</p:outputLabel>
-		<p:inputText id="login-input-user" required="true" class="login__input" type="text" />
-		<p:outputLabel for="" class="login__label" value="Password">
-			 
-		</p:outputLabel>
-		<p:password id="toggle" value="#{passwordView.password6}" toggleMask="true" class="login__input" required="true" redisplay="true">
-		 <f:validateLength minimum="2"/> 
-            </p:password> 
-		 
-		<button class="login__submit" >INGRESAR</button>
+	<h:form>
+		<p:panel id="panel" header="Nueva Persona">
+			<p:messages id="msgs" />
+			<h:panelGrid columns="3" cellpadding="5">
+				<p:outputLabel for="firstname" value="Firstname:" />
+				<p:inputText id="firstname" value="#{userView.firstname}"
+					required="true" label="Firstname">
+					<f:validateLength minimum="2" />
+				</p:inputText>
+				<p:message for="firstname" display="icon" />
+				<p:outputLabel for="lastname" value="Lastname:" />
+				<p:inputText id="lastname" value="#{userView.lastname}"
+					label="Lastname" required="true">
+					<f:validateLength minimum="2" />
+					<p:ajax update="msgLastname" event="keyup" />
+				</p:inputText>
+				<p:message for="lastname" id="msgLastname" display="icon" />
+			</h:panelGrid>
+
+			<p:commandButton value="Save" update="panel"
+				action="#{userView.save}" icon="pi pi-check" />
+		</p:panel>
 	</h:form>
-	<a href="#" class="login__forgot">¿Has olvidado tu contraseña?</a>
-</div>
+
+ 	
+
  
-    
-	 
-	 
-	
-	
-	 
+ 	 
 
 </h:body>
 </html>
