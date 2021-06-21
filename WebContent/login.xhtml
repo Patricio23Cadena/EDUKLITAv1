@@ -25,30 +25,42 @@
 	<title>LOGIN</title>
 </h:head>
 <h:body id="Fondo">
- 
-	<h:form>
-		<p:panel id="panel" header="Nueva Persona">
-			<p:messages id="msgs" />
-			<h:panelGrid columns="3" cellpadding="5">
-				<p:outputLabel for="firstname" value="Firstname:" />
-				<p:inputText id="firstname" value="#{userView.firstname}"
-					required="true" label="Firstname">
-					<f:validateLength minimum="2" />
-				</p:inputText>
-				<p:message for="firstname" display="icon" />
-				<p:outputLabel for="lastname" value="Lastname:" />
-				<p:inputText id="lastname" value="#{userView.lastname}"
-					label="Lastname" required="true">
-					<f:validateLength minimum="2" />
-					<p:ajax update="msgLastname" event="keyup" />
-				</p:inputText>
-				<p:message for="lastname" id="msgLastname" display="icon" />
-			</h:panelGrid>
 
-			<p:commandButton value="Save" update="panel"
-				action="#{userView.save}" icon="pi pi-check" />
-		</p:panel>
+ <div class="login-container" >
+	<h:form  class="form-login">
+	<p:growl id="growl" showDetail="true" life="2000" />
+	<p:outputPanel style="display:block" id="panel">
+	<p:messages id="msgs"/>
+		<ul class="login-nav">
+			<li class="login-nav__item active">
+				<a href="#">Sign In</a>
+			</li>
+		</ul>
+ 
+ 		<p:outputLabel for="firstname" value="Username" class="login__label"/>
+			
+		<p:inputText id="firstname" value="#{userView.firstname}" required="true" class="login__input" type="text" label="Firstname">
+		 <f:validateLength minimum="7"/> 
+		 </p:inputText>
+		<p:message for="firstname" display="icon" />
+		
+		
+		
+		<p:outputLabel for="password" class="login__label" value="Password">
+			 
+		</p:outputLabel>
+		<p:password id="password" value="#{userView.lastname}" toggleMask="true" class="login__input" required="true" redisplay="true" label="Password">
+		 <f:validateLength minimum="10"/> 
+		 <p:ajax update="msgPassword" event="keyup" />
+            </p:password> 
+		 <p:message for="password" id="msgPassword" display="icon" />
+		<p:commandButton  actionListener="#{userView.showWarn}" update="growl" value="SING IN"   class="login__submit" icon="pi pi-check"/>
+	</p:outputPanel>
 	</h:form>
+	
+	<a href="#" class="login__forgot">¿Has olvidado tu contraseña?</a>
+	
+</div>
 
  	
 
