@@ -12,6 +12,15 @@ public class PersonaBean {
 	
 	 private String firstname;
 	 private String password;
+	 
+	 private String nombres;
+	 private String apellidos; 
+	 private int edad;
+	 private long cedula;
+	 private String correo; 
+
+	 
+	 
 	 private boolean logeado = false;
 	 public boolean estaLogeado() {
 	 return logeado;}
@@ -28,7 +37,44 @@ public class PersonaBean {
 	 this.password = lastname;
 	 }
 	 
-	 public void addMessage(FacesMessage.Severity severity, String summary, String detail) {
+	 
+	 
+		
+		
+		
+		
+		
+	public String getNombres() {
+		return nombres;
+	}
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+	public String getApellidos() {
+		return apellidos;
+	}
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+	public int getEdad() {
+		return edad;
+	}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public long getCedula() {
+		return cedula;
+	}
+	public void setCedula(long cedula) {
+		this.cedula = cedula;
+	}
+	public String getCorreo() {
+		return correo;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
+	}
+	public void addMessage(FacesMessage.Severity severity, String summary, String detail) {
 	        FacesContext.getCurrentInstance().
 	                addMessage(null, new FacesMessage(severity, summary, detail));
 	    }
@@ -40,8 +86,7 @@ public class PersonaBean {
 
 	    public void showWarn() {
 	        addMessage(FacesMessage.SEVERITY_WARN, "Warn Message", "Message Content");
-	    }
-
+	    } 
 	    public void showError() {
 	        addMessage(FacesMessage.SEVERITY_ERROR, "Error", "Credenciales Incorrectas");
 	    }
@@ -58,6 +103,10 @@ public class PersonaBean {
 	public PersonaBean() {
 		 firstname="";
 		 password="";
+		 nombres="";
+		 apellidos=""; 
+		 correo ="";
+		 
 	 }
 	
 }

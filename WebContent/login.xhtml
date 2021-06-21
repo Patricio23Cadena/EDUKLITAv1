@@ -5,27 +5,35 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
+ 
 
 	<style>
 #Fondo {
-	background: red;
+	background: url(images/finalcity.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-
-
-.ui-widget-content { 
-      background: url(images/satelite2.jpg); 
-          color: White;
-}
-
-
 </style> 
 	<h:outputStylesheet library="css" name="estiloslogin.css" /> 
 	<title>LOGIN</title>
 </h:head>
-<h:body id="Fondo">
 
+ 
+
+
+
+ 
+<div class="frame">
+   
+  <button onclick="window.location.href='/eduklita/index.jsf'"  class="custom-btn btn-12"><span>  </span><span>     </span>
+   
+  </button>
+   
+   
+</div> 
+
+<h:body id="Fondo"> 
+ 
  <div class="login-container" >
 	<h:form  class="form-login">
 	<p:growl id="growl" showDetail="true" life="2000" />
@@ -33,20 +41,25 @@
 	<p:messages id="msgs"/>
 		<ul class="login-nav">
 			<li class="login-nav__item active">
-				<a href="#">Sign In</a>
+				 <p:link outcome="login" value="INGRESAR">
+        <f:param name="login" value="10"/></p:link>&nbsp;&nbsp;&nbsp;
+			 <p:link outcome="register" value="REGISTRARSE">
+        <f:param name="register" value="10"/></p:link> 
 			</li>
 		</ul>
+  
+    
+
  
- 		<p:outputLabel for="firstname" value="Username" class="login__label"/>
+ 		<p:outputLabel for="firstname" value="Correo electrónico:" class="login__label"/>
 			
 		<p:inputText id="firstname" value="#{userView.firstname}" required="true" class="login__input" type="text" label="Firstname">
-		 <f:validateLength minimum="7"/> 
+		 <f:validateLength minimum="10"/> 
 		 </p:inputText>
 		<p:message for="firstname" display="icon" />
 		
-		
-		
-		<p:outputLabel for="password" class="login__label" value="Password">
+		 
+		<p:outputLabel for="password" class="login__label" value="Contraseña:">
 			 
 		</p:outputLabel>
 		<p:password id="password" value="#{userView.lastname}" toggleMask="true" class="login__input" required="true" redisplay="true" label="Password">
@@ -54,7 +67,8 @@
 		 <p:ajax update="msgPassword" event="keyup" />
             </p:password> 
 		 <p:message for="password" id="msgPassword" display="icon" />
-		<p:commandButton  actionListener="#{userView.showWarn}" update="growl" value="SING IN"   class="login__submit" icon="pi pi-check"/>
+		<p:commandButton action="#{userView.save()}"  actionListener="#{userView.showInfo}" type="password" update="growl" value="INGRESAR" id="contraseña"  class="login__submit" icon="pi pi-check" style=" text-align: center; border-style: none;"/>
+	 
 	</p:outputPanel>
 	</h:form>
 	
@@ -63,7 +77,8 @@
 </div>
 
  	
-
+<script></script>
+  
  
  	 
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+ 
+
+	<style>
+#Fondo {
+	background: url(images/administrador.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style> 
+	<h:outputStylesheet library="css" name="estilosAdmin.css" /> 
+	<title>ADMINISTRADOR</title>
+</h:head>
+
+ 
+
+ 
+
+<h:body id="Fondo"> 
+ 
+  <h:form>
+   
+   <p:growl id="messages" showDetail="true"/>
+   <div class="card"> 
+        <p:menu toggleable="true">
+            <p:submenu label="Uusarios">
+              
+                <p:menuitem value="Creación" action="#{menuView.update}" update="messages" icon="pi pi-refresh"/>
+                <p:menuitem value="Cambio de clave" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Bloqueo de usuario" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Consulta" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
+                
+            </p:submenu>
+            <p:submenu label="Auditoría">
+                <p:menuitem value="Ver" url="http://www.primefaces.org" icon="pi pi-external-link"/>
+                  </p:submenu>
+        </p:menu>
+    </div>
+   
+   </h:form>
+ 
+  
+ 
+ 	 
+
+</h:body>
+</html>

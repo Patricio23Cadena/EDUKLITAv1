@@ -6,120 +6,103 @@
 	xmlns:p="http://primefaces.org/ui">
 <h:head>
 
+<script>
+function myfunction() {
+}
+</script>
+
 	<style>
 #Fondo {
-	background: url(images/satelite2.jpg);
+	background: url(images/finalcity2.png);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-</style>
-	<h:outputStylesheet library="css" name="estiloslogin.css" />
-	<title>INDEX</title>
+</style> 
+	<h:outputStylesheet library="css" name="estilosRegister.css" /> 
+	<title>REGISTRARSE</title>
 </h:head>
-<h:body id="Fondo">
 
-	 
-	 
-	 
-	  
-	  <h:form>
-<p:panel id="panel" header="Registro Persona">
-<p:messages id="msgs"/>
-<h:panelGrid columns="2" cellpadding="5">
-<p:outputLabel for="firstname" value="Nombre:" />
-<p:inputText id="firstname" value="#{userView.firstname}" required="true" label="Firstname">
-<f:validateLength minimum="2" />
-</p:inputText>
 
-<p:outputLabel for="Apellidos" value="Apellidos" />
-<p:inputText id="Apellidos" value="#{userView.firstname}" required="true" label="Apellidos">
-<f:validateLength minimum="2" />
-</p:inputText>
+ <div class="frame">
+   
+  <button onclick="window.location.href='/eduklita/index.jsf'"  class="custom-btn btn-12"><span>   </span><span>    </span>
+   
+  </button> 
+</div> 
+
+<h:body id="Fondo"> 
  
- 
- 
- <p:outputLabel for="Correo" value="Correo" />
-<p:inputText id="Correo" value="#{userView.Correo}" required="true" label="Correo">
-<f:validateLength minimum="2" />
-</p:inputText>
-
-
-
-<p:outputLabel for="Cedula" value="Cedula" />
-<p:inputText id="Cedula" value="#{userView.Cedula}" required="true" label="Cedula">
-<f:validateLength minimum="2" />
-</p:inputText>
-
-
-<p:outputLabel for="Usuario" value="Usuario" />
-<p:inputText id="Usuario" value="#{userView.Usuario}" required="true" label="Usuario">
-<f:validateLength minimum="2" />
-</p:inputText>
-
- 
-
-
-<p:outputLabel for="lastname" value="Contraseña:" />
-<p:inputText id="lastname" value="#{userView.lastname}" label="Lastname" required="true">
-<f:validateLength minimum="2" />
-<p:ajax update="msgLastname" event="keyup" />
-</p:inputText>
-<p:message for="lastname" id="msgLastname" display="icon" />
-
- 
-		
-		
-		
-<div class="login-container">
-	<h:form action="" class="form-login">
+ <div class="login-container" >
+	<h:form  class="form-login">
+	<p:growl id="growl" showDetail="true" life="3000" />
+	<p:outputPanel style="display:block" id="panel">
+	<p:messages id="msgs"/>
 		<ul class="login-nav">
 			<li class="login-nav__item active">
-				<a href="#">Sign In</a>
-			</li>
-			<li class="login-nav__item">
-				<a href="#">Sign Up</a>
+			
+			 <p:link outcome="login" value="INGRESAR">
+        <f:param name="login" value="10"/></p:link>&nbsp;&nbsp;&nbsp;
+			 <p:link outcome="register" value="REGISTRARSE">
+        <f:param name="register" value="10"/></p:link> 
 			</li>
 		</ul>
-		
-		<p:outputLabel for="" class="login__label">
-			Username
-		</p:outputLabel>
-		<p:inputText id="login-input-user" class="login__input" type="text" />
-		<p:outputLabel for="" class="login__label">
-			Password
-		</p:outputLabel>
-		<p:inputText id="login-input-password" class="login__input" type="password" />
+ 
+ 		<p:outputLabel for="nombres" value="Nombres:" class="login__label"/> 
+		<p:inputText id="nombres" value="#{userView.nombres}" required="true" class="login__input" type="text" label="Nombres">
+		 <f:validateLength minimum="7"/> 
+		 </p:inputText>
+		<p:message for="nombres" display="icon" />
 		 
-		<button class="login__submit" >INGRESAR</button>
+		 
+	<p:outputLabel for="apellidos" value="Apellidos:" class="login__label"/> 
+		<p:inputText id="apellidos" value="#{userView.apellidos}" required="true" class="login__input" type="text" label="Apellidos">
+		 <f:validateLength minimum="7"/> 
+		 </p:inputText>
+		<p:message for="apellidos" display="icon" />
+		
+		
+		<p:outputLabel for="cedula" value="Cédula:" class="login__label"/> 
+		<p:inputText id="cedula" value="#{userView.cedula}" required="true" class="login__input" type="text" label="Cedula">
+		 <f:validateLength minimum="10" maximum="10"/> 
+		 </p:inputText>
+		<p:message for="cedula" display="icon" />
+		
+		<p:outputLabel for="edad" value="Edad:" class="login__label"/> 
+		<p:inputText id="edad" value="#{userView.edad}" required="true" class="login__input" type="text" label="Edad">
+		 <f:validateLength minimum="1" maximum="2"/> 
+		 </p:inputText>
+		<p:message for="edad" display="icon" />
+		
+		
+		
+		
+		<p:outputLabel for="correo" value="Correo electrónico:" class="login__label"/> 
+		<p:inputText id="correo" value="#{userView.correo}" required="true" class="login__input" type="text" label="correo">
+		 <f:validateLength minimum="20"/> 
+		 </p:inputText>
+		<p:message for="correo" display="icon" /> 
+		 
+		<p:outputLabel for="password" class="login__label" value="Contraseña:"> 
+		</p:outputLabel>
+		<p:password id="password" value="#{userView.lastname}" toggleMask="true" class="login__input" required="true" redisplay="true" label="Password">
+		 <f:validateLength minimum="10"/> 
+		 <p:ajax update="msgPassword" event="keyup" />
+            </p:password> 
+		 <p:message for="password" id="msgPassword" display="icon" />
+		<p:commandButton  actionListener="#{userView.showWarn}" type="password" update="growl" value="INGRESAR" id="contraseña"  class="login__submit" icon="pi pi-check" style=" text-align: center; border-style: none;"/>
+	 
+	</p:outputPanel>
 	</h:form>
-	<a href="#" class="login__forgot">¿Has olvidado tu contraseña?</a>
-</div>		
-			
-
-
-
-</h:panelGrid>
-<p:commandButton value="Save" update="panel" action="#{userView.save}" icon="pi pi-check" />
-
-
-
-
-
-
-
-</p:panel>
-
-
-
-
- </h:form>
-	  
-	 
-	 
 	
+	<a href="http://localhost:8080/eduklita/login.jsf" class="login__forgot">¿Ya tienes tu cuenta?</a>
 	
-	 
+</div>
 
-	 
+ 	
+
+  
+ 
+ 	 
+
 </h:body>
 </html>

@@ -1,21 +1,5 @@
 @charset "ISO-8859-1";
 
-
-
-/*.wrapper {
-    height: 15%;
-	width:7%;
-	padding-left:3%;
-  max-width: 65rem;
-  width: 100%;*/
-  /*margin: 2rem auto;*/
-  /*padding: 5rem;*/
-  /*text-align: center;
-
-}*/
-
-
-
 .login__inicio {
 	color: #ffffff;
 	font-size: 1rem;
@@ -56,38 +40,26 @@ button::after {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 .login{
 	
 	justify-content: center;
 	
 	
-}
+} 
 
 
-
-
-
-
-
-
- 
-
-
-
-
-
-/*body {
-	background-color: #e9e9e9;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 16px;
-	line-height: 1.25;
-	letter-spacing: 1px;
-}
-
-* {
-	box-sizing: border-box;
-	transition: .25s all ease;
-}*/
 
 .login-container {
 	display: block;
@@ -379,10 +351,10 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   -webkit-transition: all .3s;
   transition: all .3s;
   
+  background-image: url(../images/home.png); 
   width:50px;
   height:50px;
   
-  background-image: url(../images/home.png); 
   
   background-size: cover;
 	background-repeat: no-repeat;
@@ -390,6 +362,10 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   
   
 }
+
+
+
+
 .btn-12 span:nth-child(1) {
   box-shadow:
    -7px -7px 20px 0px #fff9,
@@ -431,5 +407,3 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
 
 
  
- 
-

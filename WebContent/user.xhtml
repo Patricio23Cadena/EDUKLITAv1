@@ -4,9 +4,43 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
-	<body>
-	<p:growl id="growl" showDetail="true" life="2000" />
+<h:head>
+ 
 
-	</body>
-	
+	<style>
+#Fondo {
+	background: url(images/index_usuario.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style> 
+	<h:outputStylesheet library="css" name="estilosUser.css" /> 
+	<title>USUARIO</title>
+</h:head>
+
+ 
+
+<h:body id="Fondo"> 
+ 
+   <h:form>
+   
+   <p:growl id="messages" showDetail="true"/>
+   <div class="card"> 
+        <p:menu toggleable="true">
+            <p:submenu label="Reportes">
+                 
+                <p:menuitem value="Creación" action="#{menuView.update}" update="messages" icon="pi pi-refresh"/>
+                <p:menuitem value="Publicación" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
+            </p:submenu>
+            <p:submenu label="Opciones">
+                <p:menuitem value="Cambio de clave" url="http://www.primefaces.org" icon="pi pi-external-link"/>
+             </p:submenu>
+        </p:menu>
+    </div>
+   
+   </h:form>
+ 
+ 	 
+
+</h:body>
 </html>
