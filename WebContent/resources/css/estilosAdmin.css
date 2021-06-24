@@ -1,5 +1,155 @@
 @charset "ISO-8859-1";
 
-.ui-widget-content {
-   background-color: rgba(0,0,0,0.5);
+.ui-menu {
+    width: none;
+    padding: .3em;
+    position: relative;
+    outline: 0 none;
 }
+
+.ui-widget{
+	
+	font-weight: bolder;
+    font-style: Italic;
+}
+
+.ui-widget-content {
+   background-color: #dda15e;
+}
+
+
+.ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover {
+        background: #dda15e; }
+
+.ui-state-hover {
+        -webkit-box-shadow: black;
+        box-shadow:black; 
+        }
+        
+
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content 
+.ui-state-focus,.ui-widget-header .ui-state-focus
+{border:1px solid #bc6c25;background:#bc6c25 url("/eduklita/javax.faces.resource/images/ui-bg_highlight-hard_80_85b2cb_1x100.png.jsf?ln=primefaces-aristo") 50% 50% repeat-x;
+background:#bc6c25 linear-gradient(top,rgba(255,255,255,0.6),rgba(255,255,255,0));
+background:#bc6c25 -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.6)),to(rgba(255,255,255,0)));
+background:#bc6c25 -moz-linear-gradient(top,rgba(255,255,255,0.6),rgba(255,255,255,0));
+font-weight:bold;color:#313131;-moz-box-shadow:0 0 5px #bc6c25;-webkit-box-shadow:0 0 8px #bc6c25;box-shadow:0 0 8px #bc6c25}	    
+        
+
+.ui-widget-header {
+    border: 1px solid #a8a8a8;
+    background: #c4c4c4 url(/eduklita/javax.faces.resource/images/ui-bg_highlight-soft_100_c4c4c4_1x100.png.jsf?ln=primefaces-aristo) 50% 50% repeat-x;
+    background: #c4c4c4 linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    background: #ffcb77 -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.8)),to(rgba(255,255,255,0)));
+    background: #c4c4c4 -moz-linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    color: #333;
+    font-weight: bold;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 70%);
+}
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#footer{
+	margin-top:10%;
+	height: 30%;
+	width:100%;
+	font-size: 0.5em;
+	color: White;
+	background-color: rgba(0,0,0,0.5);
+	/*display: inline-flex;*/
+    /*flex-wrap: wrap;*/
+    	/*align-content: flex-start;*/
+    display: flex;
+    justify-content: start;}
+
+
+.footerToDIvC{
+	height: 96%;
+	width:27%;
+	display: flex;
+  flex-direction: column;
+  padding-left:25%;
+ 
+}
+
+.footerDiv{
+	padding-top:2%;
+	font-size: 0.6em;
+	color: White;
+	height: 100%;
+	width:33%;
+
+	 display: flex;
+    justify-content: center;
+	 /*display: flex;
+	flex-wrap: wrap;
+	align-content: flex-around;
+	flex-direction: column;
+	height: 100%;*/
+}
+
+.imagenCentroFo{
+	
+	height: 80%;
+	width:40%;
+
+	
+}
+.imagenCentroFo1{
+    height: 80%;
+	width:40%;
+	
+	
+  
+}
+
+
+
+.footerImg{
+	height: 96%;
+	width:12%;
+}
+
+.gifTierra {
+	height: 100%;
+	width:100%;	
+	
+}
+
+.imgFoter{
+	
+	height: 15%;
+	width:15%;	
+}
+
+.foh1{
+	padding-top:28%;
+	padding-left:5%;
+	font-size:3.5em;
+}
+
+.foh2{
+	
+	font-size:1.2em;
+}
+ 

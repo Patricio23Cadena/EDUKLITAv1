@@ -13,7 +13,7 @@ function myfunction() {
 
 	<style>
 #Fondo {
-	background: url(images/finalcity2.png);
+	background: url(images/administrador3.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -25,7 +25,7 @@ function myfunction() {
 
  <div class="frame">
    
-  <button onclick="window.location.href='/eduklita/index.jsf'"  class="custom-btn btn-12"><span>   </span><span>    </span>
+  <button onclick="window.location.href='/eduklita/admin.jsf'"  class="custom-btn btn-12"><span>   </span><span>    </span>
    
   </button> 
 </div> 
@@ -39,9 +39,7 @@ function myfunction() {
 	<p:messages id="msgs"/>
 		<ul class="login-nav">
 			<li class="login-nav__item active">
-			
-			 <p:link outcome="login" value="INGRESAR">
-        <f:param name="login" value="10"/></p:link>&nbsp;&nbsp;&nbsp;
+			 
 			 <p:link outcome="register" value="REGISTRARSE">
         <f:param name="register" value="10"/></p:link> 
 			</li>
@@ -89,7 +87,7 @@ function myfunction() {
 		 <p:ajax update="msgPassword" event="keyup" />
             </p:password> 
 		 <p:message for="password" id="msgPassword" display="icon" />
-		<p:commandButton  actionListener="#{userView.showWarn}" type="password" update="growl" value="INGRESAR" id="contraseña"  class="login__submit" icon="pi pi-check" style=" text-align: center; border-style: none;"/>
+		<p:commandButton  actionListener="#{userView.showWarn}" type="password" update="growl" value="REGISTRAR" id="contraseña"  class="login__submit" icon="pi pi-check" style=" text-align: center; border-style: none;"/>
 	 
 	</p:outputPanel>
 	</h:form>

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+	<style>
+#Fondo {
+	background: url(images/fondo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style>
+	<h:outputStylesheet library="css" name="estilos.css" />
+	<title>GRÁFICOS</title>
+</h:head>
+<h:body id="Fondo">
+
+	<p:menubar styleClass="menubar">
+		<p:submenu label="Inicio" icon="pi pi-pencil">
+			<p:menuitem style="color:White" value="Inicio" url="index.jsf"
+				icon="pi pi-angle-double-left" />
+			<p:menuitem style="color:White" value="GitHub"
+				url="https://github.com/Patricio23Cadena/EDUKLITAv1/tree/master"
+				icon="pi pi-angle-double-right" target="_blank" />
+			<p:menuitem style="color:White" value="Wiki"
+				url="https://patricio23cadena.github.io/EDUKLITAv1/"
+				icon="pi pi-angle-double-right" target="_blank" />
+			<p:menuitem style="color:White" value="Readme"
+				url="https://github.com/Patricio23Cadena/EDUKLITAv1/blob/main/README.md"
+				icon="pi pi-angle-double-right" target="_blank" />
+		</p:submenu>
+		<p:menuitem value="Introducción" style="color:White"
+			outcome="introduccion" icon="pi pi-times" />
+		<p:menuitem value="¿Quiénes somos?" style="color:White"
+			outcome="nosotros" icon="pi pi-times" />
+			<p:menuitem value="Misión/Visión" style="color:White" outcome="misionvision"
+			icon="pi pi-times" />
+		<p:menuitem value="Gráficos" style="color:White" outcome="graficos"
+			icon="pi pi-times" />
+	</p:menubar>
+
+ 
+	  
+	<div id="footer">	<div class="footerImg">
+		
+		<img class="gifTierra" src="images/giphy.gif"/>
+		</div>
+		<div class="footerToDIvC">
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/telefono.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">0984571751</h1>
+		</div>
+		</div>
+		
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/mail.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">guerrero01.@gmail.com</h1>
+		</div>
+		</div>
+		<div >
+		<b  class="foh2">Copyright© 2021. EDUKLITA. Todos los derechos reservados. </b>
+		</div>
+		</div>
+	
+	</div>
+	
+	
+	<style type="text/css">
+.ui-stack {
+	z-index: 1000;
+	
+}
+</style>
+
+	<h:form >
+		<p:stack   icon="images/herramienta.png" expanded="false">
+			<p:menuitem value="Wiki" 
+			url="https://patricio23cadena.github.io/EDUKLITAv1/"
+			target="_blank"
+			icon="images/wiki.png" />
+			<p:menuitem value="Readme" 
+			url="https://github.com/Patricio23Cadena/EDUKLITAv1/blob/main/README.md"
+				target="_blank"
+			icon="images/readme.png" />
+			<p:menuitem value="Facebook"
+				url="https://www.facebook.com/profile.php?id=100068991534701"
+				target="_blank"
+				icon="images/facebook.png" />
+			<p:menuitem value="Youtube"
+			    url="https://www.youtube.com/channel/UCIPQtaDrSSkHVb3wE-pApzQ"
+				target="_blank"
+				icon="images/youtube.png" />
+			<p:menuitem  value="GitHub"
+				url="https://github.com/Patricio23Cadena/EDUKLITAv1/tree/master"
+				target="_blank"
+				icon="/images/github.png" />
+		</p:stack>
+	</h:form>
+
+</h:body>
+</html>

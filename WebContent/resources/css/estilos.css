@@ -89,40 +89,8 @@ submenu{
 
 
 
-
-
-
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700');
-
-body {
-  /*min-height: 100%;*/
-  /*height:-webkit-fill-available;*/
-  margin: 0;
-  height:200%;
-  font-family: Lato, sans-serif;
-  /*background-color: #E1E2E1; */
-  /*overflow-y:scroll;*/
-}
-
-header{
-    background:#35429f;        
-}
-h2{
-   font-size: 72px;
-  background: -webkit-linear-gradient(#ff0000, #7686fd);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h2 {
-animation-duration: 12s !important; /*tiempo que dura la animación*/ 
-animation-delay: 5s; /*tiempo de espera hasta que se produce la animación*/
-/*  animation-iteration-count: infinite;*/
-}
-
  .ui-menu .ui-menu-list .ui-menuitem .ui-menuitem-link.ui-state-hover {
-        background: #858ae3; }
+        background: #c1770f; }
 
  h4{
  
@@ -251,14 +219,16 @@ text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0
  /*Letra del titulo de eduklita*/
  .detallePro{
 	margin-top:35%;
-	
+	margin-left:40%;
 	padding-top:1%;
 	text-align:center;
 	height: 30%;
 	width: 100%;
-	font-size:0.7em;
-	color:white;
+	font-size:1.2em;
+	color:black;
 	font-family: "Consolas", monospace;;
+	
+	
 }
  
  .divcontenedorTi{
@@ -301,35 +271,21 @@ text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0
   
   font-family: 'Erica One', cursive;
   font-size: 8em;
-  color: #00a8e8;
+  color: #007200;
   text-align: center;
   line-height: 100px;
-  text-shadow: 0 1px 0 #CCC,
-               0 2px 0 #CCC,
-               0 3px 0 #CCC,
-               0 4px 0 #CCC,
-               0 5px 0 #CCC,
-               0 6px 0 transparent,
-               0 7px 0 transparent,
-               0 8px 0 transparent,
-               0 9px 0 transparent,
-               0 10px 10px rgba(0, 0, 0, .6);
+  text-shadow: 0 1px 0 #9ef01a, 0 2px 0 #9ef01a, 0 3px 0 #9ef01a,
+   0 4px 0 #9ef01a, 0 5px 0 #9ef01a, 0 6px 0 transparent, 0 7px 0 #9ef01a, 0 8px 0 #9ef01a, 0 9px 0 transparent, 
+   0 10px 10px rgb(88 85 65 / 96%);
 }
 /* ANIMATION */
 @-webkit-keyframes bounce {
   100% {
     top: -220px;
     
-    text-shadow: 0 1px 0 #CCC,
-                 0 2px 0 #CCC,
-                 0 3px 0 #CCC,
-                 0 4px 0 #CCC,
-                 0 5px 0 #CCC,
-                 0 6px 0 #CCC,
-                 0 7px 0 #CCC,
-                 0 8px 0 #CCC,
-                 0 9px 0 #CCC,
-                 0 30px 30px rgba(0, 0, 0, .3);
+   text-shadow: 0 1px 0 #ccff33, 0 2px 0 #ccff33, 0 3px 0 #ccff33,
+    0 4px 0 #ccff33, 0 5px 0 #ccff33, 0 6px 0 #ccff33, 
+    0 7px 0 #ccff33, 0 8px 0 #ccff33, 0 9px 0 #ccff33, 0 30px 30px rgb(0 0 0 / 30%);
   }
 }
 
@@ -339,8 +295,8 @@ text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0
   /*flex-direction: ;*/
   flex-direction:row;
 	height: 100%;
-	width:85%;
-	padding-left:15%;
+	width:30%;
+	padding-left:32%;
  }
  
  
@@ -349,7 +305,7 @@ text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0
  .wrapper {
     height: 15%;
 	width:7%;
-	padding-left:3%;
+	padding-left:35%;
  /* max-width: 65rem;
   width: 100%;*/
   /*margin: 2rem auto;*/
@@ -364,9 +320,9 @@ hr {
 }
 button {
   font-size: 1.0em;
-  background: #0077b6;
+  background: #f08080;
   color: #fff;
-  border: 0.25rem solid #0077b6;
+  border: 0.25rem solid #f08080;
   padding: 0.85em 0.75em;
   margin: 2.1rem;
   position: relative;

@@ -3,6 +3,9 @@
  .divcontenedorNosotros{
   width: 100%;  
  }
+ 
+ 
+ 
 
 
 
@@ -11,7 +14,7 @@
     border: 1px solid #191717;
     background: #272424 url(/eduklita/javax.faces.resource/images/ui-bg_highlight-soft_100_c4c4c4_1x100.png.jsf?ln=primefaces-aristo) 50% 50% repeat-x;
     background: #c4c4c4 linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
-    background: #003566 -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.8)),to(rgba(255,255,255,0)));
+    background: #c1770f -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.8)),to(rgba(255,255,255,0)));
     background: #c4c4c4 -moz-linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
     color: #FFFF;
     font-weight: bold;
@@ -19,18 +22,17 @@
 }
 
 
+/*background: #a10220;*/
+
 .ui-widget-content { 
-    background: url(images/satelite2.jpg); 
-    color:#FFFF;
+	border:none;  
 }
  
  ui-carousel-button ui-carousel-prev-button ui-icon ui-icon-circle-triangle-w{
  
  color:red;
  }
- 
-
-
+  
 .circular-imagen {
   border-top-left-radius: 50% 50%;
   border-top-right-radius: 50% 50%;
@@ -38,14 +40,23 @@
   border-bottom-left-radius: 50% 50%;
 }
 
-  
+#destrezas {
+	   margin-top:0px;
+}
 
+td {
+    display: table-cell;
+    vertical-align: inherit; 
+    
+}
 
 table {
     border-collapse: separate;
     text-indent: initial;
     border-spacing: 2px;
-     width:100%
+     width:100%;  
+     	background: rgba(0,0,0,0.5); 
+     
 }
 
 
@@ -55,6 +66,7 @@ table {
  color: #FFFFFF;
 text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0, 0 0 20px #2cd0f0, 0 0 20px #2cd0f0, 0 0 1px #2cd0f0, 0 0 12px #2cd0f0;
 	 font-family: 'Erica One', cursive;
+text-align:center;
 }
 
 
