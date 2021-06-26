@@ -16,14 +16,7 @@
 </style> 
 	<h:outputStylesheet library="css" name="estilosAdmin.css" /> 
 	<title>ADMINISTRADOR</title>
-</h:head>
-
- 
-
-
-
-
-
+</h:head> 
  
 
 <h:body id="Fondo"> 
@@ -39,6 +32,8 @@
                 <p:menuitem value="Cambio de clave" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
                 <p:menuitem value="Bloqueo de usuario" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
                 <p:menuitem value="Consulta usuarios" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Cerrar Sesión" action="#{menuView}" update="messages" icon="pi pi-times"/>  
+                
                 
             </p:submenu>
             <p:submenu label="Auditoría">
