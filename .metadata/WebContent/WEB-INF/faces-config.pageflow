@@ -1,19 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" comment="registrado" id="pf16234593569280" configfile="/eduklita/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="72" y="192" id="pf162346474428721" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf162346474428722 pf162346474428724 pf16235564030752 pf16238912324130 pf16238912324131 pf16245142305990" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="introduccion.xhtml" x="552" y="120" id="pf162346474428726" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf162346474428724" path="/introduccion.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="nosotros.xhtml" x="408" y="291" id="pf162346474428728" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf162346474428722" path="/nosotros.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="misionvision.xhtml" x="552" y="240" id="pf16235564030753" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf16235564030752" path="/misionvision.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="240" y="-12" id="pf16238912324132" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf16242093210930" inlinks="pf16238912324130 pf16242593738600" path="/login.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="register.xhtml" x="351" y="84" id="pf16238912324133" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf16242593738600" inlinks="pf16238912324131" path="/register.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="user.xhtml" x="456" id="pf16242093210931" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf16242093210930" path="/user.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="graficos.xhtml" x="295" y="365" id="pf16245142306011" inlinks="pf16245142305990" path="/graficos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="72" y="192" id="pf162346474428721" referenceLink="//@navigationRule.5/@fromViewId|" outlinks="pf162346474428722 pf162346474428724 pf16235564030752 pf16238912324130 pf16245142305990" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="introduccion.xhtml" x="216" y="168" id="pf162346474428726" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf162346474428724" path="/introduccion.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="nosotros.xhtml" x="243" y="330" id="pf162346474428728" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf162346474428722" path="/nosotros.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="misionvision.xhtml" x="232" y="251" id="pf16235564030753" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf16235564030752" path="/misionvision.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="login.xhtml" x="180" id="pf16238912324132" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf16242093210930 pf16246761274000" inlinks="pf16238912324130" path="/login.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="register.xhtml" x="663" y="215" id="pf16238912324133" referenceLink="//@navigationRule.7/@navigationCase.0/@toViewId|" inlinks="pf16242593738600" path="/register.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user.xhtml" x="456" y="-12" id="pf16242093210931" referenceLink="//@navigationRule.24/@fromViewId|" outlinks="pf162467649389313 pf162467649389314 pf162467649389315 pf162467649389316 pf162467649389317 pf162467649389318 pf162467649389319 pf162467649389320 pf162467649389321 pf162467649389322 pf162467781594233 pf162467649389312" inlinks="pf16242093210930" path="/user.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="graficos.xhtml" x="245" y="414" id="pf16245142306011" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf16245142305990" path="/graficos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="admin.xhtml" x="420" y="316" id="pf16246761274011" referenceLink="//@navigationRule.25/@fromViewId|" outlinks="pf16242593738600 pf162467649389324 pf162467649389325 pf162467649389326 pf162467649389327 pf162467781594234 pf162468064130936" inlinks="pf16246761274000" path="/admin.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="TotalDocentes.xhtml" x="317" y="-127" id="pf16246761274012" referenceLink="//@navigationRule.24/@navigationCase.0/@toViewId|" inlinks="pf162467649389312" path="/TotalDocentes.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="TotalAlumnos.xhtml" x="456" y="-204" id="pf16246761274013" referenceLink="//@navigationRule.8/@navigationCase.0/@toViewId|" inlinks="pf162467649389313" path="/TotalAlumnos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="ValorFinanciacion.xhtml" x="735" y="-84" id="pf16246761274014" referenceLink="//@navigationRule.9/@navigationCase.0/@toViewId|" inlinks="pf162467649389314" path="/ValorFinanciacion.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="valorErogaciones.xhtml" x="737" y="24" id="pf16246761274015" referenceLink="//@navigationRule.10/@navigationCase.0/@toViewId|" inlinks="pf162467649389315" path="/valorErogaciones.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cantidadAlumnos.xhtml" x="584" y="156" id="pf16246761274016" referenceLink="//@navigationRule.11/@navigationCase.0/@toViewId|" inlinks="pf162467649389316" path="/cantidadAlumnos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="comparacionPIB.xhtml" x="610" y="-192" id="pf16246761274017" referenceLink="//@navigationRule.12/@navigationCase.0/@toViewId|" inlinks="pf162467649389317" path="/comparacionPIB.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="comparacionProduccion.xhtml" x="805" y="-180" id="pf16246761274018" referenceLink="//@navigationRule.13/@navigationCase.0/@toViewId|" inlinks="pf162467649389318" path="/comparacionProduccion.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="comparacionContribuciones.xhtml" x="828" y="-12" id="pf16246761274019" referenceLink="//@navigationRule.14/@navigationCase.0/@toViewId|" inlinks="pf162467649389319" path="/comparacionContribuciones.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="comparacionRentas.xhtml" x="800" y="121" id="pf162467612740110" referenceLink="//@navigationRule.15/@navigationCase.0/@toViewId|" inlinks="pf162467649389320" path="/comparacionRentas.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="valorTotalFinancia.xhtml" x="805" y="204" id="pf162467612740111" referenceLink="//@navigationRule.16/@navigationCase.0/@toViewId|" inlinks="pf162467649389321" path="/valorTotalFinancia.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cambioClave.xhtml" x="432" y="137" id="pf162467649389328" referenceLink="//@navigationRule.21/@navigationCase.0/@toViewId|" inlinks="pf162467649389322" path="/cambioClave.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="bloqueoUser.xhtml" x="662" y="461" id="pf162467649389329" referenceLink="//@navigationRule.17/@navigationCase.0/@toViewId|" inlinks="pf162467649389324" path="/bloqueoUser.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="consultaUser.xhtml" x="610" y="528" id="pf162467649389330" referenceLink="//@navigationRule.20/@navigationCase.0/@toViewId|" inlinks="pf162467649389327" path="/consultaUser.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="creacionUser.xhtml" x="662" y="300" id="pf162467649389331" referenceLink="//@navigationRule.19/@navigationCase.0/@toViewId|" inlinks="pf162467649389326" path="/creacionUser.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verAuditoria.xhtml" x="663" y="377" id="pf162467649389332" referenceLink="//@navigationRule.18/@navigationCase.0/@toViewId|" inlinks="pf162467649389325" path="/verAuditoria.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cerrarSesion.xhtml" x="317" y="72" id="pf162467781594235" referenceLink="//@navigationRule.23/@navigationCase.0/@toViewId|" inlinks="pf162467781594234 pf162467781594233" path="/cerrarSesion.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="cambioClave1.xhtml" x="432" y="504" id="pf162468064130937" referenceLink="//@navigationRule.25/@navigationCase.0/@toViewId|" inlinks="pf162468064130936" path="/cambioClave1.xhtml"/>
   <links id="pf162346474428722" target="pf162346474428728" source="pf162346474428721" outcome="nosotros"/>
   <links id="pf162346474428724" target="pf162346474428726" source="pf162346474428721" outcome="introduccion"/>
   <links id="pf16235564030752" target="pf16235564030753" source="pf162346474428721" outcome="misionvision"/>
   <links id="pf16238912324130" target="pf16238912324132" source="pf162346474428721" outcome="login"/>
-  <links id="pf16238912324131" target="pf16238912324133" source="pf162346474428721" outcome="register"/>
   <links id="pf16242093210930" target="pf16242093210931" source="pf16238912324132" outcome="bienvenida"/>
-  <links id="pf16242593738600" target="pf16238912324132" source="pf16238912324133" outcome="registrado"/>
+  <links id="pf16242593738600" target="pf16238912324133" source="pf16246761274011" outcome="registrado"/>
   <links id="pf16245142305990" target="pf16245142306011" source="pf162346474428721" outcome="graficos"/>
+  <links id="pf16246761274000" target="pf16246761274011" source="pf16238912324132" outcome="bienvenida"/>
+  <links id="pf162467649389313" target="pf16246761274013" source="pf16242093210931" outcome="TotalAlumnos"/>
+  <links id="pf162467649389314" target="pf16246761274014" source="pf16242093210931" outcome="ValorFinanciacion"/>
+  <links id="pf162467649389315" target="pf16246761274015" source="pf16242093210931" outcome="valorErogaciones"/>
+  <links id="pf162467649389316" target="pf16246761274016" source="pf16242093210931" outcome="cantidadAlumnos"/>
+  <links id="pf162467649389317" target="pf16246761274017" source="pf16242093210931" outcome="comparacionPIB"/>
+  <links id="pf162467649389318" target="pf16246761274018" source="pf16242093210931" outcome="comparacionProduccion"/>
+  <links id="pf162467649389319" target="pf16246761274019" source="pf16242093210931" outcome="comparacionContribuciones"/>
+  <links id="pf162467649389320" target="pf162467612740110" source="pf16242093210931" outcome="comparacionRentas"/>
+  <links id="pf162467649389321" target="pf162467612740111" source="pf16242093210931" outcome="valorTotalFinancia"/>
+  <links id="pf162467649389324" target="pf162467649389329" source="pf16246761274011" outcome="bloqueoUser"/>
+  <links id="pf162467649389325" target="pf162467649389332" source="pf16246761274011" outcome="verAuditoria"/>
+  <links id="pf162467649389326" target="pf162467649389331" source="pf16246761274011" outcome="creacionUser"/>
+  <links id="pf162467649389327" target="pf162467649389330" source="pf16246761274011" outcome="consultaUser"/>
+  <links id="pf162467649389322" target="pf162467649389328" source="pf16242093210931" outcome="cambioClave"/>
+  <links id="pf162467781594234" target="pf162467781594235" source="pf16246761274011" outcome="cerrarSesion"/>
+  <links id="pf162467781594233" target="pf162467781594235" source="pf16242093210931" outcome="cerrarSesion"/>
+  <links id="pf162467649389312" target="pf16246761274012" source="pf16242093210931" outcome="TotalDocentes"/>
+  <links id="pf162468064130936" target="pf162468064130937" source="pf16246761274011" outcome="cambioClave1"/>
 </pageflow:Pageflow>

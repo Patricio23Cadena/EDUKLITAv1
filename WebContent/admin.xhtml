@@ -29,25 +29,22 @@
             <p:submenu label="Usuarios">
               
                 <p:menuitem value="Creación usuarios" outcome="register" update="messages" icon="pi pi-refresh"/>
-                <p:menuitem value="Cambio de clave" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Bloqueo de usuario" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Consulta usuarios" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Cerrar Sesión" action="#{menuView}" update="messages" icon="pi pi-times"/>  
+                <p:menuitem value="Cambio de clave" outcome="cambioClave1" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Bloqueo de usuario" outcome="bloqueoUser" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Consulta usuarios" outcome="consultaUser" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Cerrar Sesión" outcome="cerrarSesion" update="messages" icon="pi pi-times"/>  
                 
                 
             </p:submenu>
             <p:submenu label="Auditoría">
-                <p:menuitem value="Ver" url="http://www.primefaces.org" icon="pi pi-external-link"/>
+                <p:menuitem value="Ver" outcome="verAuditoria" icon="pi pi-external-link"/>
                   </p:submenu>
         </p:menu>
     </div>
    
    </h:form>
  
- <br /> 
- <br />
- <br />
- <br />
+ 
 <div id="footer">	<div class="footerImg">
 		
 		<img class="gifTierra" src="images/giphy.gif"/>

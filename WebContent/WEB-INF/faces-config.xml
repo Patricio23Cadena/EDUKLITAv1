@@ -37,14 +37,6 @@
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<display-name>index.xhtml</display-name>
-		<from-view-id>/index.xhtml</from-view-id>
-		<navigation-case>
-			<from-outcome>register</from-outcome>
-			<to-view-id>/register.xhtml</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	<navigation-rule>
 		<display-name>login.xhtml</display-name>
 		<from-view-id>/login.xhtml</from-view-id>
 		<navigation-case>
@@ -53,19 +45,163 @@
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<display-name>register.xhtml</display-name>
-		<from-view-id>/register.xhtml</from-view-id>
-		<navigation-case>
-			<from-outcome>registrado</from-outcome>
-			<to-view-id>/login.xhtml</to-view-id>
-		</navigation-case>
-	</navigation-rule>
-	<navigation-rule>
 		<display-name>index.xhtml</display-name>
 		<from-view-id>/index.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>graficos</from-outcome>
 			<to-view-id>/graficos.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>login.xhtml</display-name>
+		<from-view-id>/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>bienvenida</from-outcome>
+			<to-view-id>/admin.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>admin.xhtml</display-name>
+		<from-view-id>/admin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>registrado</from-outcome>
+			<to-view-id>/register.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>TotalAlumnos</from-outcome>
+			<to-view-id>/TotalAlumnos.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>ValorFinanciacion</from-outcome>
+			<to-view-id>/ValorFinanciacion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>valorErogaciones</from-outcome>
+			<to-view-id>/valorErogaciones.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>cantidadAlumnos</from-outcome>
+			<to-view-id>/cantidadAlumnos.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>comparacionPIB</from-outcome>
+			<to-view-id>/comparacionPIB.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>comparacionProduccion</from-outcome>
+			<to-view-id>/comparacionProduccion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>comparacionContribuciones</from-outcome>
+			<to-view-id>/comparacionContribuciones.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>comparacionRentas</from-outcome>
+			<to-view-id>/comparacionRentas.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>valorTotalFinancia</from-outcome>
+			<to-view-id>/valorTotalFinancia.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>admin.xhtml</display-name>
+		<from-view-id>/admin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>bloqueoUser</from-outcome>
+			<to-view-id>/bloqueoUser.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>admin.xhtml</display-name>
+		<from-view-id>/admin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>verAuditoria</from-outcome>
+			<to-view-id>/verAuditoria.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>admin.xhtml</display-name>
+		<from-view-id>/admin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>creacionUser</from-outcome>
+			<to-view-id>/creacionUser.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>admin.xhtml</display-name>
+		<from-view-id>/admin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>consultaUser</from-outcome>
+			<to-view-id>/consultaUser.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule> 
+	<navigation-rule>
+		<display-name>admin.xhtml</display-name>
+		<from-view-id>/admin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>cerrarSesion</from-outcome>
+			<to-view-id>/cerrarSesion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>cerrarSesion</from-outcome>
+			<to-view-id>/cerrarSesion.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>user.xhtml</display-name>
+		<from-view-id>/user.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>TotalDocentes</from-outcome>
+			<to-view-id>/TotalDocentes.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>admin.xhtml</display-name>
+		<from-view-id>/admin.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>cambioClave1</from-outcome>
+			<to-view-id>/cambioClave1.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	 

@@ -1,11 +1,156 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+ 
 
-<h:head></h:head> 
-<body> 
+	<style>
+#Fondo {
+	background: url(images/administrador.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style> 
+	<h:outputStylesheet library="css" name="estilosUser.css" /> 
+	<title>CAMBIO CLAVE</title>
+</h:head>
 
-</body> 
+ <h:body id="Fondo">  
+ <ul class="acordeon">
+  <li>
+    <a href="https://educacion.gob.ec/educacion-para-la-democracia-y-buen-vivir/" target="_blank">
+      <img src="images/panel1.png"/>
+    </a>
+  </li>
+  <li>
+    <a href="https://educacion.gob.ec/mejoramiento-pedagogico/" target="_blank">
+      <img src="images/panel2.png"/>
+    </a>
+  </li>
+  <li>
+    <a href="https://educacion.gob.ec/estandares/" target="_blank">
+      <img src="images/panel3.png"/>
+    </a>
+  </li>
+  <li>
+    <a href="https://educacion.gob.ec/educacion-para-la-democracia-y-buen-vivir/" target="_blank">
+      <img src="images/panel4.png"/>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.mineducacion.gov.co/1759/w3-propertyvalue-56708.html?_noredirect=1" target="_blank">
+      <img src="images/panel5.jpg"/>
+    </a>
+  </li>
+    <li>
+    <a href="https://educacion.gob.ec/educacion-especial-inclusiva/" target="_blank">
+      <img src="images/panel6.png"/>
+    </a>
+  </li>
+
+</ul>
+
+<br />
+
+ <h:form>
+   
+   <p:growl id="messages" showDetail="true"  />
+   <div class="card" > 
+        <p:menu toggleable="true" style="width:20%">
+            <p:submenu label="Reportes">
+                 
+                <p:menuitem value="Total Docentes" outcome="TotalDocentes" update="messages" icon="pi pi-refresh"/>
+                <p:menuitem value="Total Alumnos" outcome="TotalAlumnos" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Valor Financiación" outcome="ValorFinanciacion" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Valor Erogaciones" outcome="valorErogaciones" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Cantidad de Alumnos" outcome="cantidadAlumnos" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación del PIB" outcome="comparacionPIB" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación Producción" outcome="comparacionProduccion" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación Contribuciones" outcome="comparacionContribuciones" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación Rentas" outcome="comparacionRentas" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Valor Total Financiación" outcome="valorTotalFinancia" update="messages" icon="pi pi-times"/>
+                
+            </p:submenu>
+            <p:submenu label="Opciones">
+                <p:menuitem value="Cambio de Clave" outcome="cambioClave" icon="pi pi-external-link"/>
+                <p:menuitem value="Cerrar Sesión" outcome="cerrarSesion" icon="pi pi-external-link"/>
+                
+             </p:submenu>
+        </p:menu>
+    </div>
+   
+   </h:form> 
+
+ 
+		
+			<div id="footer">	<div class="footerImg">
+		
+		<img class="gifTierra" src="images/giphy.gif"/>
+		</div>
+		<div class="footerToDIvC">
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/telefono.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">0984571751</h1>
+		</div>
+		</div>
+		
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/mail.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">guerrero01.@gmail.com</h1>
+		</div>
+		</div>
+		<div >
+		<b  class="foh2">Copyright© 2021. EDUKLITA. Todos los derechos reservados. </b>
+		</div>
+		</div>
+	
+	</div>	
+	
+	
+	
+	<style type="text/css">
+.ui-stack {
+	z-index: 1000;
+	
+}
+</style>
+
+	<h:form >
+		<p:stack   icon="images/herramienta.png" expanded="false">
+			<p:menuitem value="Wiki" 
+			url="https://patricio23cadena.github.io/EDUKLITAv1/"
+			target="_blank"
+			icon="images/wiki.png" />
+			<p:menuitem value="Readme" 
+			url="https://github.com/Patricio23Cadena/EDUKLITAv1/blob/main/README.md"
+				target="_blank"
+			icon="images/readme.png" />
+			<p:menuitem value="Facebook"
+				url="https://www.facebook.com/profile.php?id=100068991534701"
+				target="_blank"
+				icon="images/facebook.png" />
+			<p:menuitem value="Youtube"
+			    url="https://www.youtube.com/channel/UCIPQtaDrSSkHVb3wE-pApzQ"
+				target="_blank"
+				icon="images/youtube.png" />
+			<p:menuitem  value="GitHub"
+				url="https://github.com/Patricio23Cadena/EDUKLITAv1/tree/master"
+				target="_blank"
+				icon="/images/github.png" />
+		</p:stack>
+	</h:form>
+	 
+
+</h:body>
 </html>

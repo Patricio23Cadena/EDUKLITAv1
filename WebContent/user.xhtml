@@ -62,21 +62,21 @@
         <p:menu toggleable="true" style="width:20%">
             <p:submenu label="Reportes">
                  
-                <p:menuitem value="Total Docentes" action="#{menuView.update}" update="messages" icon="pi pi-refresh"/>
-                <p:menuitem value="Total Alumnos" action="#{menuView.delete}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Valor Financiación" action="#{menuView}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Valor Erogaciones" action="#{menuView}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Cantidad de Alumnos" action="#{menuView}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Comparación del PIB" action="#{menuView}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Comparación Producción" action="#{menuView}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Comparación Contribuciones" action="#{menuView}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Comparación Rentas" action="#{menuView}" update="messages" icon="pi pi-times"/>
-                <p:menuitem value="Valor Total Financiación" action="#{menuView}" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Total Docentes" outcome="TotalDocentes" update="messages" icon="pi pi-refresh"/>
+                <p:menuitem value="Total Alumnos" outcome="TotalAlumnos" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Valor Financiación" outcome="ValorFinanciacion" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Valor Erogaciones" outcome="valorErogaciones" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Cantidad de Alumnos" outcome="cantidadAlumnos" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación del PIB" outcome="comparacionPIB" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación Producción" outcome="comparacionProduccion" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación Contribuciones" outcome="comparacionContribuciones" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Comparación Rentas" outcome="comparacionRentas" update="messages" icon="pi pi-times"/>
+                <p:menuitem value="Valor Total Financiación" outcome="valorTotalFinancia" update="messages" icon="pi pi-times"/>
                 
             </p:submenu>
             <p:submenu label="Opciones">
-                <p:menuitem value="Cambio de Clave" url="http://www.primefaces.org" icon="pi pi-external-link"/>
-                <p:menuitem value="Cerrar Sesión" url="http://www.primefaces.org" icon="pi pi-external-link"/>
+                <p:menuitem value="Cambio de Clave" outcome="cambioClave" icon="pi pi-external-link"/>
+                <p:menuitem value="Cerrar Sesión" outcome="cerrarSesion" icon="pi pi-external-link"/>
                 
              </p:submenu>
         </p:menu>
