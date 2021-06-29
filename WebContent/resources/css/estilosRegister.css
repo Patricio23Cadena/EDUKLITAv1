@@ -84,15 +84,15 @@ button::after {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-image: radial-gradient(ellipse at left bottom, rgb(60 72 204) 0%,rgb(30 23 44 / 90%) 80%, rgb(101 105 127 / 90%) 10%);
-	box-shadow: 0 -20px 150px -20px rgba(0, 0, 0, 0.5);
+	background-image: radial-gradient(ellipse at left bottom, rgb(255 35 13) 0%,rgb(18 15 245 / 90%) 80%, rgb(138 33 33 / 90%) 10%);
+	box-shadow: 0 -20px 150px -20px rgba(255, 0, 0, 0.5);
    
 }
 
 .form-login {
 	position: relative;
 	z-index: 1;
-  padding-bottom: 4.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 

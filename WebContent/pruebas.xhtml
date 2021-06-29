@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>CONSULTAR USUARIO</title>
+        <title>ADMIN EDUKLITA</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -29,8 +29,8 @@
     <body class="sb-nav-fixed" id="Fondo">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <p:link class="nav-link" outcome="admin" style="color:white; font-size:2em">ADMINISTRADOR</p:link >
-             
+            <a class="navbar-brand ps-3" href="index.html">ADMINISTRADOR</a>
+            <!-- Sidebar Toggle-->
              
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
@@ -43,7 +43,7 @@
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                           
-                        <li> <p:link class="nav-link" style="color:black" outcome="cerrarSesion">Cerrar Sesión</p:link></li>
+                        <li><a class="dropdown-item" href="#!">Cerrar Sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -66,9 +66,10 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <p:link class="nav-link" outcome="creacionUser">Crear</p:link>
-                                    <p:link class="nav-link" outcome="consultaUser">Consultar</p:link>
-                                    <p:link class="nav-link" outcome="bloqueoUser">Bloquear</p:link>                                    
+                                    <a class="nav-link" href="layout-static.html">Crear</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Consultar</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Bloquear</a>
+                                    
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -84,7 +85,7 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                           <p:link class="nav-link" outcome="cambioClave1">Cambio de contraseña</p:link> 
+                                            <a class="nav-link" href="login.html">Cambio de contraseña</a> 
                                         </nav>
                                     </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
@@ -93,17 +94,17 @@
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <p:link class="nav-link" outcome="verAuditoria">Ver</p:link> 
+                                            <a class="nav-link" href="401.html">Ver</a> 
                                         </nav>
                                     </div>
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">LOG-OUT</div>
                              
-                            <p:link class="nav-link" outcome="cerrarSesion">
+                            <a class="nav-link" href="tables.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 CERRAR SESIÓN
-                            </p:link>
+                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
