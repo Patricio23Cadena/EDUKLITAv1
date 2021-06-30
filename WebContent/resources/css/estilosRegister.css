@@ -43,7 +43,11 @@ button::after {
 
 
 
-
+.main{
+	
+	height:50%;
+	
+}
 
 
 
@@ -66,7 +70,7 @@ button::after {
 	position: relative;
 	z-index: 0;
 	margin: 4rem auto 0;
-  padding: 5rem 4rem 0 4rem;
+  padding: 0 4rem 0 4rem;
 	width: 100%;
 	max-width: 30%;
 	min-height: 100%;
@@ -75,8 +79,7 @@ button::after {
 }
 
 .login-container:after {
-	content: '';
-	 
+	content: ''; 
 	display: inline-block;
 	position: absolute;
 	z-index: 0;
@@ -92,14 +95,13 @@ button::after {
 .form-login {
 	position: relative;
 	z-index: 1;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 1.5rem; 
 }
 
 .login-nav {
 	position: relative;
-	padding: 0;
-	margin: 0 0 6em 1rem;
+	/*padding: 0;
+	margin: 0 0 6em 1rem;*/
 }
 
 .login-nav__item {
@@ -117,8 +119,8 @@ button::after {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 500;
-	font-size: 1.25rem;
-	padding-bottom: .5rem;
+	font-size: 1.25rem; 
+	text-align:center;
 	transition: .20s all ease;
 }
 
