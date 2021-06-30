@@ -123,12 +123,19 @@ public class PersonaBean {
 		String cor = p.getCorreo();
 		System.out.println(pdao.login(cor).getNombres());
 		setNombres(pdao.login(cor).getNombres());
+		setTipo(pdao.login(cor).getTipo());
 		p.setEdad(edad);
 		p.setTipo(tipo);
 		p.setFlag(flag);
-		if (pdao.iniciarSesion(p) != null) {
+		if (pdao.iniciarSesion(p) != null ) {
 			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME", pdao.login(cor).getApellidos()+" "+ pdao.login(cor).getNombres());
-			return "admin";
+			if(tipo==1) {
+				return "admin";
+			}
+			else {
+				return "user";
+			}
+			
 		}
 		else {
 			showError();
