@@ -11028,7 +11028,7 @@ body {
   flex-direction: column;
 }
 .sb-sidenav .sb-sidenav-footer {
-  padding: 25px 40px 70px 30px;
+  padding: 0px 40px 70px 30px;
   flex-shrink: 0;
 }
 
