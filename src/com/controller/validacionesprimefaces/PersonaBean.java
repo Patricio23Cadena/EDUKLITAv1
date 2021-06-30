@@ -5,10 +5,11 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
- 
- 
+
+import org.primefaces.context.PrimeRequestContext;
 
 import com.daos.personas.PersonaDao;
 import com.entities.personas.Persona;
@@ -113,15 +114,15 @@ public class PersonaBean {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(severity, summary, detail));
 	}
 
+	
 	public String showInfo() {
 		p = new Persona();
-	
+		
 		p.setApellidos(apellidos);
 		p.setCdi(cdi);
 		p.setClave(clave);
 		p.setCorreo(correo);
 		String cor = p.getCorreo();
-		System.out.println(pdao.login(cor).getNombres());
 		setNombres(pdao.login(cor).getNombres());
 		setTipo(pdao.login(cor).getTipo());
 		p.setEdad(edad);
@@ -129,6 +130,11 @@ public class PersonaBean {
 		p.setFlag(flag);
 		if (pdao.iniciarSesion(p) != null ) {
 			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME", pdao.login(cor).getApellidos()+" "+ pdao.login(cor).getNombres());
+		            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", nombres);
+		            FacesContext contextaux = FacesContext.getCurrentInstance();
+		            contextaux.getExternalContext().getFlash().setKeepMessages(true);
+		            contextaux.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "!!Bienbenido!!", nombres));
+		           
 			if(tipo==1) {
 				return "admin";
 			}
