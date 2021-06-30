@@ -48,7 +48,7 @@
  
  		<p:outputLabel for="firstname" value="Correo electrónico:" class="login__label"/>
 			
-		<p:inputText id="firstname" value="#{userView.firstname}" required="true" class="login__input" type="text" label="Firstname">
+		<p:inputText id="firstname" value="#{userView.correo}" required="true" class="login__input" type="text" label="Firstname">
 		 <f:validateLength minimum="10"/> 
 		 </p:inputText>
 		<p:message for="firstname" display="icon" />
@@ -57,12 +57,12 @@
 		<p:outputLabel for="password" class="login__label" value="Contraseña:">
 			 
 		</p:outputLabel>
-		<p:password id="password" value="#{userView.lastname}" toggleMask="true" class="login__input" required="true" redisplay="true" label="Password">
+		<p:password id="password" value="#{userView.clave}" toggleMask="true" class="login__input" required="true" redisplay="true" label="Password">
 		 <f:validateLength minimum="10"/> 
 		 <p:ajax update="msgPassword" event="keyup" />
             </p:password> 
 		 <p:message for="password" id="msgPassword" display="icon" />
-		<p:commandButton action="#{userView.save()}"  actionListener="#{userView.showInfo}" type="password" update="growl" value="INGRESAR" id="contraseña"  class="login__submit" icon="pi pi-check" style=" text-align: center; border-style: none;"/>
+		<p:commandButton   action="#{userView.showInfo}" type="password" update="growl" value="INGRESAR" id="contraseña"  class="login__submit" icon="pi pi-check" style=" text-align: center; border-style: none;"/>
 	 
 	</p:outputPanel>
 	</h:form>
