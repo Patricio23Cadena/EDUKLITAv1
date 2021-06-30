@@ -7,6 +7,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+ 
+ 
 
 import com.daos.personas.PersonaDao;
 import com.entities.personas.Persona;
@@ -124,7 +126,7 @@ public class PersonaBean {
 		p.setFlag(flag);
 		if (pdao.iniciarSesion(p) != null) {
 			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME", pdao.login(cor).getApellidos()+" "+ pdao.login(cor).getNombres());
-			return "bienvenida";
+			return "user";
 		}
 		else {
 			showError();

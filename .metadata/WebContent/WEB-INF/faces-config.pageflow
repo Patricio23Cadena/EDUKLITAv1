@@ -30,10 +30,10 @@
   <links id="pf162346474428724" target="pf162346474428726" source="pf162346474428721" outcome="introduccion"/>
   <links id="pf16235564030752" target="pf16235564030753" source="pf162346474428721" outcome="misionvision"/>
   <links id="pf16238912324130" target="pf16238912324132" source="pf162346474428721" outcome="login"/>
-  <links id="pf16242093210930" target="pf16242093210931" source="pf16238912324132" outcome="bienvenida"/>
+  <links id="pf16242093210930" target="pf16242093210931" source="pf16238912324132" outcome="user"/>
   <links id="pf16242593738600" target="pf16238912324133" source="pf16246761274011" outcome="registrado"/>
   <links id="pf16245142305990" target="pf16245142306011" source="pf162346474428721" outcome="graficos"/>
-  <links id="pf16246761274000" target="pf16246761274011" source="pf16238912324132" outcome="bienvenida"/>
+  <links id="pf16246761274000" target="pf16246761274011" source="pf16238912324132" outcome="admin"/>
   <links id="pf162467649389313" target="pf16246761274013" source="pf16242093210931" outcome="TotalAlumnos"/>
   <links id="pf162467649389314" target="pf16246761274014" source="pf16242093210931" outcome="ValorFinanciacion"/>
   <links id="pf162467649389315" target="pf16246761274015" source="pf16242093210931" outcome="valorErogaciones"/>
