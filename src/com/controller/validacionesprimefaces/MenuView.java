@@ -3,6 +3,7 @@ package com.controller.validacionesprimefaces;
 import java.io.IOException;
 
 import javax.annotation.PostConstruct;
+//import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.ExternalContext;

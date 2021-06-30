@@ -115,18 +115,20 @@ public class PersonaBean {
 
 	public String showInfo() {
 		p = new Persona();
-		p.setNombres(nombres);
+	
 		p.setApellidos(apellidos);
 		p.setCdi(cdi);
 		p.setClave(clave);
 		p.setCorreo(correo);
 		String cor = p.getCorreo();
+		System.out.println(pdao.login(cor).getNombres());
+		setNombres(pdao.login(cor).getNombres());
 		p.setEdad(edad);
 		p.setTipo(tipo);
 		p.setFlag(flag);
 		if (pdao.iniciarSesion(p) != null) {
 			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME", pdao.login(cor).getApellidos()+" "+ pdao.login(cor).getNombres());
-			return "user";
+			return "admin";
 		}
 		else {
 			showError();
@@ -145,7 +147,7 @@ public class PersonaBean {
 
 	public String save() {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Welcome " + nombres + " " + apellidos));
-		return "bienvenida";
+		return "admin";
 
 	}
 
