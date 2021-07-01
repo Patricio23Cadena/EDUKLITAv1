@@ -129,75 +129,61 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                       <center><h1 class="mt-4">EDUKLITA</h1></center>
-                         
-                     <!--<div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-                        <div class="row">
-                            <div class="col-xl-6">
-                                 
-                            </div>
-                            <div class="col-xl-6">
-                                 
-                                 
-                                 
-                                 
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                              
-                        </div>
-                        
-                        
-                        
-                       
-                        
-                    </div>
+                  
+                  
+                  
+                   <br />
+ <h:form>       
+          
+               <center><div><u>  <h1>Cambio de clave </h1></u>
+               <br />
+<h:panelGrid  columns="16">
+
+<tr>
+ <td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Antigua Contraseña:</h1></td>
+ <td><h:inputSecret id="nombre" value="#{userView.nombres}" required="true"  validatorMessage="Contraseña incorrecta"
+requiredMessage="El campo es obligatorio"><f:validateRequired />
+ </h:inputSecret>*</td>
+ <td><h:message for="nombre" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
+</tr>
+
+ 
+
+
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nueva Contraseña:</h1></td>
+
+<td><h:inputSecret id="apellidos" value="#{userView.apellidos}" required="true"
+requiredMessage="El campo es obligatorio" validatorMessage="Contraseña incorrecta">
+<f:validateRequired />
+ </h:inputSecret>*</td>
+ <td><h:message for="apellidos" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
+</tr>
+
+ 
+ 
+  
+  
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Repetir Contraseña:</h1>
+</td><td><h:inputSecret id="clave" value="#{userView.clave}" 
+requiredMessage="El campo es obligatorio" required="true" validatorMessage="Contraseña incorrecta"/>
+*</td>
+<td><h:message for="clave" style="color:#6e09ad; font-family:Arial; font-size:1.5em"/></td>
+</tr>
+
+
+
+</h:panelGrid>
+
+<div>
+<br />
+<h:commandButton action="#{userView.registrar()}" value="Confirmar" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
+<input type="reset" value="Restablecer" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
+</div></div></center></h:form>
+                     
                 </main>
-                
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
+                  
                 <footer class="py-4 bg-light mt-auto">
                     <div id="footer">	<div class="footerImg">
 		
