@@ -29,8 +29,9 @@ public class PersonaBean {
 	private int tipo;
 	private int flag;
 	private String clave;
-	
-	private PersonaDao personaDao;
+
+
+
 	public Persona getP() {
 		return p;
 	}
@@ -115,10 +116,9 @@ public class PersonaBean {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(severity, summary, detail));
 	}
 
-	
 	public String showInfo() {
 		p = new Persona();
-		
+
 		p.setApellidos(apellidos);
 		p.setCdi(cdi);
 		p.setClave(clave);
@@ -129,26 +129,25 @@ public class PersonaBean {
 		p.setEdad(edad);
 		p.setTipo(tipo);
 		p.setFlag(flag);
-		if (pdao.iniciarSesion(p) != null ) {
-			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME", pdao.login(cor).getApellidos()+" "+ pdao.login(cor).getNombres());
-		            FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", nombres);
-		            FacesContext contextaux = FacesContext.getCurrentInstance();
-		            contextaux.getExternalContext().getFlash().setKeepMessages(true);
-		            contextaux.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "!!Bienbenido!!", nombres));
-		           
-			if(tipo==1) {
+		if (pdao.iniciarSesion(p) != null) {
+			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME",
+					pdao.login(cor).getApellidos() + " " + pdao.login(cor).getNombres());
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", nombres);
+			FacesContext contextaux = FacesContext.getCurrentInstance();
+			contextaux.getExternalContext().getFlash().setKeepMessages(true);
+			contextaux.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "!!Bienbenido!!", nombres));
+
+			if (tipo == 1) {
 				return "admin";
-			}
-			else {
+			} else {
 				return "user";
 			}
-			
-		}
-		else {
+
+		} else {
 			showError();
 			return "";
 		}
-		
+
 	}
 
 	public void showWarn() {
@@ -159,41 +158,41 @@ public class PersonaBean {
 		addMessage(FacesMessage.SEVERITY_ERROR, "WARNING", "Credenciales Incorrectas");
 	}
 
-	public String save() {
+	public void save() {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Welcome " + nombres + " " + apellidos));
-		return "admin";
+		
 
 	}
- 
-	
-	
-	
-	
-	
-	public void registrar() {
-		Persona nuevaPersona=new Persona();
-		nuevaPersona.setNombres(nombres); 
-		nuevaPersona.setApellidos(apellidos); 
+
+	public String registrar() {
+		Persona nuevaPersona = new Persona();
+		nuevaPersona.setNombres(nombres);
+		nuevaPersona.setApellidos(apellidos);
 		nuevaPersona.setCdi(cdi);
-		nuevaPersona.setEdad(edad);  
+		nuevaPersona.setEdad(edad);
 		nuevaPersona.setCorreo(correo);
-		nuevaPersona.setClave(clave); 
-		personaDao.crear(nuevaPersona);
-		addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente",nuevaPersona.getNombres());
-	} 
-	
-	
-	
-	
+		nuevaPersona.setClave(clave);
+		nuevaPersona.setTipo(1);
+		nuevaPersona.setFlag(0);
+		pdao.crear(nuevaPersona);
+		addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente", "HOLA");
+		return "admin";
+	}
+
 	public PersonaBean() {
-		 nombres=""; 
-		 apellidos="";  
-		 correo ="";
-		 clave="";
-		 
-	 }
-	
-	
+		nombres = "";
+		apellidos = "";
+		correo = "";
+		clave = "";
+		cdi = 0;
+
+		edad = 0;
+
+		tipo = 0;
+		flag = 0;
+
+	}
+
 	protected boolean cedula(String cedula) {
 		boolean cedulaCorrecta = false;
 
@@ -239,6 +238,5 @@ public class PersonaBean {
 		}
 		return cedulaCorrecta;
 	}
-	
 
 }
