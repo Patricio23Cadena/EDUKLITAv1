@@ -120,71 +120,95 @@ function myfunction() {
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid 4px">                                     
-                     
-                     <div class="login-container" >
-	<h:form  class="form-login">
-	<p:growl id="growl" showDetail="true" life="3000" />
-	<p:outputPanel style="display:block" id="panel">
-	<p:messages id="msgs"/>
-		<ul class="login-nav">
-			<li class="login-nav__item active">
-			 
-			 <p:link outcome="register" value="REGISTRARSE">
-        <f:param name="register" value="10"/></p:link> 
-			</li>
-		</ul>
+                 
+ <br />
+ <h:form>       
+          
+               <center><div><u>  <h1>Registro de personas </h1></u>
+<h:panelGrid  columns="16">
+
+<tr>
+ <td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nombres:</h1></td>
+ <td><h:inputText id="nombre" value="#{userView.nombres}" required="true"
+requiredMessage="El campo es obligatorio"><f:validateRequired />
+ </h:inputText>*</td>
+ <td><h:message for="nombre" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
+</tr>
+
  
- 		<p:outputLabel for="nombres" value="Nombres:" class="login__label"/> 
-		<p:inputText id="nombres" value="#{userView.nombres}" required="true" class="login__input" type="text" label="Nombres">
-		 <f:validateLength minimum="7"/> 
-		 </p:inputText>
-		<p:message for="nombres" display="icon" />
-		 
-		 
-	<p:outputLabel for="apellidos" value="Apellidos:" class="login__label"/> 
-		<p:inputText id="apellidos" value="#{userView.apellidos}" required="true" class="login__input" type="text" label="Apellidos">
-		 <f:validateLength minimum="7"/> 
-		 </p:inputText>
-		<p:message for="apellidos" display="icon" />
-		
-		
-		<p:outputLabel for="cedula" value="Cédula:" class="login__label"/> 
-		<p:inputText id="cedula" value="#{userView.cdi}" required="true" class="login__input" type="text" label="Cedula">
-		 <f:validateLength minimum="10" maximum="10"/> 
-		 </p:inputText>
-		<p:message for="cedula" display="icon" />
-		
-		<p:outputLabel for="edad" value="Edad:" class="login__label"/> 
-		<p:inputText id="edad" value="#{userView.edad}" required="true" class="login__input" type="text" label="Edad">
-		 <f:validateLength minimum="1" maximum="2"/> 
-		 </p:inputText>
-		<p:message for="edad" display="icon" />
-		 
-		
-		<p:outputLabel for="correo" value="Correo electrónico:" class="login__label"/> 
-		<p:inputText id="correo" value="#{userView.correo}" required="true" class="login__input" type="text" label="correo">
-		 <f:validateLength minimum="20"/> 
-		 </p:inputText>
-		<p:message for="correo" display="icon" /> 
-		 
-		<p:outputLabel for="password" class="login__label" value="Contraseña:"> 
-		</p:outputLabel>
-		<p:password id="password" value="#{userView.clave}" toggleMask="true" class="login__input" required="true" redisplay="true" label="Password">
-		 <f:validateLength minimum="10"/> 
-		 <p:ajax update="msgPassword" event="keyup" />
-            </p:password> 
-		 <p:message for="password" id="msgPassword" display="icon" />
-		<p:commandButton  actionListener="#{userView.registrar()}" type="password" update="growl" value="REGISTRAR" id="contraseña"  class="login__submit" icon="pi pi-check" style=" text-align: center; border-style: none;"/>
-	 
-	</p:outputPanel>
-	</h:form>
+
+
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Apellidos:</h1></td>
+
+<td><h:inputText id="apellidos" value="#{userView.apellidos}" required="true"
+requiredMessage="El campo es obligatorio">
+<f:validateRequired />
+ </h:inputText>*</td>
+ <td><h:message for="apellidos" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
+</tr>
+
+
+
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Edad:</h1></td><td><h:inputText id="edad" value="#{userView.edad}" required="true"
+requiredMessage="El campo es obligatorio" validatorMessage="Edad correcta">
+<f:validateLongRange minimum="18" maximum="100"/></h:inputText>*</td>
+<td><h:message for="edad" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
+</tr>
+
+
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Cédula:</h1></td><td><h:inputText id="cedula" value="#{userView.cdi}" required="true"
+requiredMessage="El campo es obligatorio"   validatorMessage="Ingrese una cédula correcta">
+<f:validateLength minimum="10" maximum="10"/></h:inputText>*</td>
+<td><h:message for="cedula" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
+</tr>
+
+
+
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Correo Electrónico:</h1></td><td><h:inputText id="correo" value="#{userView.correo} " validatorMessage="Se esperaba un correo electrónico"
+requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe ser un correo válido">
+
+<f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"  ></f:validateRegex>
+
+
+</h:inputText>*</td>
+<td><h:message for="correo" style="color:#6e09ad; font-family:Arial; font-size:1.5em"/></td>
+</tr>
+  
+  
+
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Tipo:</h1></td>
+<td><h:selectOneMenu value="#{userView.tipo}" style="padding:0 57px 0 0">
+<f:selectItem itemValue="Administrador" itemLabel="Administrador"  />
+<f:selectItem itemValue="Usuario" itemLabel="Usuario"/> 
+</h:selectOneMenu></td>
+</tr>  
+  
+<tr>
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Clave:</h1></td><td><h:inputSecret id="clave" value="#{userView.clave}" requiredMessage="El campo es obligatorio" required="true" />*</td>
+<td><h:message for="clave" style="color:#6e09ad; font-family:Arial; font-size:1.5em"/></td>
+</tr>
+
+
+
+</h:panelGrid>
+
+<div>
+<br />
+<h:commandButton action="#{persona.registrar}" value="Registrar" style="background-color:Blue;font-family:Arial; font-size:1.5em"/>
+<input type="reset" value="Restablecer" style="background-color:Red;font-family:Arial; font-size:1.5em"/>
+</div></div></center></h:form>
 	
-	
-</div>          
-                    </div>
-                </main>
+                 
+                 
+                 
+                 
+                 
+                 
                  
                 <footer class="py-4 bg-light mt-auto">
                     <div id="footer">	<div class="footerImg">
