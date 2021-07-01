@@ -168,7 +168,7 @@ requiredMessage="El campo es obligatorio"   validatorMessage="Ingrese una cédul
 
 
 <tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Correo Electrónico:</h1></td><td><h:inputText id="correo" value="#{userView.correo} " validatorMessage="Se esperaba un correo electrónico"
+<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Correo Electrónico:</h1></td><td><h:inputText id="correo" value="#{userView.correo}" validatorMessage="Se esperaba un correo electrónico"
 requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe ser un correo válido">
 
 <f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"  ></f:validateRegex>
@@ -183,8 +183,8 @@ requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe
 <tr>
 <td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Tipo:</h1></td>
 <td><h:selectOneMenu value="#{userView.tipo}" style="padding:0 57px 0 0">
-<f:selectItem itemValue="Administrador" itemLabel="Administrador"  />
-<f:selectItem itemValue="Usuario" itemLabel="Usuario"/> 
+<f:selectItem itemValue="2"  itemLabel="Administrador"  />
+<f:selectItem itemValue="1"  itemLabel="Usuario"/> 
 </h:selectOneMenu></td>
 </tr>  
   
@@ -199,7 +199,7 @@ requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe
 
 <div>
 <br />
-<h:commandButton action="#{persona.registrar}" value="Registrar" style="background-color:Blue;font-family:Arial; font-size:1.5em"/>
+<h:commandButton action="#{userView.registrar}" value="Registrar" style="background-color:Blue;font-family:Arial; font-size:1.5em"/>
 <input type="reset" value="Restablecer" style="background-color:Red;font-family:Arial; font-size:1.5em"/>
 </div></div></center></h:form>
 	

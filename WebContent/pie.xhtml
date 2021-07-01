@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	  <p:dataTable id="reporte" var="personaAutos1" value="#{consultainvitado.consulta}"
+	rows="10" paginator="true"
+	paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
+{PageLinks}"
+	rowsPerPageTemplate="5,10,15">
+	<p:column headerText="Nombre Persona">
+		<h:outputText value="#{personaAutos1.provincia.provincia}" />
+	</p:column>
+	<p:column headerText="Cantidad Autos">
+		<h:outputText value="#{personaAutos1.total}" />
+	</p:column>
+</p:dataTable>
+     <p:chart type="pie" model="#{consultainvitado.torta}" style="width: 50%; height: 50%" ></p:chart>
+     
+   
+</html>

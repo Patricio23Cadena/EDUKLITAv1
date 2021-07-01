@@ -172,7 +172,7 @@ public class PersonaBean {
 		nuevaPersona.setEdad(edad);
 		nuevaPersona.setCorreo(correo);
 		nuevaPersona.setClave(clave);
-		nuevaPersona.setTipo(1);
+		nuevaPersona.setTipo(tipo);
 		nuevaPersona.setFlag(0);
 		pdao.crear(nuevaPersona);
 		addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente", "HOLA");
