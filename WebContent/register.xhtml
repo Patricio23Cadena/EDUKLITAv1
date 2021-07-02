@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>CANTIDAD ALUMNOS</title>
+        <title>REGISTRAR USUARIO</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
@@ -32,7 +32,7 @@
     <h:body class="sb-nav-fixed" id="Fondo">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <p:link class="nav-link" outcome="admin" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
+            <p:link class="nav-link" outcome="consultaUser" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
              
              
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
@@ -46,79 +46,64 @@
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                           
-                        <li> <p:link class="nav-link" style="color:black" outcome="cerrarSesion">Cerrar Sesión</p:link></li>
+                        <li> <p:link class="nav-link" style="color:black" outcome="index">Cerrar Sesión</p:link></li>
                     </ul>
                 </li>
             </ul>
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">INCIO</div>
-                            <p:link class="nav-link" outcome="user">
+                            <p:link class="nav-link" outcome="admin">
                                 <div class="sb-nav-link-icon"><i class="fas fa-home fa-spin"></i></div>
                                 HOME
                             </p:link>
-                            <div class="sb-sidenav-menu-heading">REPORTES</div>
+                            <div class="sb-sidenav-menu-heading">USUARIOS</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area fa-spin"></i></div>
-                                BARRAS
+                                <div class="sb-nav-link-icon"><i class="fas fa-users-cog fa-spin"></i></div>
+                                USUARIOS
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav"> 
-                                    <p:link class="nav-link" outcome="TotalDocentes">Docentes</p:link>
-                                    <p:link class="nav-link" outcome="TotalAlumnos">Alumnos </p:link>
-                                    <p:link class="nav-link" outcome="ValorFinanciacion">Financiación</p:link>  
-                                     <p:link class="nav-link" outcome="valorErogaciones">Erogaciones</p:link>  
-                                      <p:link class="nav-link" outcome="cantidadAlumnos">Cantidad Alumno</p:link>                                    
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <p:link class="nav-link" outcome="register">Crear</p:link>
+                                    <p:link class="nav-link" outcome="consultaUser">Consultar</p:link>
+                                    <p:link class="nav-link" outcome="bloqueoUser">Bloquear</p:link>                                    
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-pie  fa-spin"></i></div>
-                                PASTELES
+                                <div class="sb-nav-link-icon"><i class="fas fa-cog fa-spin"></i></div>
+                                OPCIONES
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                     
-                                       <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>
-                                    <p:link class="nav-link" outcome="comparacionProduccion">Producción </p:link>
-                                    <p:link class="nav-link" outcome="comparacionContribuciones">Contribucción</p:link>  
-                                     <p:link class="nav-link" outcome="comparacionRentas">Renta</p:link>  
-                                      <p:link class="nav-link" outcome="valorTotalFinancia">Total Financiación</p:link>  
-                                     
+                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
+                                        Configuración
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                           <p:link class="nav-link" outcome="cambioClave1">Cambio de contraseña</p:link> 
+                                        </nav>
+                                    </div>
+                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
+                                        Auditoria
+                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                    </a>
+                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
+                                        <nav class="sb-sidenav-menu-nested nav">
+                                            <p:link class="nav-link" outcome="verAuditoria">Ver</p:link> 
+                                        </nav>
+                                    </div>
                                 </nav>
                             </div>
-                            
-                           
-                            
-                            
-                            
-                            
-                             
-                            <div class="sb-sidenav-menu-heading">OPCIONES</div>
-                             
-                            <p:link class="nav-link" outcome="cambioClave">
-                                <div class="sb-nav-link-icon"><i class="fas fa-key fa-spin"></i></div>
-                                CAMBIAR CONTRASEÑA
-                            </p:link>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             <div class="sb-sidenav-menu-heading">LOG-OUT</div>
                              
-                            <p:link class="nav-link" outcome="cerrarSesion">
+                            <p:link class="nav-link" outcome="index">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users-cog fa-spin"></i></div>
                                 CERRAR SESIÓN
                             </p:link>
@@ -126,7 +111,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Usuario:</div>
-                        <p:link class="nav-link" outcome="admin" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link > 
+            <p:link class="nav-link" outcome="consultaUser" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link >
                     </div>
                 </nav>
             </div>

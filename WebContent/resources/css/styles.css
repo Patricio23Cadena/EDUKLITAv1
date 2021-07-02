@@ -3626,7 +3626,7 @@ textarea.form-control-lg {
   color: #212529;
   text-align: left;
   list-style: none;
-  background-color: #fff;
+  background-color: #e8d69b;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0.25rem;
@@ -11573,11 +11573,13 @@ ul.acordeon li:hover {
 	padding-top:28%;
 	padding-left:5%;
 	font-size:3.5em;
+	color:White;
 }
 
 .foh2{
 	
 	font-size:1.2em;
+	color:White;
 }
  
 
