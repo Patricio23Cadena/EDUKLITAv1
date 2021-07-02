@@ -1,39 +1,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui"> 
-    
-        <meta charset="utf-8" />
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	   <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>REGISTRAR USUARIO</title>
+        <title>CANTIDAD ALUMNOS</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-        <link href="resources/css/stylesRegister.css" rel="stylesheet" />
+        <link href="resources/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-    <link href="resources/css/estilosRegister.css" rel="stylesheet" /> 
+       
+   </h:head> 
     
- <script>
-function myfunction() {
-}
-</script>   
     
     <style>
 #Fondo {
 	background: url(images/administrador.jpg);
-	background-size: cover;
+	/*background-size: cover;*/
 	background-repeat: no-repeat;
-	height:100%;
+	
 }
 </style> 
     
     
-    <body class="sb-nav-fixed" id="Fondo">
-   		
-        
+    <h:body class="sb-nav-fixed" id="Fondo">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <p:link class="nav-link" outcome="admin" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
@@ -61,50 +57,65 @@ function myfunction() {
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">INCIO</div>
-                            <p:link class="nav-link" outcome="admin">
+                            <p:link class="nav-link" outcome="user">
                                 <div class="sb-nav-link-icon"><i class="fas fa-home fa-spin"></i></div>
                                 HOME
                             </p:link>
-                            <div class="sb-sidenav-menu-heading">USUARIOS</div>
+                            <div class="sb-sidenav-menu-heading">REPORTES</div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-users-cog fa-spin"></i></div>
-                                USUARIOS
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area fa-spin"></i></div>
+                                BARRAS
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <p:link class="nav-link" outcome="register">Crear</p:link>
-                                    <p:link class="nav-link" outcome="consultaUser">Consultar</p:link>
-                                    <p:link class="nav-link" outcome="bloqueoUser">Bloquear</p:link>                                    
+                                <nav class="sb-sidenav-menu-nested nav"> 
+                                    <p:link class="nav-link" outcome="TotalDocentes">Docentes</p:link>
+                                    <p:link class="nav-link" outcome="TotalAlumnos">Alumnos </p:link>
+                                    <p:link class="nav-link" outcome="ValorFinanciacion">Financiación</p:link>  
+                                     <p:link class="nav-link" outcome="valorErogaciones">Erogaciones</p:link>  
+                                      <p:link class="nav-link" outcome="cantidadAlumnos">Cantidad Alumno</p:link>                                    
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-cog fa-spin"></i></div>
-                                OPCIONES
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-pie  fa-spin"></i></div>
+                                PASTELES
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Configuración
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                           <p:link class="nav-link" outcome="cambioClave1">Cambio de contraseña</p:link> 
-                                        </nav>
-                                    </div>
-                                    <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Auditoria
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <p:link class="nav-link" outcome="verAuditoria">Ver</p:link> 
-                                        </nav>
-                                    </div>
+                                <nav class="sb-sidenav-menu-nested nav">
+                                     
+                                       <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>
+                                    <p:link class="nav-link" outcome="comparacionProduccion">Producción </p:link>
+                                    <p:link class="nav-link" outcome="comparacionContribuciones">Contribucción</p:link>  
+                                     <p:link class="nav-link" outcome="comparacionRentas">Renta</p:link>  
+                                      <p:link class="nav-link" outcome="valorTotalFinancia">Total Financiación</p:link>  
+                                     
                                 </nav>
                             </div>
+                            
+                           
+                            
+                            
+                            
+                            
+                             
+                            <div class="sb-sidenav-menu-heading">OPCIONES</div>
+                             
+                            <p:link class="nav-link" outcome="cambioClave">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key fa-spin"></i></div>
+                                CAMBIAR CONTRASEÑA
+                            </p:link>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                             <div class="sb-sidenav-menu-heading">LOG-OUT</div>
                              
                             <p:link class="nav-link" outcome="cerrarSesion">
@@ -115,99 +126,104 @@ function myfunction() {
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Usuario:</div>
-                        <p:link class="nav-link" outcome="admin" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link >
+                        <p:link class="nav-link" outcome="admin" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link > 
                     </div>
                 </nav>
             </div>
             <div id="layoutSidenav_content">
-                 
- <br />
- <h:form>       
-          
-               <center><div><u>  <h1>Registro de personas </h1></u>
-<h:panelGrid  columns="16">
-
-<tr>
- <td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nombres:</h1></td>
- <td><h:inputText id="nombre" value="#{userView.nombres}" required="true"
-requiredMessage="El campo es obligatorio"><f:validateRequired />
- </h:inputText>*</td>
- <td><h:message for="nombre" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
-</tr>
-
- 
-
-
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Apellidos:</h1></td>
-
-<td><h:inputText id="apellidos" value="#{userView.apellidos}" required="true"
-requiredMessage="El campo es obligatorio">
+                <main>
+                    <div class="container-fluid px-4">
+                       <center><h1 class="mt-4">EDUKLITA</h1></center>
+                         
+                     <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+               
+            </div>
+        </div>
+     </div>     
+</div> 
+                        
+                       
+                        
+                    </div>
+         
+         
+           
+               <div class="container">
+	<section id="content">
+		<h:form >
+		<p:growl id="growl" showDetail="true" life="2000"  />
+	<p:outputPanel style="display:block" id="panel">
+	<p:messages id="msgs"/>
+			<h1>Registrar Usuario</h1>
+			<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nombres</h1>
+<h:inputText id="nombre" value="#{userView.nombres}" required="true"
+requiredMessage="El campo nombres es obligatorio"><f:validateRequired />
+ </h:inputText>	
+ <h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Apellidos:</h1>
+		<h:inputText id="apellidos" value="#{userView.apellidos}" required="true"
+requiredMessage="El apellidos campo es obligatorio">
 <f:validateRequired />
- </h:inputText>*</td>
- <td><h:message for="apellidos" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
-</tr>
-
-
-
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Edad:</h1></td><td><h:inputText id="edad" value="#{userView.edad}" required="true"
-requiredMessage="El campo es obligatorio" validatorMessage="Edad correcta">
-<f:validateLongRange minimum="18" maximum="100"/></h:inputText>*</td>
-<td><h:message for="edad" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
-</tr>
-
-
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Cédula:</h1></td><td><h:inputText id="cedula" value="#{userView.cdi}" required="true"
-requiredMessage="El campo es obligatorio"   validatorMessage="Ingrese una cédula correcta">
-<f:validateLength minimum="10" maximum="10"/></h:inputText>*</td>
-<td><h:message for="cedula" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
-</tr>
-
-
-
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Correo Electrónico:</h1></td><td><h:inputText id="correo" value="#{userView.correo}" validatorMessage="Se esperaba un correo electrónico"
-requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe ser un correo válido">
+ </h:inputText>	
+			<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Edad:</h1>
+			<h:inputText id="edad" value="#{userView.edad}" required="true"
+requiredMessage="El campo edad es obligatorio" validatorMessage="Edad incorrecta">
+<f:validateLongRange minimum="18" maximum="100"/></h:inputText>
+		<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Cédula:</h1>	
+			<h:inputText id="cedula" value="#{userView.cdi}" required="true"
+requiredMessage="El cédula campo es obligatorio"   validatorMessage="Ingrese una cédula correcta">
+<f:validateLength minimum="10" maximum="10"/></h:inputText>
+			
+<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Correo Electrónico:</h1>			
+			<h:inputText id="correo" value="#{userView.correo}" validatorMessage="Se esperaba un correo electrónico"
+requiredMessage="El campo correo es obligatorio" required="true" validateRequired="Debe ser un correo válido">
 
 <f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"  ></f:validateRegex>
 
 
-</h:inputText>*</td>
-<td><h:message for="correo" style="color:#6e09ad; font-family:Arial; font-size:1.5em"/></td>
-</tr>
-  
-  
-
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Tipo:</h1></td>
-<td><h:selectOneMenu value="#{userView.tipo}" style="padding:0 57px 0 0">
+</h:inputText>
+			
+	<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Tipo:</h1>		
+			
+		<h:selectOneMenu value="#{userView.tipo}" style="padding:0 57px 0 0">
 <f:selectItem itemValue="2"  itemLabel="Administrador"  />
 <f:selectItem itemValue="1"  itemLabel="Usuario"/> 
-</h:selectOneMenu></td>
-</tr>  
-  
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Clave:</h1></td><td><h:inputSecret id="clave" value="#{userView.clave}" requiredMessage="El campo es obligatorio" required="true" />*</td>
-<td><h:message for="clave" style="color:#6e09ad; font-family:Arial; font-size:1.5em"/></td>
-</tr>
-
-
-
-</h:panelGrid>
-
-<div>
-<br />
-<h:commandButton action="#{userView.registrar}" value="Registrar" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
-<input type="reset" value="Restablecer" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
-</div></div></center></h:form>
-	
-                 
-                 
-                 
-                 
-                 
+</h:selectOneMenu>	
+<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Clave:</h1>
+<h:inputSecret id="clave" value="#{userView.clave}" requiredMessage="El campo clave es obligatorio" required="true" />			
+			<div style="padding-top:3%">
+				<h:commandButton update="growl" action="#{userView.registrar()}" value="Registrar" style="font-family:Arial; font-size:1.5em"/>
+<input type="reset" value="Restablecer" style="font-family:Arial; font-size:1.5em"/>
+				
+			</div>
+		</p:outputPanel>
+		</h:form><!-- form -->
+	</section><!-- content -->
+</div><!-- container -->
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+                </main>
+               
                  
                  
                 <footer class="py-4 bg-light mt-auto">
@@ -222,7 +238,7 @@ requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe
 			<img class="gifTierra" src="images/telefono.png"/>	
 		</div>
 		<div class="imagenCentroFo1">
-			<h1 class="foh1">0984571751</h1>
+			<h1 style="color:white"  class="foh1">0984571751</h1>
 		</div>
 		</div>
 		
@@ -232,11 +248,11 @@ requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe
 			<img class="gifTierra" src="images/mail.png"/>	
 		</div>
 		<div class="imagenCentroFo1">
-			<h1 class="foh1">guerrero01.@gmail.com</h1>
+			<h1 style="color:white" class="foh1">guerrero01.@gmail.com</h1>
 		</div>
 		</div>
 		<div >
-		<b  class="foh2">Copyright© 2021. EDUKLITA. Todos los derechos reservados. </b>
+		<b  style="color:white"  class="foh2">Copyright© 2021. EDUKLITA. Todos los derechos reservados. </b>
 		</div>
 		</div>
 	
@@ -246,9 +262,9 @@ requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe
                 
                 
             </div>
-         
+            
         </div>
-       
+        
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
@@ -259,5 +275,5 @@ requiredMessage="El campo es obligatorio" required="true" validateRequired="Debe
    
    
    
-    </body>
+    </h:body>
 </html>

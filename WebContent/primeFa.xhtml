@@ -1,34 +1,39 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:p="http://primefaces.org/ui"> 
-    
-        <meta charset="utf-8" />
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	   <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>USER EDUKLITA</title>
+        <title>CANTIDAD ALUMNOS</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-    
+       
+   </h:head> 
     
     
     <style>
 #Fondo {
 	background: url(images/administrador.jpg);
-	background-size: cover;
+	/*background-size: cover;*/
 	background-repeat: no-repeat;
+	
 }
 </style> 
-   
+    
+    
     <h:body class="sb-nav-fixed" id="Fondo">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-               <p:link class="nav-link" outcome="user" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
+            <p:link class="nav-link" outcome="cantidadAlumnos" style="color:white; font-size:2em" value="asdg"></p:link >
+             
              
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group">
@@ -121,7 +126,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Usuario:</div>
-                        <p:link class="nav-link" outcome="user" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link >
+                        <p:link class="nav-link" outcome="admin" style="color:white; font-size:1em" value="dfdsaf"></p:link > 
                     </div>
                 </nav>
             </div>
@@ -130,72 +135,97 @@
                     <div class="container-fluid px-4">
                        <center><h1 class="mt-4">EDUKLITA</h1></center>
                          
-                     <!--<div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
-                        <div class="row">
-                            <div class="col-xl-6">
-                                 
-                            </div>
-                            <div class="col-xl-6">
-                                 
-                                 
-                                 
-                                 
-                            </div>
-                        </div>
-                        <div class="card mb-4">
-                              
-                        </div>
-                        
-                        
+                     <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+               
+            </div>
+        </div>
+     </div>     
+</div> 
                         
                        
                         
                     </div>
+         
+         
+           
+               <div class="container">
+	<section id="content">
+		<h:form >
+		<p:growl id="growl" showDetail="true" life="2000"  />
+	<p:outputPanel style="display:block" id="panel">
+	<p:messages id="msgs"/>
+			<h1>Login Form</h1>
+			<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nombres</h1>
+<h:inputText id="nombre" value="#{userView.nombres}" required="true"
+requiredMessage="El campo nombres es obligatorio"><f:validateRequired />
+ </h:inputText>	
+ <h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Apellidos:</h1>
+		<h:inputText id="apellidos" value="#{userView.apellidos}" required="true"
+requiredMessage="El apellidos campo es obligatorio">
+<f:validateRequired />
+ </h:inputText>	
+			<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Edad:</h1>
+			<h:inputText id="edad" value="#{userView.edad}" required="true"
+requiredMessage="El campo edad es obligatorio" validatorMessage="Edad incorrecta">
+<f:validateLongRange minimum="18" maximum="100"/></h:inputText>
+		<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Cédula:</h1>	
+			<h:inputText id="cedula" value="#{userView.cdi}" required="true"
+requiredMessage="El cédula campo es obligatorio"   validatorMessage="Ingrese una cédula correcta">
+<f:validateLength minimum="10" maximum="10"/></h:inputText>
+			
+<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Correo Electrónico:</h1>			
+			<h:inputText id="correo" value="#{userView.correo}" validatorMessage="Se esperaba un correo electrónico"
+requiredMessage="El campo correo es obligatorio" required="true" validateRequired="Debe ser un correo válido">
+
+<f:validateRegex pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$"  ></f:validateRegex>
+
+
+</h:inputText>
+			
+	<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Tipo:</h1>		
+			
+		<h:selectOneMenu value="#{userView.tipo}" style="padding:0 57px 0 0">
+<f:selectItem itemValue="2"  itemLabel="Administrador"  />
+<f:selectItem itemValue="1"  itemLabel="Usuario"/> 
+</h:selectOneMenu>	
+<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Clave:</h1>
+<h:inputSecret id="clave" value="#{userView.clave}" requiredMessage="El campo clave es obligatorio" required="true" />			
+			<div>
+				<h:commandButton update="growl" action="#{userView.registrar()}" value="Registrar" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
+<input type="reset" value="Restablecer" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
+				
+			</div>
+		</p:outputPanel>
+		</h:form><!-- form -->
+	</section><!-- content -->
+</div><!-- container -->
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
                 </main>
-                
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
+               
+                 
+                 
                 <footer class="py-4 bg-light mt-auto">
                     <div id="footer">	<div class="footerImg">
 		
@@ -247,3 +277,5 @@
    
     </h:body>
 </html>
+	
+	

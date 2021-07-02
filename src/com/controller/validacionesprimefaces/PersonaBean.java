@@ -30,8 +30,6 @@ public class PersonaBean {
 	private int flag;
 	private String clave;
 
-
-
 	public Persona getP() {
 		return p;
 	}
@@ -160,7 +158,6 @@ public class PersonaBean {
 
 	public void save() {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Welcome " + nombres + " " + apellidos));
-		
 
 	}
 
@@ -174,9 +171,23 @@ public class PersonaBean {
 		nuevaPersona.setClave(clave);
 		nuevaPersona.setTipo(tipo);
 		nuevaPersona.setFlag(0);
-		pdao.crear(nuevaPersona);
-		addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente", "HOLA");
-		return "admin";
+		Long var1 = nuevaPersona.getCdi();
+		String var =  var1.toString();
+		if (pdao.bloqCorreo(nuevaPersona) == null) {
+			if (cedula(var)) {
+				pdao.crear(nuevaPersona);
+				addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente", "");
+				return "admin";
+			} else {
+				addMessage(FacesMessage.SEVERITY_ERROR, "Error al registrarse", "");
+				return "register";
+			}
+		} else {
+			addMessage(FacesMessage.SEVERITY_ERROR, "Este correo ya esta registrado", "");
+			return "register";
+
+		}
+
 	}
 
 	public PersonaBean() {
@@ -193,50 +204,43 @@ public class PersonaBean {
 
 	}
 
-	protected boolean cedula(String cedula) {
-		boolean cedulaCorrecta = false;
-
-		try {
-
-			if (cedula.length() == 10) // ConstantesApp.LongitudCedula
-			{
-				int tercerDigito = Integer.parseInt(cedula.substring(2, 3));
-				if (tercerDigito < 6) {
-					// Coeficientes de validación cédula
-					// El decimo digito se lo considera dígito verificador
-					int[] coefValCedula = { 2, 1, 2, 1, 2, 1, 2, 1, 2 };
-					int verificador = Integer.parseInt(cedula.substring(9, 10));
-					int suma = 0;
-					int digito = 0;
-					for (int i = 0; i < (cedula.length() - 1); i++) {
-						digito = Integer.parseInt(cedula.substring(i, i + 1)) * coefValCedula[i];
-						suma += ((digito % 10) + (digito / 10));
-					}
-
-					if ((suma % 10 == 0) && (suma % 10 == verificador)) {
-						cedulaCorrecta = true;
-					} else if ((10 - (suma % 10)) == verificador) {
-						cedulaCorrecta = true;
-					} else {
-						cedulaCorrecta = false;
-					}
-				} else {
-					cedulaCorrecta = false;
+	protected boolean cedula(String x) {
+		int suma = 0;
+		if (x.length() == 9) {
+			System.out.println("Ingrese su cedula de 10 digitos");
+			return false;
+		} else {
+			int a[] = new int[x.length() / 2];
+			int b[] = new int[(x.length() / 2)];
+			int c = 0;
+			int d = 1;
+			for (int i = 0; i < x.length() / 2; i++) {
+				a[i] = Integer.parseInt(String.valueOf(x.charAt(c)));
+				c = c + 2;
+				if (i < (x.length() / 2) - 1) {
+					b[i] = Integer.parseInt(String.valueOf(x.charAt(d)));
+					d = d + 2;
 				}
-			} else {
-				cedulaCorrecta = false;
 			}
-		} catch (NumberFormatException nfe) {
-			cedulaCorrecta = false;
-		} catch (Exception err) {
-			System.out.println("Una excepcion ocurrio en el proceso de validacion");
-			cedulaCorrecta = false;
-		}
 
-		if (!cedulaCorrecta) {
-			System.out.println("La Cédula ingresada es Incorrecta");
+			for (int i = 0; i < a.length; i++) {
+				a[i] = a[i] * 2;
+				if (a[i] > 9) {
+					a[i] = a[i] - 9;
+				}
+				suma = suma + a[i] + b[i];
+			}
+			int aux = suma / 10;
+			int dec = (aux + 1) * 10;
+			if ((dec - suma) == Integer.parseInt(String.valueOf(x.charAt(x.length() - 1))))
+				return true;
+			else if (suma % 10 == 0 && x.charAt(x.length() - 1) == '0') {
+				return true;
+			} else {
+				return false;
+			}
+
 		}
-		return cedulaCorrecta;
 	}
 
 }
