@@ -147,11 +147,11 @@
 		<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nueva contraseña:</h1>	
 			<h:inputSecret id="contra" value="#{userView.contra}" required="true"
 requiredMessage="El campo de nueva clave es obligatorio"   validatorMessage="Ingrese una nueva clave correcta">
-<f:validateLength minimum="7" maximum="7"/></h:inputSecret>
+<f:validateLength minimum="10" maximum="20"/></h:inputSecret>
 <h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Vuelva a escribir la contraseña:</h1>
 <h:inputSecret id="vlcontra" value="#{userView.vlcontra}" requiredMessage="El campo clave es obligatorio" validatorMessage="Ingrese una nueva clave correcta"
  required="true" >
-<f:validateLength minimum="7" maximum="7"/></h:inputSecret>			
+<f:validateLength minimum="10" maximum="20"/></h:inputSecret>			
 			<div style="padding-top:3%">
 				<h:commandButton update="growl" action="#{userView.cambioClave()}" value="Cambiar" style="font-family:Arial; font-size:1.5em"/>
 <input type="reset" value="Restablecer" style="font-family:Arial; font-size:1.5em"/>

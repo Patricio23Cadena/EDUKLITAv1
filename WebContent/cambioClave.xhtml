@@ -158,23 +158,16 @@
 	<p:messages id="msgs"/>
 			<h1><u>Cambio Contraseña</u></h1>
 			  
-			<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Contraseña Antigua:</h1>
-			<h:inputSecret id="edad" value="#{userView.edad}" required="true"
-requiredMessage="El campo de antigua contraseña es obligatorio" validatorMessage="Ingrese su clave antigua">
-<f:validateLength minimum="7" maximum="7"/></h:inputSecret>
-		<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nueva Contraseña:</h1>	
-			<h:inputSecret id="cedula" value="#{userView.cdi}" required="true"
-requiredMessage="El campo de nueva clave es obligatorio"   validatorMessage="Ingrese una nueva clave correcta">
-<f:validateLength minimum="7" maximum="7"/></h:inputSecret>
-			
- 
-			 	
-<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Clave:</h1>
-<h:inputSecret id="clave" value="#{userView.clave}" requiredMessage="El campo clave es obligatorio" validatorMessage="Ingrese una nueva clave correcta"
+		<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nueva contraseña:</h1>	
+			<h:inputSecret id="contra" value="#{userView.contra}" required="true"
+requiredMessage="El campo de nueva clave es obligatorio"   validatorMessage="Mínimo 10 y máximo 20 dígitos">
+<f:validateLength minimum="10" maximum="20"/></h:inputSecret>
+<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Vuelva a escribir la contraseña:</h1>
+<h:inputSecret id="vlcontra" value="#{userView.vlcontra}" requiredMessage="El campo clave es obligatorio" validatorMessage="Mínimo 10 y máximo 20 dígitos"
  required="true" >
-<f:validateLength minimum="7" maximum="7"/></h:inputSecret>			
+<f:validateLength minimum="10" maximum="20"/></h:inputSecret>			
 			<div style="padding-top:3%">
-				<h:commandButton update="growl" action="#{userView.registrar()}" value="Cambiar" style="font-family:Arial; font-size:1.5em"/>
+				<h:commandButton update="growl" action="#{userView.cambioClave()}" value="Cambiar" style="font-family:Arial; font-size:1.5em"/>
 <input type="reset" value="Restablecer" style="font-family:Arial; font-size:1.5em"/>
 				
 			</div>
