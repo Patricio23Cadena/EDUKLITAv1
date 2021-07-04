@@ -29,6 +29,7 @@ public class PersonaBean {
 	private int tipo;
 	private int flag;
 	private String clave;
+	private Datos dt = new Datos();
 
 	public Persona getP() {
 		return p;
@@ -114,6 +115,51 @@ public class PersonaBean {
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(severity, summary, detail));
 	}
 
+	private String contra;
+	private String vlcontra;
+
+	
+	
+	public String getContra() {
+		return contra;
+	}
+
+	public void setContra(String contra) {
+		this.contra = contra;
+	}
+
+	public String getVlcontra() {
+		return vlcontra;
+	}
+
+	public void setVlcontra(String vlcontra) {
+		this.vlcontra = vlcontra;
+	}
+
+	public String cambioClave() {
+		System.out.println("------------------"+ dt.getId());
+		List<Persona> lista = pdao.cambioContra(dt.getId()); 
+		if(contra.equals(vlcontra)) {
+			Persona p = lista.get(0);
+			p.setClave(contra);
+			pdao.actualizar(p);
+	        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cambio de clave correcto"));
+
+			return "cambioClave1";
+		}
+		else {
+	        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error al cambiar la clave"));
+
+			return "cambioClave1";
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
 	public String showInfo() {
 		p = new Persona();
 
@@ -131,6 +177,7 @@ public class PersonaBean {
 			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME",
 					pdao.login(cor).getApellidos() + " " + pdao.login(cor).getNombres());
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", nombres);
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("id", pdao.iniciarSesion(p).getId_usuario());
 			FacesContext contextaux = FacesContext.getCurrentInstance();
 			contextaux.getExternalContext().getFlash().setKeepMessages(true);
 			contextaux.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "!!Bienbenido!!", nombres));
