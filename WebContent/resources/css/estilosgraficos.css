@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+
+.ui-widget-content {
+    border: 1px solid #a8a8a8;
+    background-color: #f7ede2;
+    color: #4f4f4f;
+}
+
+.ui-widget-header {
+	color:White;
+	background-color:#212529;
+	}
+	
+	
+.ui-datatable tbody td {
+    border-color: inherit;
+    text-align: center;
+}
+
+.ui-state-default{
+    border: 1px solid #a8a8a8;
+    background: #c4c4c4 url(/eduklita/javax.faces.resource/images/ui-bg_highlight-hard_80_c4c4c4_1x100.png.jsf?ln=primefaces-aristo) 50% 50% repeat-x;
+    background: #c4c4c4 linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    background: #669bbc -webkit-gradient(linear,left top,left bottom,from(rgba(255,255,255,0.8)),to(rgba(255,255,255,0)));
+    background: #c4c4c4 -moz-linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    font-weight: bold;
+    color: #4f4f4f;
+    text-shadow: 0 1px 0 rgb(255 255 255 / 70%);
+}
+
+
+.ui-menu, .ui-menu .ui-menu-child {
+    background: #c4c4c4 url(/eduklita/javax.faces.resource/images/ui-bg_highlight-hard_80_c4c4c4_1x100.png.xhtml?ln=primefaces-aristo) top repeat-x;
+    background: #c4c4c4 linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    background: rgba(0,0,0,0.5) -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5)));
+    background: #c4c4c4 -moz-linear-gradient(top,rgba(255,255,255,0.8),rgba(255,255,255,0));
+    border-style: none;
+}
+	
+	
+	
+	
+	
+	
+.jqplot-grid-canvas{	
+	background-color: rgba(0,0,0,0.5);
+     border-style: none;
+}
+
+.jqplot-event-canvas{	
+	background: transparent;
+     border-style: none;
+}
+
+
+.jqplot-table-legend{	 
+     border-style: none;
+}

@@ -13,6 +13,7 @@
         <title>CONSULTAR USUARIO</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
+         <link href="resources/css/estilosTablas.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
  </h:head>    
     
@@ -26,7 +27,7 @@
 </style> 
     
     
-    <body class="sb-nav-fixed" id="Fondo">
+    <h:body class="sb-nav-fixed" id="Fondo">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <p:link class="nav-link" outcome="consultaUser" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
@@ -88,7 +89,7 @@
                                         </nav>
                                     </div>
                                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Auditoria
+                                        Auditoría
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
                                     <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
@@ -114,36 +115,84 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    
-                  <h:form>       
-          <br />
-               <center><div><u>  <h1>Consultar Usuario</h1></u>
-               <br />
-<h:panelGrid  columns="16">
-
-<tr>
- <td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Buscar:</h1></td>
- <td><h:inputSecret id="nombre" value="#{userView.nombres}" required="true"  validatorMessage="Contraseña incorrecta"
-requiredMessage="El campo es obligatorio"><f:validateRequired />
- </h:inputSecret>*</td>
- <td><h:message for="nombre" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
-</tr>
-
- 
-
-
- 
-
-
-
-</h:panelGrid>
-
-<div>
+                <br /><br />
+     <center><u> <h1 style="color:black; font-weight: bolder"> CONSULTAR USUARIOS</h1> </u> </center>         
 <br />
-<h:commandButton action="#{userView.registrar()}" value="Consultar" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
-<input type="reset" value="Restablecer" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
-</div></div></center></h:form>  
-                    
+                 <h:form id="form">
+    <div class="card crud-demo">
+        <p:growl id="messages" showDetail="true"/>
+
+       
+
+        <p:dataTable id="dt-products" widgetVar="dtProducts" var="product" value="#{crudView.products}"
+                     reflow="true" styleClass="products-table"
+                     selection="#{crudView.selectedProducts}" rowKey="#{product.id_usuario}" paginator="true"
+                     rows="10" rowSelectMode="add" paginatorPosition="bottom">
+            <f:facet name="header">
+                <div class="products-table-header">
+                    <span style="font-weight: bold">Ingrese cédula:</span>
+
+                    <span class="filter-container ui-input-icon-left"   >
+                        <i class="pi pi-search"></i>
+                        <p:inputText id="globalFilter" onkeyup="PF('dtProducts').filter()" placeholder="Buscar" />
+                    </span>
+
+                </div>
+            </f:facet>
+            <p:column selectionMode="multiple" exportable="false"   style="width:3%"></p:column>
+
+            <p:column  headerText="Code" sortBy="#{product.id_usuario}" filterBy="#{product.id_usuario}"  style="width:6%">
+                <h:outputText value="#{product.id_usuario}"   />
+            </p:column>
+            <p:column headerText="Cedúla" sortBy="#{product.cdi}" filterBy="#{product.cdi}" style="width:10%">
+                <h:outputText value="#{product.cdi}"   />
+            </p:column>
+            <p:column headerText="Nombre" exportable="false">
+              <h:outputText value="#{product.nombres}"/>
+            </p:column>
+             <p:column headerText="Apellido" exportable="false">
+                <h:outputText value="#{product.apellidos}"/>
+            </p:column>
+            <p:column headerText="Edad" exportable="false">
+                <h:outputText value="#{product.edad}"/>
+            </p:column>
+             <p:column headerText="Correo Electronico" exportable="false" style="width:22%">
+                <h:outputText value="#{product.correo}"/>
+            </p:column>
+               <p:column headerText="Tipo" exportable="false" style="width:10%">
+                 <h:outputText value="#{product.tipoPer()}"/>
+            </p:column>
+              <p:column headerText="Estado" exportable="false"   style="width:8%">
+                 <h:outputText value="#{product.estadoPer()}"/>
+            </p:column>
+            
+
+        </p:dataTable>
+
+         <p:confirmDialog widgetVar="saveProductDialog" showEffect="fade" width="300"
+                         message="Desea desbloquear esta cuenta" header="Confirm" severity="warn">
+            <p:commandButton value="Yes" icon="pi pi-check" actionListener="#{crudView.saveProduct()}"
+                             process="@this" oncomplete="PF('deleteProductDialog').hide()"
+                              onclick="PF('saveProductDialog').hide()"/>
+            <p:commandButton value="No" type="button" styleClass="ui-button-secondary" icon="pi pi-times"
+                             onclick="PF('saveProductDialog').hide()"/>
+        </p:confirmDialog>
+
+        <p:confirmDialog widgetVar="deleteProductDialog" showEffect="fade" width="300"
+                         message="Desea bloquear esta cuenta" header="Confirm" severity="warn">
+            <p:commandButton value="Yes" icon="pi pi-check" actionListener="#{crudView.deleteProduct}"
+                             process="@this" oncomplete="PF('deleteProductDialog').hide()"/>
+            <p:commandButton value="No" type="button" styleClass="ui-button-secondary" icon="pi pi-times"
+                             onclick="PF('deleteProductDialog').hide()"/>
+        </p:confirmDialog>
+
+        <p:confirmDialog global="true" showEffect="fade" width="300">
+            <p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+            <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no ui-button-secondary"
+                             icon="pi pi-times"/>
+        </p:confirmDialog>
+    </div>
+</h:form>
                     
                 </main> 
                 <footer class="py-4 bg-light mt-auto">
@@ -195,5 +244,5 @@ requiredMessage="El campo es obligatorio"><f:validateRequired />
    
    
    
-    </body>
+    </h:body>
 </html>

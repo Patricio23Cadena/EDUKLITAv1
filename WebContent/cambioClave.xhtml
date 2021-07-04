@@ -4,7 +4,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui"> 
-    
+    <h:head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -14,7 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-    
+    </h:head>
     
     
     <style>
@@ -26,7 +26,7 @@
 </style> 
     
     
-    <body class="sb-nav-fixed" id="Fondo">
+    <h:body class="sb-nav-fixed" id="Fondo">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <p:link class="nav-link" outcome="cambioClave" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
@@ -130,58 +130,58 @@
             <div id="layoutSidenav_content">
                 <main>
                   
-                  
-                  
-                   <br />
- <h:form>       
-          
-               <center><div><u>  <h1>Cambio de clave </h1></u>
-               <br />
-<h:panelGrid  columns="16">
-
-<tr>
- <td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Antigua Contraseña:</h1></td>
- <td><h:inputSecret id="nombre" value="#{userView.nombres}" required="true"  validatorMessage="Contraseña incorrecta"
-requiredMessage="El campo es obligatorio"><f:validateRequired />
- </h:inputSecret>*</td>
- <td><h:message for="nombre" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
-</tr>
-
+              
+                     <div class="container-fluid px-4">
+                       <center><h1 class="mt-4" style="color:black; font-weight: bolder">EDUKLITA</h1></center>
+                         
+                     <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+               
+            </div>
+        </div>
+     </div>     
+</div> 
+                        
+                       
+                        
+                    </div>
+         
+         
+           
+               <div class="container">
+	<section id="content">
+		<h:form >
+		<p:growl id="growl" showDetail="true" life="2000"  />
+	<p:outputPanel style="display:block" id="panel">
+	<p:messages id="msgs"/>
+			<h1><u>Cambio Contraseña</u></h1>
+			  
+			<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Contraseña Antigua:</h1>
+			<h:inputSecret id="edad" value="#{userView.edad}" required="true"
+requiredMessage="El campo de antigua contraseña es obligatorio" validatorMessage="Ingrese su clave antigua">
+<f:validateLength minimum="7" maximum="7"/></h:inputSecret>
+		<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nueva Contraseña:</h1>	
+			<h:inputSecret id="cedula" value="#{userView.cdi}" required="true"
+requiredMessage="El campo de nueva clave es obligatorio"   validatorMessage="Ingrese una nueva clave correcta">
+<f:validateLength minimum="7" maximum="7"/></h:inputSecret>
+			
  
-
-
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Nueva Contraseña:</h1></td>
-
-<td><h:inputSecret id="apellidos" value="#{userView.apellidos}" required="true"
-requiredMessage="El campo es obligatorio" validatorMessage="Contraseña incorrecta">
-<f:validateRequired />
- </h:inputSecret>*</td>
- <td><h:message for="apellidos" style="color:#6e09ad; font-family:Arial; font-size:1.5em" /></td>
-</tr>
-
- 
- 
-  
-  
-<tr>
-<td><h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Repetir Contraseña:</h1>
-</td><td><h:inputSecret id="clave" value="#{userView.clave}" 
-requiredMessage="El campo es obligatorio" required="true" validatorMessage="Contraseña incorrecta"/>
-*</td>
-<td><h:message for="clave" style="color:#6e09ad; font-family:Arial; font-size:1.5em"/></td>
-</tr>
-
-
-
-</h:panelGrid>
-
-<div>
-<br />
-<h:commandButton action="#{userView.registrar()}" value="Confirmar" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
-<input type="reset" value="Restablecer" style="background-color:#ff9400;font-family:Arial; font-size:1.5em"/>
-</div></div></center></h:form>
-                     
+			 	
+<h1 style="font-family:Arial; font-size:1.5em; font-weight: bolder;">Clave:</h1>
+<h:inputSecret id="clave" value="#{userView.clave}" requiredMessage="El campo clave es obligatorio" validatorMessage="Ingrese una nueva clave correcta"
+ required="true" >
+<f:validateLength minimum="7" maximum="7"/></h:inputSecret>			
+			<div style="padding-top:3%">
+				<h:commandButton update="growl" action="#{userView.registrar()}" value="Cambiar" style="font-family:Arial; font-size:1.5em"/>
+<input type="reset" value="Restablecer" style="font-family:Arial; font-size:1.5em"/>
+				
+			</div>
+		</p:outputPanel>
+		</h:form><!-- form -->
+	</section><!-- content -->
+</div><!-- container -->
                 </main>
                   
                 <footer class="py-4 bg-light mt-auto">
@@ -233,5 +233,5 @@ requiredMessage="El campo es obligatorio" required="true" validatorMessage="Cont
    
    
    
-    </body>
+    </h:body>
 </html>

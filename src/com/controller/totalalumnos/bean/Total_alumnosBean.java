@@ -76,11 +76,10 @@ public class Total_alumnosBean implements Serializable {
 	}
 	
 	private void crear() {
-		torta = init();
-		torta.setTitle("Total de alumnos por provincias del 2017");
-		torta.setLegendPosition("e");
-		torta.setShadow(false);
-		
+		torta = init(); 
+		torta.setLegendPosition("7");
+		torta.setShadow(false); 
+		torta.setDiameter(500);  
 	}
 	
 	public Total_alumnosDao getTolDao() {

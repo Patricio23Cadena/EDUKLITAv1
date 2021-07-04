@@ -14,6 +14,8 @@
 }
 </style>
 	<h:outputStylesheet library="css" name="estilos.css" />
+	<h:outputStylesheet library="css" name="estilosgraficos.css" />
+	
 	<title>GRÁFICOS</title>
 </h:head>
 <h:body id="Fondo">
@@ -41,11 +43,14 @@
 		<p:menuitem value="Gráficos" style="color:White" outcome="graficos"
 			icon="pi pi-times" />
 	</p:menubar>
-<br />
-<br />
+<br /> 
  <div>
+ <center><u> <h1 style="color:black; font-weight: bolder">TOTAL ALUMNOS POR PROVINCIA EN 2017</h1></u></center>
+ <br /> 
+ <div class="graficos">
  
  <center>
+ 
 
 
 
@@ -62,15 +67,11 @@
 		<h:outputText value="#{personaAutos1.total}" />
 	</p:column>
 </p:dataTable>
-     <p:chart type="pie" model="#{consultainvitado.torta}" style="width: 100%; height: 80% " ></p:chart>
-
-
-
-
+     <p:chart type="pie" model="#{consultainvitado.torta}" style="width: 75% ; height: 610px " ></p:chart>
 
 
  </center>
- 
+</div> 
  
  <style>
  
@@ -90,9 +91,7 @@
  
  </div>
  
- <br /> 
- <br />
- <br />
+ <br />  
  <br />
  
 	  

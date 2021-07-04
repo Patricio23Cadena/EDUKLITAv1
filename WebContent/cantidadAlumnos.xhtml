@@ -4,7 +4,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui"> 
-    
+    <h:head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -15,7 +15,7 @@
         <link href="resources/css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     
-    
+    </h:head>
     
     <style>
 #Fondo {
@@ -26,10 +26,10 @@
 </style> 
     
     
-    <body class="sb-nav-fixed" id="Fondo">
+    <h:body class="sb-nav-fixed" id="Fondo">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <p:link class="nav-link" outcome="cantidadAlumnos" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
+            <p:link class="nav-link" outcome="comparacionPIB" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
              
              
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
@@ -123,7 +123,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Usuario:</div>
-                        <p:link class="nav-link" outcome="admin" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link > 
+                           <p:link class="nav-link" outcome="comparacionPIB" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link >
                     </div>
                 </nav>
             </div>
@@ -132,38 +132,72 @@
                     <div class="container-fluid px-4">
                        <center><h1 class="mt-4">EDUKLITA</h1></center>
                          
-                     <div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-                    <canvas id="chLine"></canvas>
-                </div>
-            </div>
-        </div>
-     </div>     
-</div> 
+                     <!--<div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="row">
+                            <div class="col-xl-6">
+                                 
+                            </div>
+                            <div class="col-xl-6">
+                                 
+                                 
+                                 
+                                 
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                              
+                        </div>
+                        
+                        
                         
                        
                         
                     </div>
-                 <p:dataTable id="reporte" var="personaAutos1" value="#{consultainvitado.consulta}"
-	rows="10" paginator="true"
-	paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
-{PageLinks}"
-	rowsPerPageTemplate="5,10,15">
-	<p:column headerText="Nombre Persona">
-		<h:outputText value="#{personaAutos1.provincia.provincia}" />
-	</p:column>
-	<p:column headerText="Cantidad Autos">
-		<h:outputText value="#{personaAutos1.total}" />
-	</p:column>
-</p:dataTable>
-     <p:chart type="pie" model="#{consultainvitado.torta}" style="width: 50%; height: 50%" ></p:chart>
                 </main>
-               
-                 
-                 
+                
+                <BR />
+                <BR />
+                <BR />
+                <BR />
+                <BR />
+                <BR />
                 <footer class="py-4 bg-light mt-auto">
                     <div id="footer">	<div class="footerImg">
 		
@@ -213,5 +247,5 @@
    
    
    
-    </body>
+    </h:body>
 </html>
