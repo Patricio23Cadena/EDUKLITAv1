@@ -120,7 +120,56 @@
                   
                   
                   
-                  
+    <h:form id="form">
+    <div class="card crud-demo">
+        <p:growl id="messages" showDetail="true"/>
+
+       
+
+        <p:dataTable id="dt-products" widgetVar="dtProducts" var="product" value="#{crudAud.products}"
+                     reflow="true" styleClass="products-table"
+                     selection="#{crudAud.selectedProducts}" rowKey="#{product.id_aud}" paginator="true"
+                     rows="10" rowSelectMode="add" paginatorPosition="bottom">
+            <f:facet name="header">
+                <div class="products-table-header">
+                    <span style="font-weight: bold">Ingrese Fecha:</span>
+
+                    <span class="filter-container ui-input-icon-left"   >
+                        <i class="pi pi-search"></i>
+                        <p:inputText id="globalFilter" onkeyup="PF('dtProducts').filter()" placeholder="Buscar" />
+                    </span>
+
+                </div>
+            </f:facet>
+            <p:column selectionMode="multiple" exportable="false"   style="width:3%"></p:column>
+
+            <p:column  headerText="Code" sortBy="#{product.id_aud}" filterBy="#{product.id_aud}"  style="width:6%">
+                <h:outputText value="#{product.id_aud}"   />
+            </p:column>
+            <p:column headerText="Fecha" sortBy="#{product.fecha_aud}" filterBy="#{product.fecha_aud}" style="width:10%">
+                <h:outputText value="#{product.fecha_aud}"   />
+            </p:column>
+            <p:column headerText="Tabla" exportable="false">
+              <h:outputText value="#{product.tabla_aud}"/>
+            </p:column>
+             <p:column headerText="Operación" exportable="false">
+                <h:outputText value="#{product.operacion_aud}"/>
+            </p:column>
+            <p:column headerText="Valor Anterior" exportable="false">
+                <h:outputText value="#{product.valoranterior_aud}"/>
+            </p:column>
+             <p:column headerText="Valor Nuevo" exportable="false" style="width:22%">
+                <h:outputText value="#{product.valornuevo_aud}"/>
+            </p:column>
+               <p:column headerText="Usuario" exportable="false" style="width:10%">
+                 <h:outputText value="#{product.usuario_aud}"/>
+            </p:column>
+              
+            
+
+        </p:dataTable>
+    </div>
+</h:form>               
                   
                   
                   
