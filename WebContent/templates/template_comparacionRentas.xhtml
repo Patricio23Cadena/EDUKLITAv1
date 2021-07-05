@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"> 
+    <h:head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>COMPARACIÓN RENTAS</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="resources/css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    </h:head>
+    
+    
+    <style>
+#Fondo {
+	background: url(images/administrador.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+</style> 
+    
+    
+    <h:body class="sb-nav-fixed" id="Fondo">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <p:link class="nav-link" outcome="comparacionRentas" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
+             
+             
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                          
+                        <li> <p:link class="nav-link" style="color:black" outcome="index">Cerrar Sesión</p:link></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">INCIO</div>
+                            <p:link class="nav-link" outcome="user">
+                                <div class="sb-nav-link-icon"><i class="fas fa-home fa-spin"></i></div>
+                                HOME
+                            </p:link>
+                            <div class="sb-sidenav-menu-heading">REPORTES</div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area fa-spin"></i></div>
+                                BARRAS
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav"> 
+                                    <p:link class="nav-link" outcome="TotalDocentes">Docentes</p:link>
+                                    <p:link class="nav-link" outcome="TotalAlumnos">Alumnos </p:link>
+                                    <p:link class="nav-link" outcome="ValorFinanciacion">Financiación</p:link>  
+                                     <p:link class="nav-link" outcome="valorErogaciones">Erogaciones</p:link>  
+                                      <p:link class="nav-link" outcome="cantidadAlumnos">Cantidad Alumno</p:link>                                    
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-pie  fa-spin"></i></div>
+                                PASTELES
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                     
+                                       <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>
+                                    <p:link class="nav-link" outcome="comparacionProduccion">Producción </p:link>
+                                    <p:link class="nav-link" outcome="comparacionContribuciones">Contribucción</p:link>  
+                                     <p:link class="nav-link" outcome="comparacionRentas">Renta</p:link>  
+                                      <p:link class="nav-link" outcome="valorTotalFinancia">Total Financiación</p:link>  
+                                     
+                                </nav>
+                            </div>
+                            
+                           
+                            
+                            
+                            
+                            
+                             
+                            <div class="sb-sidenav-menu-heading">OPCIONES</div>
+                             
+                            <p:link class="nav-link" outcome="cambioClave">
+                                <div class="sb-nav-link-icon"><i class="fas fa-key fa-spin"></i></div>
+                                CAMBIAR CONTRASEÑA
+                            </p:link>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <div class="sb-sidenav-menu-heading">LOG-OUT</div>
+                             
+                            <p:link class="nav-link" outcome="index">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users-cog fa-spin"></i></div>
+                                CERRAR SESIÓN
+                            </p:link>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Usuario:</div>
+            <p:link class="nav-link" outcome="comparacionRentas" style="color:white; font-size:1em" value="#{userioDato.get()}"></p:link >
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                       <center><h1 class="mt-4">EDUKLITA</h1></center>
+                         
+                     <!--<div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="row">
+                            <div class="col-xl-6">
+                                 
+                            </div>
+                            <div class="col-xl-6">
+                                 
+                                 
+                                 
+                                 
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                              
+                        </div>
+                        
+                        
+                        
+                       
+                        
+                    </div>
+                </main>
+                
+                <BR />
+                <BR />
+                <BR />
+                <BR />
+                <BR />
+                <BR />
+                <footer class="py-4 bg-light mt-auto">
+                    <div id="footer">	<div class="footerImg">
+		
+		<img class="gifTierra" src="images/giphy.gif"/>
+		</div>
+		<div class="footerToDIvC">
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/telefono.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">0984571751</h1>
+		</div>
+		</div>
+		
+		<div class="footerDiv" > 
+		
+		<div class="imagenCentroFo">
+			<img class="gifTierra" src="images/mail.png"/>	
+		</div>
+		<div class="imagenCentroFo1">
+			<h1 class="foh1">guerrero01.@gmail.com</h1>
+		</div>
+		</div>
+		<div >
+		<b  class="foh2">Copyright© 2021. EDUKLITA. Todos los derechos reservados. </b>
+		</div>
+		</div>
+	
+	</div>	 
+	
+                </footer>
+                
+                
+            </div>
+            
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+   
+   
+   
+    </h:body>
+</html>
