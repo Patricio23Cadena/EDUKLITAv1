@@ -7,6 +7,7 @@ import java.util.Random;
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
 
 import com.daos.auditoria.AuditoriaDao;
 import com.entities.auditoria.Auditoria;
@@ -14,7 +15,7 @@ import com.entities.personas.Persona;
 
 import jdk.jfr.Name;
 
-@Name("audService")
+@Named("audService")
 @ApplicationScoped
 public class AudService {
 	List<Auditoria> auditorias;
