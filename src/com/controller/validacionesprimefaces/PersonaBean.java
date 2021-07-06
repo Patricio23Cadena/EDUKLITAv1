@@ -5,14 +5,17 @@ import java.util.List;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
-import javax.faces.context.ExternalContext;
+
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 
-import org.primefaces.context.PrimeRequestContext;
-
+import com.daos.auditoria.AuditoriaDao;
 import com.daos.personas.PersonaDao;
+import com.entities.auditoria.Auditoria;
 import com.entities.personas.Persona;
+
 
 @Named("userView")
 @RequestScoped
@@ -20,7 +23,8 @@ public class PersonaBean {
 	private Persona p;
 	@EJB
 	private PersonaDao pdao;
-
+	private Auditoria auditoria;
+	private mailsender mc = new mailsender();
 	private long cdi;
 	private String nombres;
 	private String apellidos;
@@ -31,6 +35,10 @@ public class PersonaBean {
 	private String clave;
 	private Datos dt = new Datos();
 
+	
+	@EJB
+	private AuditoriaDao audo = new AuditoriaDao();
+	
 	public Persona getP() {
 		return p;
 	}
@@ -143,6 +151,9 @@ public class PersonaBean {
 			Persona p = lista.get(0);
 			p.setClave(contra);
 			pdao.actualizar(p);
+			auditoria = audo.buscarCod();
+			auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
+			audo.actualizar(auditoria);
 	        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cambio de clave correcto"));
 
 			return "cambioClave1";
@@ -169,6 +180,7 @@ public class PersonaBean {
 		p.setCorreo(correo);
 		String cor = p.getCorreo();
 		setNombres(pdao.login(cor).getNombres());
+		setApellidos(pdao.login(cor).getApellidos());
 		setTipo(pdao.login(cor).getTipo());
 		p.setEdad(edad);
 		p.setTipo(tipo);
@@ -177,6 +189,7 @@ public class PersonaBean {
 			addMessage(FacesMessage.SEVERITY_INFO, "WELCOME",
 					pdao.login(cor).getApellidos() + " " + pdao.login(cor).getNombres());
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", nombres);
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("apellido", apellidos);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("id", pdao.iniciarSesion(p).getId_usuario());
 			FacesContext contextaux = FacesContext.getCurrentInstance();
 			contextaux.getExternalContext().getFlash().setKeepMessages(true);
@@ -208,7 +221,7 @@ public class PersonaBean {
 
 	}
 
-	public String registrar() {
+	public String registrar() throws AddressException, MessagingException {
 		Persona nuevaPersona = new Persona();
 		nuevaPersona.setNombres(nombres);
 		nuevaPersona.setApellidos(apellidos);
@@ -222,11 +235,23 @@ public class PersonaBean {
 		String var =  var1.toString();
 		if (pdao.bloqCorreo(nuevaPersona) == null) {
 			if (cedula(var)) {
-				pdao.crear(nuevaPersona);
-				addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente", "");
-				return "admin";
+				System.out.println("-----Correo" + correo);
+				if(mc.sendMail(correo,"Suscripción","Se acaba de registrar a Eduklita")) {
+					pdao.crear(nuevaPersona);
+					addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente", "");
+					auditoria = audo.buscarCod();
+	    	    	auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
+	    	    	audo.actualizar(auditoria);
+					return "resgister";
+				}
+				else {
+					addMessage(FacesMessage.SEVERITY_INFO, "El correo electronico no existe", "");
+					return "register";
+				}
+				
+				
 			} else {
-				addMessage(FacesMessage.SEVERITY_ERROR, "Error al registrarse", "");
+				addMessage(FacesMessage.SEVERITY_ERROR, "Verifique la cédula", "");
 				return "register";
 			}
 		} else {

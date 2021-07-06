@@ -14,7 +14,10 @@ import javax.inject.Named;
 
 import org.primefaces.PrimeFaces;
 
+import com.controller.validacionesprimefaces.Datos;
+import com.daos.auditoria.AuditoriaDao;
 import com.daos.personas.PersonaDao;
+import com.entities.auditoria.Auditoria;
 import com.entities.personas.Persona;
 
 @Named("crudView")
@@ -28,13 +31,18 @@ public class CrudView implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private List<Persona> products;
-
+	private Auditoria auditoria;
     private Persona selectedProduct;
+    private Datos dt = new Datos();
 
     private List<Persona> selectedProducts;
 
     @EJB
     private PersonaDao pdap = new PersonaDao();
+    
+    @EJB
+    private AuditoriaDao audo = new AuditoriaDao();
+    
 
     @PostConstruct
     public void init() {
@@ -70,6 +78,10 @@ public class CrudView implements Serializable {
     	    	Persona p = pdap.buscarCod(selectedProduct);
     	    	p.setFlag(0);
     	    	pdap.actualizar(p);
+    	    	
+    	    	auditoria = audo.buscarCod();
+    	    	auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
+    	    	audo.actualizar(auditoria);
     	        /*this.products.remove(this.selectedProduct);*/
     	    	init();
     	        this.selectedProduct = null;
@@ -82,6 +94,9 @@ public class CrudView implements Serializable {
     	Persona p = pdap.buscarCod(selectedProduct);
     	p.setFlag(1);
     	pdap.actualizar(p);
+    	auditoria = audo.buscarCod();
+    	auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
+    	audo.actualizar(auditoria);
         /*this.products.remove(this.selectedProduct);*/
     	init();
         this.selectedProduct = null;
