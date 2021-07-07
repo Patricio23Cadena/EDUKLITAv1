@@ -13,6 +13,7 @@
         <title>TOTAL DOCENTES</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
+        <link href="resources/css/estilosgraficos.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </h:head>  
     
@@ -22,7 +23,27 @@
 	background: url(images/administrador.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	 
 }
+
+body {
+  margin: 0;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+   
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+html, body {
+    height: 1726px; 
+} 
+
+
 </style> 
     
     
@@ -130,54 +151,14 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                       <center><h1 class="mt-4">EDUKLITA</h1></center>
+                       <center><h1 class="mt-4" style="font-weight: bolder">Total Docentes por año</h1></center>
                          
-                     <!--<div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                  
                         <div class="row">
                             <div class="col-xl-6">
                                  
                             </div>
-                            <div class="col-xl-6">
-                                 
-                                 
-                                 
+                            <div class="col-xl-6"> 
                                  
                             </div>
                         </div>
@@ -187,6 +168,7 @@
                         
                         
                      <h:form>
+                     <div align="right">
                      <h:selectOneMenu value="#{totaldocentesxanio.anio}" style="padding:0 95px 0 0; height:40px">
 					<f:selectItem itemValue="2009"  itemLabel="2009"  />
 					<f:selectItem itemValue="2010"  itemLabel="2010"/> 
@@ -199,6 +181,16 @@
 					<f:selectItem itemValue="2017"  itemLabel="2017"  />
 					</h:selectOneMenu>	
 					<h:commandButton actionListener="#{totaldocentesxanio.getConsultaint}"  value="Consultar" style="font-family:Arial; font-size:1.5em"/>
+
+   <h:commandLink>
+<p:graphicImage value="images/xls.png" width="100"/>
+<p:dataExporter type="xls" target="reporte" fileName="Total de docentes por provincia"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" width="100"/>
+<p:dataExporter type="pdf" target="reporte" fileName="Total de docentes por provincia"/> </h:commandLink>
+                     
+                     
+                     </div>
                      </h:form>   
                     <p:dataTable id="reporte" var="personaAutos1" value="#{totaldocentesxanio.consultaint}"
 					rows="10" paginator="true"
@@ -212,18 +204,16 @@
 					<h:outputText value="#{personaAutos1.total}" />
 					</p:column>
 					</p:dataTable>  
-                  <p:barChart model="#{totaldocentesxanio.barModel}" style="width: 75% ; height: 610px " />
+					<br />
+                 <p:barChart model="#{totaldocentesxanio.barModel}" style="width: 75% ; height: 610px; background-color:rgb(255 229 195)" /> 
                
                         
                     </div>
-                </main>
+                </main>  
                 
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
+                                   
+               
+                
                 <footer class="py-4 bg-light mt-auto">
                     <div id="footer">	<div class="footerImg">
 		
