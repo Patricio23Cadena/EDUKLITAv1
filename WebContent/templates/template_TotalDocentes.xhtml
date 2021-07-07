@@ -40,7 +40,7 @@ body {
 
 
 html, body {
-    height: 1726px; 
+    height: 1799px; 
 } 
 
 
@@ -182,21 +182,22 @@ html, body {
 					</h:selectOneMenu>	
 					<h:commandButton actionListener="#{totaldocentesxanio.getConsultaint}"  value="Consultar" style="font-family:Arial; font-size:1.5em"/>
 
+&nbsp;&nbsp;<h:commandLink>
+<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="100"/>
+<p:dataExporter type="xls" target="reporte" fileName="Total Docentes"/> </h:commandLink>
 <h:commandLink>
-<p:graphicImage value="images/pdf.png" width="100"/>
-<p:dataExporter type="xls" target="reporte" fileName="Total"/> </h:commandLink>
+<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="100"/>
+<p:dataExporter type="pdf" target="reporte" fileName="Total Docentes"/> </h:commandLink>
 <h:commandLink>
-<p:graphicImage value="images/pdf.png" width="100"/>
-<p:dataExporter type="pdf" target="reporte" fileName="Total"/> </h:commandLink>
+<p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="100"/>
+<p:dataExporter type="csv" target="reporte" fileName="Total Docentes"/> </h:commandLink>
 <h:commandLink>
-<p:graphicImage value="images/pdf.png" width="100"/>
-<p:dataExporter type="csv" target="reporte" fileName="Total"/> </h:commandLink>
-<h:commandLink>
-<p:graphicImage value="images/pdf.png" width="100"/>
-<p:dataExporter type="xml" target="reporte" fileName="Total"/> </h:commandLink>
+<p:graphicImage value="images/xml.png" alt="XML" title="XML" width="100"/>
+<p:dataExporter type="xml" target="reporte" fileName="Total Docentes"/> </h:commandLink>
                      
                      
                      </div>
+                     <br />
                      </h:form>   
                     <p:dataTable id="reporte" var="personaAutos1" value="#{totaldocentesxanio.consultaint}"
 					rows="10" paginator="true"
@@ -216,7 +217,7 @@ html, body {
                         
                     </div>
                 </main>  
-                
+               <br /> 
                                    
                
                 
