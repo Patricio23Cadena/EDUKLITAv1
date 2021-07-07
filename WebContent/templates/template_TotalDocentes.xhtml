@@ -182,12 +182,18 @@ html, body {
 					</h:selectOneMenu>	
 					<h:commandButton actionListener="#{totaldocentesxanio.getConsultaint}"  value="Consultar" style="font-family:Arial; font-size:1.5em"/>
 
-   <h:commandLink>
-<p:graphicImage value="images/xls.png" width="100"/>
-<p:dataExporter type="xls" target="reporte" fileName="Total de docentes por provincia"/> </h:commandLink>
 <h:commandLink>
 <p:graphicImage value="images/pdf.png" width="100"/>
-<p:dataExporter type="pdf" target="reporte" fileName="Total de docentes por provincia"/> </h:commandLink>
+<p:dataExporter type="xls" target="reporte" fileName="Total"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" width="100"/>
+<p:dataExporter type="pdf" target="reporte" fileName="Total"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" width="100"/>
+<p:dataExporter type="csv" target="reporte" fileName="Total"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" width="100"/>
+<p:dataExporter type="xml" target="reporte" fileName="Total"/> </h:commandLink>
                      
                      
                      </div>
