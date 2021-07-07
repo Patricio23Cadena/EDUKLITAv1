@@ -186,8 +186,34 @@
                         </div>
                         
                         
-                        
-                       
+                     <h:form>
+                     <h:selectOneMenu value="#{totaldocentesxanio.anio}" style="padding:0 95px 0 0; height:40px">
+					<f:selectItem itemValue="2009"  itemLabel="2009"  />
+					<f:selectItem itemValue="2010"  itemLabel="2010"/> 
+					<f:selectItem itemValue="2011"  itemLabel="2011"  />
+					<f:selectItem itemValue="2012"  itemLabel="2012"/> 
+					<f:selectItem itemValue="2013"  itemLabel="2013"  />
+					<f:selectItem itemValue="2014"  itemLabel="2014"/> 
+					<f:selectItem itemValue="2015"  itemLabel="2015"  />
+					<f:selectItem itemValue="2016"  itemLabel="2016"/> 
+					<f:selectItem itemValue="2017"  itemLabel="2017"  />
+					</h:selectOneMenu>	
+					<h:commandButton actionListener="#{totaldocentesxanio.getConsultaint}"  value="Consultar" style="font-family:Arial; font-size:1.5em"/>
+                     </h:form>   
+                    <p:dataTable id="reporte" var="personaAutos1" value="#{totaldocentesxanio.consultaint}"
+					rows="10" paginator="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
+					{PageLinks}"
+					rowsPerPageTemplate="5,10,15">
+					<p:column headerText="Provincia">
+					<h:outputText value="#{personaAutos1.prov.provincia}" />
+					</p:column>
+					<p:column headerText="Total de Docentes">
+					<h:outputText value="#{personaAutos1.total}" />
+					</p:column>
+					</p:dataTable>  
+                  <p:barChart model="#{totaldocentesxanio.barModel}" style="width: 75% ; height: 610px " />
+               
                         
                     </div>
                 </main>
