@@ -40,11 +40,14 @@ body {
 
 
 html, body {
-    height: 976px; 
+    height: 1064px; 
 } 
 
 
 </style> 
+
+
+
     
     
     <h:body class="sb-nav-fixed" id="Fondo">
@@ -200,7 +203,9 @@ html, body {
                         
                        </div> 
                         <br />
-                     </h:form>   
+                     </h:form>  
+                     
+                     
                     <p:dataTable id="reporteF" var="personaAutos1" value="#{totalfinanciamientoxanio.consultaint}"
 					rows="10" paginator="true"
 					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
@@ -214,11 +219,20 @@ html, body {
 					</p:column>
 					</p:dataTable>  
 					<br />
-                 <p:chart type="donut" model="#{totalfinanciamientoxanio.donutModel}" style="width: 100%; height: 350px; background-color:rgb(255 229 195)" /> 
+					 <div>
+                   <h5>Descargar imagen</h5>
+                   <h:commandLink>
+              <p:graphicImage value="images/descargagrafico.png" alt="Gráfico" type="button" title="Gráfico" width="50" height="50" onclick="exportChart()"/>
+              </h:commandLink>
+                  </div>
+                  <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Total Financiamiento por año" resizable="false">
+        <p:outputPanel id="output" layout="block" style="width:850px;height:450px"/>
+    </p:dialog>
+    <br />
+					
+                 <p:chart widgetVar="donut" type="donut" model="#{totalfinanciamientoxanio.donutModel}" style="width: 100%; height: 350px; background-color:rgb(255 229 195)" /> 
                        
-                        
-                        
-                           
+                         
                         
                     </div>
                 </main> 
@@ -269,6 +283,18 @@ html, body {
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
    
+   
+   <script type="text/javascript">
+    //<![CDATA[
+    function exportChart() {
+        //export image
+        $('#output').empty().append(PF('donut').exportAsImage());
+
+        //show the dialog
+        PF('dlg').show();
+    }
+    //]]>
+</script>
    
    
     </h:body>

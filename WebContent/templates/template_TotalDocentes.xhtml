@@ -15,6 +15,12 @@
         <link href="resources/css/styles.css" rel="stylesheet" />
         <link href="resources/css/estilosgraficos.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+   
+   
+   
+   <h:outputScript name="js/pdfmake/pdfmake.min.js" />
+<h:outputScript name="js/pdfmake/vfs_fonts.js" />
+   
     </h:head>  
     
     
@@ -40,7 +46,7 @@ body {
 
 
 html, body {
-    height: 1752px; 
+    height: 1865px; 
 } 
 
 
@@ -48,6 +54,26 @@ html, body {
     
     
     <h:body class="sb-nav-fixed" id="Fondo">
+    
+    
+    
+    
+     ​<script type="text/javascript">
+    //<![CDATA[
+    function exportChart() {
+        //export image
+        $('#output').empty().append(PF('chart').exportAsImage());
+
+        //show the dialog
+        PF('dlg').show();
+    }
+    //]]>
+</script>
+    
+    
+    
+    
+    
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <p:link class="nav-link" outcome="TotalDocentes" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
@@ -186,10 +212,10 @@ html, body {
 					<h:commandButton actionListener="#{totaldocentesxanio.getConsultaint}"  value="Consultar" style="font-family:Arial; font-size:1.5em"/>
 
 &nbsp;&nbsp;<h:commandLink>
-<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="50"  height="50"/>
+<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="50"  height="50" />
 <p:dataExporter type="xls" target="reporte" fileName="Total Docentes" /> </h:commandLink>
 <h:commandLink>
-<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"/>
+<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"   />
 <p:dataExporter type="pdf" target="reporte" fileName="Total Docentes" preProcessor="#{totaldocentesxanio.preProcessPDF}"/> </h:commandLink>
 <h:commandLink>
 <p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="50" height="50"/>
@@ -197,11 +223,10 @@ html, body {
 <h:commandLink>
 <p:graphicImage value="images/xml.png" alt="XML" title="XML" width="50" height="50"/>
 <p:dataExporter type="xml" target="reporte" fileName="Total Docentes" /> </h:commandLink>
-                     
-                     
+   
+                              
                      </div>
-                     <br />
-                     </h:form>   
+                     </h:form ><br />    
                     <p:dataTable id="reporte" var="personaAutos1" value="#{totaldocentesxanio.consultaint}"
 					rows="10" paginator="true"
 					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
@@ -215,8 +240,17 @@ html, body {
 					</p:column>
 					</p:dataTable>  
 					<br />
-                 <p:barChart model="#{totaldocentesxanio.barModel}" style="width: 75% ; height: 610px; background-color:rgb(255 229 195)" /> 
-               
+					<div>
+                   <h5>Descargar imagen</h5>
+                   <h:commandLink>
+<p:graphicImage value="images/descargagrafico.png" alt="Gráfico" type="button" title="Gráfico" width="50" height="50" onclick="exportChart()"/>
+                  <!--<p:commandButton type="button" icon="fas fa-images fa-spin" onclick="exportChart()"/>--></h:commandLink>
+                  </div>
+                 <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Total Docentes" resizable="false">
+        <p:outputPanel id="output" layout="block" style="width:850px;height:450px"/>
+    </p:dialog><br />
+                 <p:barChart widgetVar="chart" model="#{totaldocentesxanio.barModel}" style="width: 75% ; height: 610px; background-color:rgb(255 229 195)" /> 
+                
                         
                     </div>
                 </main>  
@@ -270,8 +304,17 @@ html, body {
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
+    
    
    
    
+   
+    
     </h:body>
+    
+    
+    
+    
 </html>
+
+   

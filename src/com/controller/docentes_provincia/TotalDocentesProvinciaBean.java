@@ -3,6 +3,8 @@ package com.controller.docentes_provincia;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,16 +64,25 @@ public class TotalDocentesProvinciaBean implements Serializable{
 		return listadoDocentesxanio;
 		
 	}
+	
+	
+	
 	public void preProcessPDF(Object document) throws IOException, BadElementException, DocumentException {
 	    Document pdf = (Document) document;
 	    ServletContext servletContext = (ServletContext)
 	    FacesContext.getCurrentInstance().getExternalContext().getContext();
 	    pdf.open();
-	    pdf.add(new Paragraph("\tEduklita \n"));
-	    pdf.add(new Paragraph(dt.anioTotalDocenPean()+"\n\n"));
-	    /*String logo = servletContext.getRealPath("") + File.separator + "images" +
-	    File.separator + "prime_logo.png";
-	    pdf.add(Image.getInstance(logo));*/
+	    String logo = servletContext.getRealPath("") + File.separator + "images" +
+	    	    File.separator + "logo.png";
+	        
+	    pdf.add(Image.getInstance(logo));
+	    pdf.add(new Paragraph ("\n\n")); 
+	     
+	    pdf.add(new Paragraph(dt.anioTotalDocenPean()+"\n\n"));	
+	    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+	    pdf.add(new Paragraph("Fecha y hora de descarga:  "+dtf.format(LocalDateTime.now())));
+	    pdf.add(new Paragraph ("\n\n"));
+	    
 	}
 	private HorizontalBarChartModel init() {
 		HorizontalBarChartModel barModel2 = new HorizontalBarChartModel();

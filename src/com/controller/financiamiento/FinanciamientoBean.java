@@ -1,7 +1,10 @@
 package com.controller.financiamiento;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -30,6 +33,7 @@ import com.entities.finaciamiento.Financiamiento;
 import com.lowagie.text.BadElementException;
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
+import com.lowagie.text.Image;
 import com.lowagie.text.Paragraph;
 
 @Named("totalfinanciamientoxanio")
@@ -105,11 +109,15 @@ public class FinanciamientoBean implements Serializable {
 	    ServletContext servletContext = (ServletContext)
 	    FacesContext.getCurrentInstance().getExternalContext().getContext();
 	    pdf.open();
-	    pdf.add(new Paragraph("\tEduklita \n"));
+	    String logo = servletContext.getRealPath("") + File.separator + "images" +
+	    	    File.separator + "logo.png";
+	        
+	    pdf.add(Image.getInstance(logo)); 
+	    pdf.add(new Paragraph ("\n\n")); 
 	    pdf.add(new Paragraph(dt.finanTotalxanio()+"\n\n"));
-	    /*String logo = servletContext.getRealPath("") + File.separator + "images" +
-	    File.separator + "prime_logo.png";
-	    pdf.add(Image.getInstance(logo));*/
+	    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+	    pdf.add(new Paragraph("Fecha y hora de descarga:  "+dtf.format(LocalDateTime.now())));
+	    pdf.add(new Paragraph ("\n\n"));
 	}
 	public TipoDao getTpDao() {
 		return tpDao;
