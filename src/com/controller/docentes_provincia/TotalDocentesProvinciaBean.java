@@ -1,5 +1,7 @@
 package com.controller.docentes_provincia;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +9,9 @@ import java.util.List;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.ServletContext;
 
 import org.primefaces.model.charts.ChartData;
 import org.primefaces.model.charts.axes.cartesian.CartesianScales;
@@ -18,9 +22,15 @@ import org.primefaces.model.charts.hbar.HorizontalBarChartDataSet;
 import org.primefaces.model.charts.hbar.HorizontalBarChartModel;
 import org.primefaces.model.charts.optionconfig.title.Title;
 
+import com.controller.validacionesprimefaces.Datos;
 import com.daos.docentes_provincia.Docentes_provinciaDao;
 import com.daos.personas.ProvinciaDao;
 import com.entities.docentes_provincia.Docentes_provincia;
+import com.lowagie.text.BadElementException;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Image;
+import com.lowagie.text.Paragraph;
 @Named("totaldocentesxanio")
 @SessionScoped
 public class TotalDocentesProvinciaBean implements Serializable{
@@ -43,15 +53,26 @@ public class TotalDocentesProvinciaBean implements Serializable{
 	private List<Docentes_provincia> listadoDocentesxanio;
 	
 	private HorizontalBarChartModel barModel;
-	
+	private Datos dt = new Datos();
 	
 	public List<Docentes_provincia> getConsultaint () {
 		this.listadoDocentesxanio = donproDao.docentesxaño(anio);
+		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("anioTotalDocenPean", anio);
 		crear();
 		return listadoDocentesxanio;
 		
 	}
-
+	public void preProcessPDF(Object document) throws IOException, BadElementException, DocumentException {
+	    Document pdf = (Document) document;
+	    ServletContext servletContext = (ServletContext)
+	    FacesContext.getCurrentInstance().getExternalContext().getContext();
+	    pdf.open();
+	    pdf.add(new Paragraph("\tEduklita \n"));
+	    pdf.add(new Paragraph(dt.anioTotalDocenPean()+"\n\n"));
+	    /*String logo = servletContext.getRealPath("") + File.separator + "images" +
+	    File.separator + "prime_logo.png";
+	    pdf.add(Image.getInstance(logo));*/
+	}
 	private HorizontalBarChartModel init() {
 		HorizontalBarChartModel barModel2 = new HorizontalBarChartModel();
 		 HorizontalBarChartDataSet barralol = new  HorizontalBarChartDataSet();

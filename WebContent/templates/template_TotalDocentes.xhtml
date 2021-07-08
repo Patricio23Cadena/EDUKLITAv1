@@ -151,6 +151,7 @@ html, body {
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
+                   <center><p:outputLabel class="mt-4" style="font-weight: bolder" value ="#{userioDato.anioTotalDocenPean()}"></p:outputLabel></center> 
                        <center><h1 class="mt-4" style="font-weight: bolder">Total Docentes por año</h1></center>
                          
                   
@@ -184,16 +185,16 @@ html, body {
 
 &nbsp;&nbsp;<h:commandLink>
 <p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="100"/>
-<p:dataExporter type="xls" target="reporte" fileName="Total Docentes"/> </h:commandLink>
+<p:dataExporter type="xls" target="reporte" fileName="Total Docentes" /> </h:commandLink>
 <h:commandLink>
 <p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="100"/>
-<p:dataExporter type="pdf" target="reporte" fileName="Total Docentes"/> </h:commandLink>
+<p:dataExporter type="pdf" target="reporte" fileName="Total Docentes" preProcessor="#{totaldocentesxanio.preProcessPDF}"/> </h:commandLink>
 <h:commandLink>
 <p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="100"/>
 <p:dataExporter type="csv" target="reporte" fileName="Total Docentes"/> </h:commandLink>
 <h:commandLink>
 <p:graphicImage value="images/xml.png" alt="XML" title="XML" width="100"/>
-<p:dataExporter type="xml" target="reporte" fileName="Total Docentes"/> </h:commandLink>
+<p:dataExporter type="xml" target="reporte" fileName="Total Docentes" /> </h:commandLink>
                      
                      
                      </div>

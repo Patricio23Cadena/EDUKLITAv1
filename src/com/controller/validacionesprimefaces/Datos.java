@@ -8,7 +8,7 @@ import javax.inject.Named;
 @RequestScoped
 public class Datos {
 
-
+	
 	public String get() {
 		return FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuario").toString();
 	}
@@ -18,6 +18,10 @@ public class Datos {
 	
 	public int getId() {
 		return (int) FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("id");
+	}
+	public String anioTotalDocenPean() {
+		
+		return "Total de docentes por provincia en el año: " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("anioTotalDocenPean").toString();
 	}
 
 	
