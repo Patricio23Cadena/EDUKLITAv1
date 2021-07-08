@@ -13,16 +13,37 @@
         <title>V.T.FINANCIACIÓN</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
+        <link href="resources/css/estilosgraficos.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </h:head>
     
     
-    <style>
+   <style>
 #Fondo {
 	background: url(images/administrador.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	 
 }
+
+body {
+  margin: 0;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+   
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+html, body {
+    height: 976px; 
+} 
+
+
 </style> 
     
     
@@ -131,7 +152,7 @@
                 <main>
                     <div class="container-fluid px-4">
                         <br /> 
-                   <center><h1><p:outputLabel class="mt-4" style="font-weight: bolder" value ="#{userioDato.finanTotalxanio()}"></p:outputLabel></h1></center>
+                   <center><h1 style="font-size:2em"><p:outputLabel class="mt-4" style="font-weight: bolder" value ="#{userioDato.finanTotalxanio()}"></p:outputLabel></h1></center>
                    <div class="row">
                             <div class="col-xl-6">
                                  
@@ -169,7 +190,7 @@
 <p:dataExporter encoding="UTF-8"  type="xls" target="reporteF" fileName="Total Financiamiento por año" /> </h:commandLink>
 <h:commandLink>
 <p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"/>
-<p:dataExporter encoding="UTF-8"  type="pdf" target="reporteF" fileName="Total Financiamiento por año" preProcessor="#{totaldocentesxanio.preProcessPDF}"/> </h:commandLink>
+<p:dataExporter encoding="UTF-8"  type="pdf" target="reporteF" fileName="Total Financiamiento por año" preProcessor="#{totalfinanciamientoxanio.preProcessPDF}"/> </h:commandLink>
 <h:commandLink>
 <p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="50" height="50"/>
 <p:dataExporter  encoding="UTF-8"  type="csv" target="reporteF" fileName="Total Financiamiento por año"/> </h:commandLink>
@@ -193,21 +214,14 @@
 					</p:column>
 					</p:dataTable>  
 					<br />
-                 <p:chart type="donut" model="#{totalfinanciamientoxanio.donutModel}" style="width: 100%; height: 500px; background-color:rgb(255 229 195)" /> 
+                 <p:chart type="donut" model="#{totalfinanciamientoxanio.donutModel}" style="width: 100%; height: 350px; background-color:rgb(255 229 195)" /> 
                        
                         
                         
                            
                         
                     </div>
-                </main>
-                
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
+                </main> 
                 <footer class="py-4 bg-light mt-auto">
                     <div id="footer">	<div class="footerImg">
 		

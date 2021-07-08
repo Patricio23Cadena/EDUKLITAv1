@@ -111,7 +111,7 @@ public class TotalDocentesProvinciaBean implements Serializable{
         
         bgColor.add("rgb(70, 130, 180");
         bgColor.add("rgb(154, 205, 50)");
-        bgColor.add("rgb(245, 222, 179)");
+        bgColor.add("rgb(128, 0, 128)");
         bgColor.add("rgb(255, 99, 71)");
         
         barralol.setBackgroundColor(bgColor);
@@ -142,7 +142,7 @@ public class TotalDocentesProvinciaBean implements Serializable{
         
         borderColor.add("rgb(70, 130, 180");
         borderColor.add("rgb(154, 205, 50)");
-        borderColor.add("rgb(245, 222, 179)");
+        borderColor.add("rgb(128, 0, 128)");
         borderColor.add("rgb(255, 99, 71)");
         
         barralol.setBorderColor(borderColor);
