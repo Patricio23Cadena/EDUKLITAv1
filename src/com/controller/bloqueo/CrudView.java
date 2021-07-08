@@ -12,6 +12,7 @@ import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.apache.poi.util.SystemOutLogger;
 import org.primefaces.PrimeFaces;
 
 import com.controller.validacionesprimefaces.Datos;
@@ -31,7 +32,7 @@ public class CrudView implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private List<Persona> products;
-	private Auditoria auditoria;
+	
     private Persona selectedProduct;
     private Datos dt = new Datos();
 
@@ -79,7 +80,7 @@ public class CrudView implements Serializable {
     	    	p.setFlag(0);
     	    	pdap.actualizar(p);
     	    	
-    	    	auditoria = audo.buscarCod();
+    	    	Auditoria auditoria = audo.buscarCod();
     	    	auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
     	    	audo.actualizar(auditoria);
     	        /*this.products.remove(this.selectedProduct);*/
@@ -94,8 +95,11 @@ public class CrudView implements Serializable {
     	Persona p = pdap.buscarCod(selectedProduct);
     	p.setFlag(1);
     	pdap.actualizar(p);
-    	auditoria = audo.buscarCod();
+    	Auditoria auditoria = audo.buscarCod();
+    
     	auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
+    	/*System.out.println(auditoria.getUsuario_aud());
+    	System.out.println(auditoria.getId_aud());*/
     	audo.actualizar(auditoria);
         /*this.products.remove(this.selectedProduct);*/
     	init();

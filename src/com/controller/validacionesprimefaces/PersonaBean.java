@@ -23,7 +23,6 @@ public class PersonaBean {
 	private Persona p;
 	@EJB
 	private PersonaDao pdao;
-	private Auditoria auditoria;
 	private mailsender mc = new mailsender();
 	private long cdi;
 	private String nombres;
@@ -151,9 +150,9 @@ public class PersonaBean {
 			Persona p = lista.get(0);
 			p.setClave(contra);
 			pdao.actualizar(p);
-			auditoria = audo.buscarCod();
-			auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
-			audo.actualizar(auditoria);
+			Auditoria auditoria = audo.buscarCod();
+	    	auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
+	    	audo.actualizar(auditoria);
 	        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cambio de clave correcto"));
 
 			return "cambioClave1";
@@ -241,7 +240,7 @@ public class PersonaBean {
 				if(mc.sendMail(correo,"Suscripción","Se acaba de registrar a Eduklita")) {
 					pdao.crear(nuevaPersona);
 					addMessage(FacesMessage.SEVERITY_INFO, "Registrado correctamente", "");
-					auditoria = audo.buscarCod();
+					Auditoria auditoria = audo.buscarCod();
 	    	    	auditoria.setUsuario_aud(dt.get()+" "+dt.getA());
 	    	    	audo.actualizar(auditoria);
 					return "resgister";
