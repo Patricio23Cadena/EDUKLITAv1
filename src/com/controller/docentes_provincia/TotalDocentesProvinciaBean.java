@@ -148,7 +148,7 @@ public class TotalDocentesProvinciaBean implements Serializable{
         barralol.setBorderColor(borderColor);
         barralol.setBorderWidth(1);
         
-        barralol.setLabel("Total de docentes por provincia");
+        barralol.setLabel(dt.anioTotalDocenPean());
         
 		data.setLabels(auxLabel);
 		data.addChartDataSet(barralol);
@@ -169,7 +169,7 @@ public class TotalDocentesProvinciaBean implements Serializable{
 		options.setScales(cScales);
 		Title title = new Title();
 		title.setDisplay(true);
-		title.setText("Total de docentes por provincia");
+		title.setText(dt.anioTotalDocenPean());
 		options.setTitle(title);
 		barModel.setOptions(options);	
 	}

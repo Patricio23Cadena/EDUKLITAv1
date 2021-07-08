@@ -191,6 +191,7 @@ public class PersonaBean {
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuario", nombres);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("apellido", apellidos);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("anioTotalDocenPean", 2009);
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("anioFinanciamiento", 2007);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("id", pdao.iniciarSesion(p).getId_usuario());
 			FacesContext contextaux = FacesContext.getCurrentInstance();
 			contextaux.getExternalContext().getFlash().setKeepMessages(true);
