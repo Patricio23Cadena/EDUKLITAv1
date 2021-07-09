@@ -192,6 +192,7 @@ public class PersonaBean {
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("anioTotalDocenPean", 2009);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("anioFinanciamiento", 2007);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("id", pdao.iniciarSesion(p).getId_usuario());
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("aniototalalumno", 2009);
 			FacesContext contextaux = FacesContext.getCurrentInstance();
 			contextaux.getExternalContext().getFlash().setKeepMessages(true);
 			contextaux.addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "!!Bienbenido!!", nombres));

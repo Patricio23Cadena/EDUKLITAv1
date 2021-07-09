@@ -24,10 +24,16 @@ public class Datos {
 		return "Total de docentes por provincia en el año: " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("anioTotalDocenPean").toString();
 	}
 	
-public String finanTotalxanio() {
+     public String finanTotalxanio() {
 		
 		return "Total de financiamiento por tipo de educación en el año: " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("anioFinanciamiento").toString();
 	}
+     
+     public String totallumnosanio() {
+ 		
+ 		return "Total de alumnos por provincia en el año: " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("aniototalalumno").toString();
+ 	}
+
 
 	
 }

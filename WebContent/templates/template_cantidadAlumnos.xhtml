@@ -27,6 +27,17 @@
     
     
     <h:body class="sb-nav-fixed" id="Fondo">
+     ​<script type="text/javascript">
+    //<![CDATA[
+    function exportChart() {
+        //export image
+        $('#output').empty().append(PF('chart').exportAsImage());
+
+        //show the dialog
+        PF('dlg').show();
+    }
+    //]]>
+</script>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <p:link class="nav-link" outcome="comparacionPIB" style="color:white; font-size:2em" value="#{userioDato.get()}"></p:link >
@@ -130,46 +141,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                       <center><h1 class="mt-4">EDUKLITA</h1></center>
+                   <center><h1><p:outputLabel class="mt-4" style="font-weight: bolder" value ="#{userioDato.totallumnosanio()}"></p:outputLabel></h1></center> 
                          
-                     <!--<div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                 
                         <div class="row">
                             <div class="col-xl-6">
                                  
@@ -184,9 +158,60 @@
                         <div class="card mb-4">
                               
                         </div>
-                        
-                        
-                        
+                          <h:form>
+                     <div align="right">
+                     <h:selectOneMenu value="#{consultatotalalumnos.anio}" style="padding:0 95px 0 0; height:40px">
+					<f:selectItem itemValue="2009"  itemLabel="2009"  />
+					<f:selectItem itemValue="2010"  itemLabel="2010"/> 
+					<f:selectItem itemValue="2011"  itemLabel="2011"  />
+					<f:selectItem itemValue="2012"  itemLabel="2012"/> 
+					<f:selectItem itemValue="2013"  itemLabel="2013"  />
+					<f:selectItem itemValue="2014"  itemLabel="2014"/> 
+					<f:selectItem itemValue="2015"  itemLabel="2015"  />
+					<f:selectItem itemValue="2016"  itemLabel="2016"/> 
+					<f:selectItem itemValue="2017"  itemLabel="2017"  />
+					</h:selectOneMenu>	
+					<h:commandButton actionListener="#{consultatotalalumnos.getConsulta()}" value="Consultar" style="font-family:Arial; font-size:1.5em"/>
+
+&nbsp;&nbsp;<h:commandLink>
+<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="50"  height="50" />
+<p:dataExporter type="xls" target="reporteQ" fileName="Total alumnos" /> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"   />
+<p:dataExporter type="pdf" target="reporteQ" fileName="Total alumnos" preProcessor="#{consultatotalalumnos.preProcessPDF}"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="50" height="50"/>
+<p:dataExporter type="csv" target="reporteQ" fileName="Total alumnos"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/xml.png" alt="XML" title="XML" width="50" height="50"/>
+<p:dataExporter type="xml" target="reporteQ" fileName="Total alumnos" /> </h:commandLink>
+   
+                              
+                     </div>
+                     </h:form ><br />  
+                       <p:dataTable id="reporteQ" var="personaAutos1" value="#{consultatotalalumnos.consulta}"
+					rows="10" paginator="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
+					{PageLinks}"
+					rowsPerPageTemplate="5,10,15">
+					<p:column headerText="Provincia">
+					<h:outputText value="#{personaAutos1.provincia.provincia}" />
+					</p:column>
+					<p:column headerText="Total de Alumnos">
+					<h:outputText value="#{personaAutos1.total}" />
+					</p:column>
+					</p:dataTable>      
+                        	<br />
+					<div>
+                   <h5>Descargar imagen</h5>
+                   <h:commandLink>
+<p:graphicImage value="images/descargagrafico.png" alt="Gráfico" type="button" title="Gráfico" width="50" height="50" onclick="exportChart()"/>
+                  <!--<p:commandButton type="button" icon="fas fa-images fa-spin" onclick="exportChart()"/>--></h:commandLink>
+                  </div>
+                 <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Total alumnos" resizable="false">
+        <p:outputPanel id="output" layout="block" style="width:850px;height:450px"/>
+    </p:dialog><br />
+                 <p:barChart widgetVar="chart" model="#{consultatotalalumnos.barModel}" style="width: 75% ; height: 610px; background-color:rgb(255 229 195)" /> 
                        
                         
                     </div>
