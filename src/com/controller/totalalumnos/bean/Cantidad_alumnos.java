@@ -179,7 +179,7 @@ private static final long serialVersionUID = 1L;
 		options.setScales(cScales);
 		Title title = new Title();
 		title.setDisplay(true);
-		title.setText(dt.anioTotalDocenPean());
+		title.setText(dt.totallumnosanio());
 		options.setTitle(title);
 		barModel.setOptions(options);	
 	}
