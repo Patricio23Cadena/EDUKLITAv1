@@ -13,6 +13,7 @@
         <title>VALOR FINANCIACIÓN</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
+        <link href="resources/css/estilosgraficos.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </h:head> 
     
@@ -23,6 +24,23 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+
+
+html, body {
+    height: 1343px; 
+} 
+
+
+
+.jqplot-target {
+    position: relative;
+     color: #000; 
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 1em;
+}
+
+
 </style> 
     
     
@@ -83,7 +101,7 @@
                                      
                                        <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>
                                     <p:link class="nav-link" outcome="comparacionProduccion">Producción </p:link>
-                                    <p:link class="nav-link" outcome="comparacionContribuciones">Contribucción</p:link>  
+                                    <p:link class="nav-link" outcome="comparacionContribuciones">Contribución</p:link>  
                                      <p:link class="nav-link" outcome="comparacionRentas">Renta</p:link>  
                                       <p:link class="nav-link" outcome="valorTotalFinancia">Total Financiación</p:link>  
                                      
