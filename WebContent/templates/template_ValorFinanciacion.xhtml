@@ -130,7 +130,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                       <center><h1 class="mt-4">EDUKLITA</h1></center>
+                       <center><h1 class="mt-4">Financiamiento público vs privado</h1></center>
                     
                         <div class="row">
                             <div class="col-xl-6">
@@ -152,6 +152,59 @@
                        
                         
                     </div>
+                     <h:form>
+                     <div align="right">
+                                      &nbsp;&nbsp;<h:commandLink>
+<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="50"  height="50"/>
+<p:dataExporter encoding="UTF-8"  type="xls" target="reporteFA" fileName="Financiamiento público vs privado" /> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"/>
+<p:dataExporter encoding="UTF-8"  type="pdf" target="reporteFA" fileName="Financiamiento público vs privado" preProcessor="#{totalfinanciamientoall.preProcessPDF}"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="csv" target="reporteFA" fileName="Financiamiento público vs privado"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/xml.png" alt="XML" title="XML" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="xml" target="reporteFA" fileName="Financiamiento público vs privado" /> </h:commandLink>
+         </div> 
+                        <br />
+                     </h:form>         
+<p:dataTable id="reporteFA" var="personaAutos1" value="#{totalfinanciamientoall.consultaint}"
+					rows="10" paginator="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
+					{PageLinks}"
+					rowsPerPageTemplate="5,10,15">
+					<p:column headerText="Tipo de educación">
+					<h:outputText value="#{personaAutos1.tipo.descripcion}" />
+					</p:column>
+					<p:column headerText="Total de Financiación">
+					<h:outputText value="#{personaAutos1.total}" />
+					</p:column>
+					<p:column headerText="Año">
+					<h:outputText value="#{personaAutos1.anio}" />
+					</p:column>
+					</p:dataTable>  
+					<br />        
+               <div>
+                   <h5>Descargar imagen</h5>
+                   <h:commandLink>
+              <p:graphicImage value="images/descargagrafico.png" alt="Gráfico" type="button" title="Gráfico" width="50" height="50" onclick="exportChart()"/>
+              </h:commandLink>
+                  </div>
+                  <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Financiamiento público vs privado" resizable="false">
+        <p:outputPanel id="output" layout="block" style="width:850px;height:450px"/>
+    </p:dialog>
+    <br />
+					
+                 <p:chart widgetVar="bar" type="bar" model="#{totalfinanciamientoall.barmodel}"  style="width: 100%; height: 350px; background-color:rgb(255 229 195)" /> 
+                       
+                         
+                        
+                 
+              
+              
+              
+              
                 </main>
                  
                 <footer class="py-4 bg-light mt-auto">
@@ -201,7 +254,17 @@
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
    
-   
+   <script type="text/javascript">
+    //<![CDATA[
+    function exportChart() {
+        //export image
+        $('#output').empty().append(PF('bar').exportAsImage());
+
+        //show the dialog
+        PF('dlg').show();
+    }
+    //]]>
+</script>
    
     </h:body>
 </html>
