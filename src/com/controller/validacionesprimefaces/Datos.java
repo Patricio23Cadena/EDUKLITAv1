@@ -33,6 +33,11 @@ public class Datos {
  		
  		return "Total de alumnos por provincia en el año: " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("aniototalalumno").toString();
  	}
+     
+     public String aniPib() {
+  		
+  		return "Comparación del PIB público vs privado en el año " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("anioPib").toString();
+  	}
 
 
 	
