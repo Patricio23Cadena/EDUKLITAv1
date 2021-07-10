@@ -2,13 +2,13 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/eduklita-ejb"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-12.0.2">
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-11.0.10">
 		<attributes>
 			<attribute name="module" value="true"/>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/javamail1_4_7.zip">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/javamail1_4_7.zip">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
@@ -20,75 +20,78 @@
 			<attribute name="owner.project.facets" value="jst.jsf;jst.web"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/primefaces-8.0.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/primefaces-8.0.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/pdf/itext-4.2.0.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/pdf/itext-4.2.0.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/xbeanxml/xbean-1.0.4.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/xbeanxml/xbean-1.0.4.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/apache-poi-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/apache-poi-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/commons-codec-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/commons-codec-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/commons-collections4-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/commons-collections4-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/commons-logging-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/commons-logging-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/commons-math3-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/commons-math3-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/jakarta.activation-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/jakarta.activation-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/jakarta.validation-api-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/jakarta.validation-api-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/jakarta.xml.bind-api-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/jakarta.xml.bind-api-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/javax.activation-1.0.2.14.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/javax.activation-1.0.2.14.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/stax2-api-4.2.jar">
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/stax-ex-1.8.2.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/User/git/EDUKLITAv1/WebContent/WEB-INF/lib/librerias/stax-ex-1.8.2.jar">
-		<attributes>
-			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/kevin/git/EDUKLITAv3/WebContent/WEB-INF/lib/librerias/stax2-api-4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/wildfly-17.0.0.Final/modules/system/layers/base/javax/faces/api/main/jboss-jsf-api_2.3_spec-2.3.9.SP02.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/wildfly-17.0.0.Final/modules/system/layers/base/javax/ejb/api/main/jboss-ejb-api_3.2_spec-1.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/wildfly-17.0.0.Final/modules/system/layers/base/javax/enterprise/api/main/cdi-api-2.0.SP1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/wildfly-18.0.0.Final/modules/system/layers/base/javax/inject/api/main/jakarta.inject-api-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/wildfly-17.0.0.Final/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_4.0_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/wildfly-17.0.0.Final/modules/system/layers/base/javax/annotation/api/main/jboss-annotations-api_1.3_spec-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kevin/wildfly-18.0.0.Final/modules/system/layers/base/javax/mail/api/main/jakarta.mail-1.6.4.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
