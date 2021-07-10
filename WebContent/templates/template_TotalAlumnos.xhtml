@@ -130,46 +130,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                       <center><h1 class="mt-4">EDUKLITA</h1></center>
+                   <center><h1 style="font-size:2em"><p:outputLabel class="mt-4" style="font-weight: bolder" value="#{userioDato.nivel()}"></p:outputLabel></h1></center>
                          
-                     <!--<div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body">Warning Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body">Success Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Danger Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                  
                         <div class="row">
                             <div class="col-xl-6">
                                  
@@ -190,6 +153,68 @@
                        
                         
                     </div>
+                    
+         <h:form>
+                     <div align="right">
+                      <h:selectOneMenu value="#{gastonivel.tipo}" style="padding:0 95px 0 0; height:40px">
+					<f:selectItem itemValue="1"  itemLabel="Pública"  />
+					<f:selectItem itemValue="2"  itemLabel="Privada"/> 
+					
+					</h:selectOneMenu>	
+					<h:commandButton actionListener="#{gastonivel.getConsultaint()}" value="Consultar" style="font-family:Arial; font-size:1.5em"/>
+                     
+                     
+                     
+                     
+                                      &nbsp;&nbsp;<h:commandLink>
+<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="50"  height="50"/>
+<p:dataExporter encoding="UTF-8"  type="xls" target="reporteFA" fileName="Valor de consumo por nivel" /> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"/>
+<p:dataExporter encoding="UTF-8"  type="pdf" target="reporteFA" fileName="Valor de consumo por nivel" preProcessor="#{gastonivel.preProcessPDF}"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="csv" target="reporteFA" fileName="Valor de consumo por nivel"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/xml.png" alt="XML" title="XML" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="xml" target="reporteFA" fileName="Valor de consumo por nivel" /> </h:commandLink>
+         </div>             
+                     <br />
+                     </h:form>      
+   <p:dataTable id="reporteFA" var="personaAutos1" value="#{gastonivel.consultaint}"
+					rows="10" paginator="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
+					{PageLinks}"
+					rowsPerPageTemplate="5,10,15">
+					<p:column headerText="Nivel">
+					<h:outputText value="#{personaAutos1.nivel.descriocion}" />
+					</p:column>
+					<p:column headerText="Número de alumnos">
+					<h:outputText value="#{personaAutos1.valor_consumo}" />
+					</p:column>
+					<p:column headerText="Año">
+					<h:outputText value="#{personaAutos1.anio}" />
+					</p:column>
+					</p:dataTable>  
+					<br />        
+               <div>
+                   <h5>Descargar imagen</h5>
+                   <h:commandLink>
+              <p:graphicImage value="images/descargagrafico.png" alt="Gráfico" type="button" title="Gráfico" width="50" height="50" onclick="exportChart()"/>
+              </h:commandLink>
+                  </div>
+                  <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Valor de consumo por nivel" resizable="false">
+        <p:outputPanel id="output" layout="block" style="width:850px;height:450px"/>
+    </p:dialog>
+    <br />
+					
+                 <p:chart widgetVar="bar" type="bar" model="#{gastonivel.barmodel}"  style="width: 100%; height: 350px; background-color:rgb(255 229 195)" />                  
+                     
+                     
+                     
+                     
+                         
+                    
                 </main>
                 
                 <BR />
@@ -246,6 +271,17 @@
         <script src="js/datatables-simple-demo.js"></script>
    
    
+   <script type="text/javascript">
+    //<![CDATA[
+    function exportChart() {
+        //export image
+        $('#output').empty().append(PF('bar').exportAsImage());
+
+        //show the dialog
+        PF('dlg').show();
+    }
+    //]]>
+</script>
    
     </h:body>
 </html>

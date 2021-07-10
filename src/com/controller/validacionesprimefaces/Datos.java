@@ -38,7 +38,10 @@ public class Datos {
   		
   		return "Comparación del PIB público vs privado en el año " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("anioPib").toString();
   	}
-
+     public String nivel() {
+   		
+   		return "Total de consumo por nivel de estudio en el sector " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("gasto").toString();
+   	}
 
 	
 }
