@@ -195,6 +195,9 @@ public class PersonaBean {
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("aniototalalumno", 2009);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("anioPib", 2007);
 			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("gasto", "Público");
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("produccion", 2007);
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("contribucion", 2007);
+			FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("renta", 2007);
 
 			FacesContext contextaux = FacesContext.getCurrentInstance();
 			contextaux.getExternalContext().getFlash().setKeepMessages(true);

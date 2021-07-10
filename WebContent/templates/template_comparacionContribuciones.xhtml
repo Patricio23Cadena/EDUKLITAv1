@@ -148,7 +148,8 @@ html, body {
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                       <center><h1 class="mt-4">EDUKLITA</h1></center>
+                         <br /> 
+                   <center><h1 style="font-size:2em"><p:outputLabel class="mt-4" style="font-weight: bolder" value ="#{userioDato.contribucion()}"></p:outputLabel></h1></center>
                          
                      
                         <div class="row">
@@ -166,7 +167,66 @@ html, body {
                               
                         </div>
                         
+  <h:form>
+                     <div align="right">
+                     <h:selectOneMenu value="#{contribucion.anio}" style="padding:0 95px 0 0; height:40px">
+					<f:selectItem itemValue="2007"  itemLabel="2007"  />
+					<f:selectItem itemValue="2008"  itemLabel="2009"/> 
+					<f:selectItem itemValue="2009"  itemLabel="2009"  />
+					<f:selectItem itemValue="2010"  itemLabel="2010"/> 
+					<f:selectItem itemValue="2011"  itemLabel="2011"  />
+					<f:selectItem itemValue="2012"  itemLabel="2012"/> 
+					<f:selectItem itemValue="2013"  itemLabel="2013"  />
+					<f:selectItem itemValue="2014"  itemLabel="2014"/> 
+					<f:selectItem itemValue="2015"  itemLabel="2015"  />
+					<f:selectItem itemValue="2016"  itemLabel="2016"/> 
+					<f:selectItem itemValue="2017"  itemLabel="2017"  />
+					</h:selectOneMenu>	
+					<h:commandButton actionListener="#{contribucion.getConsultaint}"  value="Consultar" style="font-family:Arial; font-size:1.5em"/>        
+                  
+                  
+                  &nbsp;&nbsp;<h:commandLink>
+<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="50"  height="50"/>
+<p:dataExporter encoding="UTF-8"  type="xls" target="reporteF" fileName="Comparación de contrubución pública vs privada" /> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"/>
+<p:dataExporter encoding="UTF-8"  type="pdf" target="reporteF" fileName="Comparación de contrubución pública vs privada" preProcessor="#{contribucion.preProcessPDF}"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="csv" target="reporteF" fileName="Comparación de contrubución pública vs privada"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/xml.png" alt="XML" title="XML" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="xml" target="reporteF" fileName="Comparación de contrubución pública vs privada" /> </h:commandLink>
                         
+                       </div> 
+                        <br />
+                     </h:form>  
+                     
+                     
+                    <p:dataTable id="reporteF" var="personaAutos1" value="#{contribucion.consultaint}"
+					rows="10" paginator="true"
+					paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} 
+					{PageLinks}"
+					rowsPerPageTemplate="5,10,15">
+					<p:column headerText="Tipo de educación">
+					<h:outputText value="#{personaAutos1.tipo.descripcion}" />
+					</p:column>
+					<p:column headerText="Contribución">
+					<h:outputText value="#{personaAutos1.contribuciones_sociales}" />
+					</p:column>
+					</p:dataTable>  
+					<br />
+					 <div align="right"> 
+                   <h:commandLink>
+              <p:graphicImage value="images/descargagrafico.png" alt="Descargar Gráfico" type="button" title="Descargar Gráfico" width="50" height="50" onclick="exportChart()"/>
+              </h:commandLink>
+                  </div>
+                  <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Comparación de contrubución pública vs privada" resizable="false">
+        <p:outputPanel id="output" layout="block" style="width:850px;height:450px"/>
+    </p:dialog>
+    <br />
+					
+                 <p:chart widgetVar="donut" type="donut" model="#{contribucion.donutModel}" style="width: 100%; height: 350px; background-color:rgb(255 229 195)" />                         
                         
                        
                         
@@ -219,7 +279,17 @@ html, body {
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="js/datatables-simple-demo.js"></script>
-   
+    <script type="text/javascript">
+    //<![CDATA[
+    function exportChart() {
+        //export image
+        $('#output').empty().append(PF('donut').exportAsImage());
+
+        //show the dialog
+        PF('dlg').show();
+    }
+    //]]>
+</script>
    
    
     </h:body>

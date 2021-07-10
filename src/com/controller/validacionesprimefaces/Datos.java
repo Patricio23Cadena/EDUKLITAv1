@@ -42,6 +42,18 @@ public class Datos {
    		
    		return "Total de consumo por nivel de estudio en el sector " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("gasto").toString();
    	}
-
+     public String produccion() {
+    		
+    		return "Comparación de la producción del sector público vs privado en el año:  " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("produccion").toString();
+    	}
+     
+     public String contribucion() {
+ 		
+ 		return "Comparación de la contribución del sector público vs privado en el año:  " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("contribucion").toString();
+ 	}
+     public String renta() {
+  		
+  		return "Comparación de la renta del sector público vs privado en el año:  " + FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("renta").toString();
+  	}
 	
 }
