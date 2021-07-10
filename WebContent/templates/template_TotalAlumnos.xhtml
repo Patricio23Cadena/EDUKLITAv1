@@ -13,6 +13,7 @@
         <title>TOTAL ALUMNOS</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="resources/css/styles.css" rel="stylesheet" />
+        <link href="resources/css/estilosgraficos.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
    </h:head> 
     
@@ -23,6 +24,21 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+
+
+html, body {
+    height: 1305px; 
+} 
+
+
+.jqplot-target {
+    position: relative;
+     color: #000; 
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 1em;
+}
+ 
 </style> 
     
     
@@ -70,7 +86,8 @@
                                     <p:link class="nav-link" outcome="TotalAlumnos">Alumnos </p:link>
                                     <p:link class="nav-link" outcome="ValorFinanciacion">Financiación</p:link>  
                                      <p:link class="nav-link" outcome="valorErogaciones">Erogaciones</p:link>  
-                                      <p:link class="nav-link" outcome="cantidadAlumnos">Cantidad Alumno</p:link>                                    
+                                      <p:link class="nav-link" outcome="cantidadAlumnos">Cantidad Alumno</p:link> 
+                                      <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>                                   
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -81,7 +98,7 @@
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                      
-                                       <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>
+                                       
                                     <p:link class="nav-link" outcome="comparacionProduccion">Producción </p:link>
                                     <p:link class="nav-link" outcome="comparacionContribuciones">Contribución</p:link>  
                                      <p:link class="nav-link" outcome="comparacionRentas">Renta</p:link>  
@@ -197,10 +214,9 @@
 					</p:column>
 					</p:dataTable>  
 					<br />        
-               <div>
-                   <h5>Descargar imagen</h5>
+               <div align="right"> 
                    <h:commandLink>
-              <p:graphicImage value="images/descargagrafico.png" alt="Gráfico" type="button" title="Gráfico" width="50" height="50" onclick="exportChart()"/>
+              <p:graphicImage value="images/descargagrafico.png" alt="Descargar Gráfico" type="button" title="Descargar Gráfico" width="50" height="50" onclick="exportChart()"/>
               </h:commandLink>
                   </div>
                   <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Valor de consumo por nivel" resizable="false">
@@ -215,14 +231,7 @@
                      
                          
                     
-                </main>
-                
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
-                <BR />
+                </main>  
                 <footer class="py-4 bg-light mt-auto">
                     <div id="footer">	<div class="footerImg">
 		

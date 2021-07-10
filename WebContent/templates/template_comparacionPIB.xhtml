@@ -29,8 +29,18 @@
 
 
 html, body {
-    height: 1343px; 
+    height: 1311px; 
 } 
+
+
+
+.jqplot-target {
+    position: relative;
+     color: #000; 
+    font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+    font-size: 1em;
+}
+
 </style> 
     
     
@@ -77,8 +87,10 @@ html, body {
                                     <p:link class="nav-link" outcome="TotalDocentes">Docentes</p:link>
                                     <p:link class="nav-link" outcome="TotalAlumnos">Alumnos </p:link>
                                     <p:link class="nav-link" outcome="ValorFinanciacion">Financiación</p:link>  
-                                     <p:link class="nav-link" outcome="valorErogaciones">Erogaciones</p:link>  
-                                      <p:link class="nav-link" outcome="cantidadAlumnos">Cantidad Alumno</p:link>                                    
+                                    <p:link class="nav-link" outcome="valorErogaciones">Erogaciones</p:link>  
+                                    <p:link class="nav-link" outcome="cantidadAlumnos">Cantidad Alumno</p:link>    
+                                    <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>
+                                                                      
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -89,7 +101,6 @@ html, body {
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                      
-                                       <p:link class="nav-link" outcome="comparacionPIB">PIB</p:link>
                                     <p:link class="nav-link" outcome="comparacionProduccion">Producción </p:link>
                                     <p:link class="nav-link" outcome="comparacionContribuciones">Contribución</p:link>  
                                      <p:link class="nav-link" outcome="comparacionRentas">Renta</p:link>  
@@ -190,10 +201,9 @@ html, body {
 					</p:column>
 					</p:dataTable>  
 					<br />                  
-                  <div>
-                   <h5>Descargar imagen</h5>
+                  <div align="right"> 
                    <h:commandLink>
-              <p:graphicImage value="images/descargagrafico.png" alt="Gráfico" type="button" title="Gráfico" width="50" height="50" onclick="exportChart()"/>
+              <p:graphicImage value="images/descargagrafico.png" alt="Descargar Gráfico" type="button" title="Descargar Gráfico" width="50" height="50" onclick="exportChart()"/>
               </h:commandLink>
                   </div>
                   <p:dialog widgetVar="dlg" showEffect="fade" modal="true" header="Comparación del valor total con el PIB público vs privado" resizable="false">
