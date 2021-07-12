@@ -267,5 +267,19 @@ html, body {
    
    
    
+   
+    <script type="text/javascript">
+    //<![CDATA[
+    function exportChart() {
+        //export image
+        $('#output').empty().append(PF('bar').exportAsImage());
+
+        //show the dialog
+        PF('dlg').show();
+    }
+    //]]>
+</script>
+   
+   
     </h:body>
 </html>
