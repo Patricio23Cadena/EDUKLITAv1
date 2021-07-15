@@ -1,6 +1,10 @@
 package com.controller.totalalumnos.bean;
 
+import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +12,9 @@ import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.ServletContext;
 
 import org.primefaces.model.chart.ChartSeries;
 import org.primefaces.model.chart.PieChartModel;
@@ -17,6 +23,11 @@ import com.daos.personas.ProvinciaDao;
 import com.daos.personas.Total_alumnosDao;
 import com.entities.personas.Provincia;
 import com.entities.personas.Total;
+import com.lowagie.text.BadElementException;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Image;
+import com.lowagie.text.Paragraph;
 
 
 //import org.primefaces.model.charts.pie.PieChartModel;
@@ -124,7 +135,23 @@ public class Total_alumnosBean implements Serializable {
 	
 	
 	
-	
+	public void preProcessPDF(Object document) throws IOException, BadElementException, DocumentException {
+	    Document pdf = (Document) document;
+	    ServletContext servletContext = (ServletContext)
+	    FacesContext.getCurrentInstance().getExternalContext().getContext();
+	    pdf.open();
+	    String logo = servletContext.getRealPath("") + File.separator + "images" +
+	    	    File.separator + "logo.png";
+	        
+	    pdf.add(Image.getInstance(logo));
+	    pdf.add(new Paragraph ("\n\n")); 
+	     
+	    pdf.add(new Paragraph("Total Alumnos 2017\n\n"));	
+	    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+	    pdf.add(new Paragraph("Fecha y hora de descarga:  "+dtf.format(LocalDateTime.now())));
+	    pdf.add(new Paragraph ("\n\n"));
+	    
+	}
 	
 	
 }

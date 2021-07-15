@@ -47,13 +47,27 @@
  <div>
  <center><u> <h1 style="color:black; font-weight: bolder">TOTAL ALUMNOS POR PROVINCIA EN 2017</h1></u></center>
  <br /> 
+ <h:form>
+ <div align="right">
+                                      &nbsp;&nbsp;<h:commandLink>
+<p:graphicImage value="images/xlsx.png"  alt="XLSX" title="XLSX" width="50"  height="50"/>
+<p:dataExporter encoding="UTF-8"  type="xls" target="reporte" fileName="Total Alumnos 2017" /> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/pdf.png" alt="PDF" title="PDF" width="50" height="50"/>
+<p:dataExporter encoding="UTF-8"  type="pdf" target="reporte" fileName="Total Alumnos 2017" preProcessor="#{consultainvitado.preProcessPDF}"/> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/csv.png" alt="CSV" title="CSV" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="csv" target="reporte" fileName="Total Alumnos 2017" /> </h:commandLink>
+<h:commandLink>
+<p:graphicImage value="images/xml.png" alt="XML" title="XML" width="50" height="50"/>
+<p:dataExporter  encoding="UTF-8"  type="xml" target="reporte" fileName="Total Alumnos 2017"  /> </h:commandLink>
+         </div> 
+ </h:form>
+ 
+ 
  <div class="graficos">
+  <center>
  
- <center>
- 
-
-
-
 
  <p:dataTable id="reporte" var="personaAutos1" value="#{consultainvitado.consulta}"
 	rows="10" paginator="true"
