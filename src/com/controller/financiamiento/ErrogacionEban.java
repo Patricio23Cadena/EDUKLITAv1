@@ -98,12 +98,12 @@ public class ErrogacionEban implements Serializable{
 	
 	public void crear() {
 		barmodel = init();
-		barmodel.setTitle("Errogaciones público vs privado");
+		barmodel.setTitle("Erogaciones público vs privado");
 		barmodel.setLegendPosition("nw");
 		Axis xAxis = barmodel.getAxis(AxisType.X);
 		xAxis.setLabel("Años");
 		Axis yAxis = barmodel.getAxis(AxisType.Y);
-		yAxis.setLabel("Errogaciones");
+		yAxis.setLabel("Erogaciones");
 		yAxis.setMin(0);
 		
        // donutModel.setSeriesColors("rgb(51, 181, 255),rgb(255, 247, 72)");
@@ -118,7 +118,7 @@ public class ErrogacionEban implements Serializable{
 	        
 	    pdf.add(Image.getInstance(logo)); 
 	    pdf.add(new Paragraph ("\n\n")); 
-	    pdf.add(new Paragraph("Errogaciones público vs privado\n\n"));
+	    pdf.add(new Paragraph("Erogaciones público vs privado\n\n"));
 	    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
 	    pdf.add(new Paragraph("Fecha y hora de descarga:  "+dtf.format(LocalDateTime.now())));
 	    pdf.add(new Paragraph ("\n\n"));
