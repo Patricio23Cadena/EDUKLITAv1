@@ -103,7 +103,7 @@ public class ErrogacionEban implements Serializable{
 		Axis xAxis = barmodel.getAxis(AxisType.X);
 		xAxis.setLabel("Años");
 		Axis yAxis = barmodel.getAxis(AxisType.Y);
-		yAxis.setLabel("Erogaciones");
+		yAxis.setLabel("Dólares");
 		yAxis.setMin(0);
 		
        // donutModel.setSeriesColors("rgb(51, 181, 255),rgb(255, 247, 72)");

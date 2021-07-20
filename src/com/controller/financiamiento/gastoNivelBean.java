@@ -14,10 +14,13 @@ import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.servlet.ServletContext;
 
+
 import org.primefaces.model.chart.Axis;
 import org.primefaces.model.chart.AxisType;
 import org.primefaces.model.chart.BarChartModel;
 import org.primefaces.model.chart.ChartSeries;
+import org.primefaces.model.charts.bar.BarChartOptions;
+import org.primefaces.model.charts.optionconfig.tooltip.Tooltip;
 
 import com.controller.validacionesprimefaces.Datos;
 import com.daos.gastoConsumoNivel.GastoConsumoNivelDao;
@@ -137,6 +140,7 @@ public class gastoNivelBean implements Serializable{
 		 for (GastoConsumoNivel lista : listado) {
 			 if( lista.getId_nivel() == 1) {
 				primer.set(lista.getAnio(),lista.getValor_consumo() );
+			
 				
 			}
 			 else if (lista.getId_nivel() == 2) {
@@ -158,11 +162,14 @@ public class gastoNivelBean implements Serializable{
 		barmodel = init();
 		barmodel.setTitle(dt.nivel());
 		barmodel.setLegendPosition("nw");
+		 BarChartOptions options = new BarChartOptions();
 		Axis xAxis = barmodel.getAxis(AxisType.X);
 		xAxis.setLabel("Años");
 		Axis yAxis = barmodel.getAxis(AxisType.Y);
-		yAxis.setLabel("Total");
+		yAxis.setLabel("Total en dólares");
 		yAxis.setMin(0);
+	
+		
 		
        // donutModel.setSeriesColors("rgb(51, 181, 255),rgb(255, 247, 72)");
 	}

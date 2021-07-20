@@ -159,7 +159,7 @@ public class PibBean implements Serializable{
 		lineModel.getAxes().put(AxisType.X, new CategoryAxis("Años"));
 		Axis yAxis = lineModel.getAxis(AxisType.Y);
 	    yAxis = lineModel.getAxis(AxisType.Y);
-	    yAxis.setLabel("PIB");
+	    yAxis.setLabel("Dólares");
 	    yAxis.setMin(0);
 	}
 	

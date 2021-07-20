@@ -182,6 +182,7 @@ public class TotalDocentesProvinciaBean implements Serializable{
 		title.setDisplay(true);
 		title.setText(dt.anioTotalDocenPean());
 		options.setTitle(title);
+		
 		barModel.setOptions(options);	
 	}
 	public List<Docentes_provincia> getListadoDocentesxanio() {
