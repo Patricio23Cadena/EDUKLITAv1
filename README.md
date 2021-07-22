@@ -43,7 +43,16 @@ Instalar las siguientes librerías en el IDE:
 2. Descargar postgresql versión 42.2.2 
 3. Descargar la base de datos y .ear del proyecto.
 
-Pasos para conectarse al servidor.
+Pasos para conectarse.
+1. Decargar y ejecutar postgresql y pgadmin.
+2. Ingresar una contraseña.
+3. Ingresar a pgadmin e ingresar la contraseña creada anteriormente.
+4. En servers dar clic derecho --> create --> server.
+5. Ingresar la dirección del servidor asignado en este caso es: 172.17.42.107
+6. El usuario y contraseña asignados.
+
+
+Pasos para conectarse al servidor wildfly.
 
 1. Ejecutar el wildfly, una vez realizado esto se debe ingresar un usuario y contraseña, y luego se debe habilitar.
 2. Ingresar a localhost:8080 y dar clic en consola de administración.
@@ -60,10 +69,20 @@ Pasos para conectarse al servidor.
 13. En user name y password deben ir las credenciales que se crearon en postgres.
 14. Dar clic en test connection, esto verificará si la cadena de conexión está funcionando correctamente.
 
+Nota: el nombre de la base es el que usted tenga, solo debe seguir los pasos con el nombre de su base de datos.
+
 
                                       ---------------PRUEBAS---------------
 
-+++++++++++++++++++++++++POR DESARROLLAR+++++++++++++++++++++++++
+Las herramientas que se utilizaron para las pruebas correspondientes son las siguientes:
+
+1. Jmeter (herramienta OpenSource). Lo puede descargar en el siguiente enlace https://jmeter.apache.org/download_jmeter.cgi
+En el siguiente enlace indica detalladamente como funciona, además con capturas de pantalla de cada prueba que se realizó.
+https://estliveupsedu-my.sharepoint.com/:b:/g/personal/sguerrerog1_est_ups_edu_ec/EfBSzCjXqLxLp8fsau4iSp4BCmN08JGivfDHRnQdGa2d7w?e=0khYLJ
+
+2. Ranorex (herramienta de interfaz).  Lo puede descargar en el siguiente enlace https://www.ranorex.com/free-trial-confirmation/
+En el siguiente enlace indica detalladamente como funciona, además con capturas de pantalla de cada prueba que se realizó.
+https://estliveupsedu-my.sharepoint.com/:b:/g/personal/sguerrerog1_est_ups_edu_ec/EXzHg6iEu0lIhGYIcQxqMlkB7FF3aID0FGBX_1z4d2WwRw?e=xgtVP3
 
 
                                       ---------------CONSTRUIDO CON---------------
