@@ -38,8 +38,27 @@ Instalar las siguientes librerías en el IDE:
 
 
                                     ---------------INSTALACIÓN DEL PROGRAMA---------------
+                                    
+1. Descargar wildfly versión 17.0.0. Lo puede descargar del siguiente enlace https://www.wildfly.org/downloads/
+2. Descargar postgresql versión 42.2.2 
+3. Descargar la base de datos y .ear del proyecto.
 
-+++++++++++++++POR DESARROLLAR+++++++++++++++++++++++++
+Pasos para conectarse al servidor.
+
+1. Ejecutar el wildfly, una vez realizado esto se debe ingresar un usuario y contraseña, y luego se debe habilitar.
+2. Ingresar a localhost:8080 y dar clic en consola de administración.
+3. Ingresar las credenciales creadas anteriormente.
+4. Ingresar a deployments --> add deployments --> cargar el archivo postgresql 42.2.2
+5. Specify Names dejarlo por defecto --> finalizar.
+6. Regresar a home page --> configuration --> start.
+7. Ingresar a subsytems --> dataSources & drivers --> datasource.
+8. Añadir un nuevo datasource.
+9. Escoger la base de datos con la que se va a trabajar en este caso es PostgreSQL.
+10. En atributos --> name: se debe poner el nombre de la base de datos en este caso es BD_eduklita --> En JNDI name solo se debe cambiar "PostgresDS" por la base que se va a cargar, en este caso es: java:jboss/BD_eduklita
+11. JDBC Driver --> Driver name: postgresql-42.2.2.jar --> lo demás se lo deja por defecto.
+12. Connection --> En Connection URL solo se debe cambiar postgresdb por el nombre de la base que va a cargar, en este caso es: jdbc:postgresql://localhost:5432/BD_eduklita
+13. En user name y password deben ir las credenciales que se crearon en postgres.
+14. Dar clic en test connection, esto verificará si la cadena de conexión está funcionando correctamente.
 
 
                                       ---------------PRUEBAS---------------
