@@ -241,8 +241,7 @@ text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0
 .divtitulo {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 0; 
   bottom: 0;
   width: 54%;  
   height: 54%;
@@ -250,7 +249,7 @@ text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0
   background-attachment: fixed;
   background-size: 100% 100%;
   overflow: hidden;
-  margin-top: 4.2%;
+  margin-top: 5.59%;
 }
 ::selection {
   background: transparent;
@@ -270,7 +269,7 @@ text-shadow: 0 0 8px #2cd0f0, 0 0 2px #2cd0f0, 0 0 10px #2cd0f0, 0 0 6px #2cd0f0
   -webkit-animation: bounce .3s ease infinite alternate;
   
   font-family: 'Erica One', cursive;
-  font-size: 8em;
+  font-size: 5.5em;
   color: #007200;
   text-align: center;
   line-height: 100px;

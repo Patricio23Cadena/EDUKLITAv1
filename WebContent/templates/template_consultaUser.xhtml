@@ -139,24 +139,24 @@
 
                 </div>
             </f:facet>
-            <p:column selectionMode="multiple" exportable="false"   style="width:3%"></p:column>
+            <p:column selectionMode="multiple" exportable="false"   style="width:1%"></p:column>
 
-            <p:column  headerText="Code" sortBy="#{product.id_usuario}" filterBy="#{product.id_usuario}"  style="width:6%">
+            <p:column  headerText="Code" sortBy="#{product.id_usuario}" filterBy="#{product.id_usuario}"  style="width:5%">
                 <h:outputText value="#{product.id_usuario}"   />
             </p:column>
-            <p:column headerText="Cedúla" sortBy="#{product.cdi}" filterBy="#{product.cdi}" style="width:10%">
+            <p:column headerText="Cédula" sortBy="#{product.cdi}" filterBy="#{product.cdi}" style="width:9%">
                 <h:outputText value="#{product.cdi}"   />
             </p:column>
-            <p:column headerText="Nombre" exportable="false">
+            <p:column headerText="Nombre" exportable="false" style="width:10%">
               <h:outputText value="#{product.nombres}"/>
             </p:column>
-             <p:column headerText="Apellido" exportable="false">
+             <p:column headerText="Apellido" exportable="false" style="width:10%">
                 <h:outputText value="#{product.apellidos}"/>
             </p:column>
-            <p:column headerText="Edad" exportable="false">
+            <p:column headerText="Edad" exportable="false"  style="width:6%">
                 <h:outputText value="#{product.edad}"/>
             </p:column>
-             <p:column headerText="Correo Electronico" exportable="false" style="width:22%">
+             <p:column headerText="Correo Electrónico" exportable="false" style="width:19%">
                 <h:outputText value="#{product.correo}"/>
             </p:column>
                <p:column headerText="Tipo" exportable="false" style="width:10%">
