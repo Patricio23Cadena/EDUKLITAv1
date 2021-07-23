@@ -68,6 +68,7 @@ Pasos para conectarse al servidor wildfly.
 12. Connection --> En Connection URL solo se debe cambiar postgresdb por el nombre de la base que va a cargar, en este caso es: jdbc:postgresql://localhost:5432/BD_eduklita
 13. En user name y password deben ir las credenciales que se crearon en postgres.
 14. Dar clic en test connection, esto verificará si la cadena de conexión está funcionando correctamente.
+15. Ingresar a localhost con la base de BD_eduklita.
 
 Nota: el nombre de la base es el que usted tenga, solo debe seguir los pasos con el nombre de su base de datos.
 
