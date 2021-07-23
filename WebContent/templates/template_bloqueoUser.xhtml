@@ -155,17 +155,17 @@
              <p:column headerText="Apellido" exportable="false" style="width:10%">
                 <h:outputText value="#{product.apellidos}"/>
             </p:column>
-             <p:column headerText="Correo Electronico" exportable="false" style="width:22%">
+             <p:column headerText="Correo Electrónico" exportable="false" style="width:22%">
                 <h:outputText value="#{product.correo}"/>
             </p:column>
-               <p:column headerText="Tipo" exportable="false" style="width:10%">
+               <p:column headerText="Tipo" exportable="false" style="width:14%">
                  <h:outputText value="#{product.tipoPer()}"/>
             </p:column>
               <p:column headerText="Estado" exportable="false"   style="width:8%">
                  <h:outputText value="#{product.estadoPer()}"/>
             </p:column>
            
-            <p:column exportable="false">
+            <p:column exportable="false" style="width:4%">
                 <p:commandButton  class="ui-button-warning rounded-button" icon="fas fa-lock-open fa-spin" process="@this"
                                  oncomplete="PF('saveProductDialog').show()">
                     <f:setPropertyActionListener value="#{product}" target="#{crudView.selectedProduct}"/>

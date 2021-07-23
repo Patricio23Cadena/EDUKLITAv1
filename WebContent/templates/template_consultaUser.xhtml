@@ -141,28 +141,28 @@
             </f:facet>
             <p:column selectionMode="multiple" exportable="false"   style="width:1%"></p:column>
 
-            <p:column  headerText="Code" sortBy="#{product.id_usuario}" filterBy="#{product.id_usuario}"  style="width:5%">
+            <p:column  headerText="Code" sortBy="#{product.id_usuario}" filterBy="#{product.id_usuario}"  style="width:5.75%">
                 <h:outputText value="#{product.id_usuario}"   />
             </p:column>
-            <p:column headerText="Cédula" sortBy="#{product.cdi}" filterBy="#{product.cdi}" style="width:9%">
+            <p:column headerText="Cédula" sortBy="#{product.cdi}" filterBy="#{product.cdi}" style="width:13%">
                 <h:outputText value="#{product.cdi}"   />
             </p:column>
             <p:column headerText="Nombre" exportable="false" style="width:10%">
               <h:outputText value="#{product.nombres}"/>
             </p:column>
-             <p:column headerText="Apellido" exportable="false" style="width:10%">
+             <p:column headerText="Apellido" exportable="false" style="width:12%">
                 <h:outputText value="#{product.apellidos}"/>
             </p:column>
             <p:column headerText="Edad" exportable="false"  style="width:6%">
                 <h:outputText value="#{product.edad}"/>
             </p:column>
-             <p:column headerText="Correo Electrónico" exportable="false" style="width:19%">
+             <p:column headerText="Correo Electrónico" exportable="false" style="width:14%">
                 <h:outputText value="#{product.correo}"/>
             </p:column>
-               <p:column headerText="Tipo" exportable="false" style="width:10%">
+               <p:column headerText="Tipo" exportable="false" style="width:13.5%">
                  <h:outputText value="#{product.tipoPer()}"/>
             </p:column>
-              <p:column headerText="Estado" exportable="false"   style="width:8%">
+              <p:column headerText="Estado" exportable="false"   style="width:7.5%">
                  <h:outputText value="#{product.estadoPer()}"/>
             </p:column>
             
